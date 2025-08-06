@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('feedback', function (Blueprint $table) {
             $table->id('feedback_id');
             $table->unsignedBigInteger('user_id');
-            $table->foreign('user_id')->references('user_id')->on('users')->onDelete('cascade');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->unsignedBigInteger('products_id');
             $table->foreign('products_id')->references('products_id')->on('products')->onDelete('cascade');
             $table->text('comment')->nullable();
