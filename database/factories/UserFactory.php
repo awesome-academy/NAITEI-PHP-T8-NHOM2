@@ -32,7 +32,7 @@ class UserFactory extends Factory
             'last_name'  => $last,
             'email' => fake()->unique()->safeEmail(),
             'email_verified_at' => now(),
-            'username'   => ' ',
+            'username'   => fake()->unique()->userName(),
             'password' => static::$password ??= Hash::make('password'),
             'role'       => 'user',
             'remember_token' => Str::random(10),
