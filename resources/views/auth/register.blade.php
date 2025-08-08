@@ -48,5 +48,19 @@
                 {{ __('Register') }}
             </x-primary-button>
         </div>
+
+        <div style="display: flex; align-items: center; text-align: center; color: #888; margin: 20px 0;">
+            <span style="flex: 1; border-bottom: 1px solid #ccc; margin-right: 10px;"></span>
+            or
+            <span style="flex: 1; border-bottom: 1px solid #ccc; margin-left: 10px;"></span>
+        </div>
+
+        <div class="mt-6">
+            <a href="{{ route('auth.google.redirect') }}"
+               class="w-full flex justify-center items-center bg-white text-gray-800 border border-gray-300 rounded-md px-4 py-2 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                {{ __('Register with Google') }}
+            </a>
+        </div>
+
     </form>
 </x-guest-layout>
