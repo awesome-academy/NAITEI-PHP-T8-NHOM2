@@ -1,0 +1,84 @@
+<x-admin-layout>
+
+    <div class="py-12">
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+                <div class="p-6 text-gray-900">
+                    @if ($message = Session::get('success'))
+                        <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative mb-4" role="alert">
+                            <span class="block sm:inline">{{ $message }}</span>
+                        </div>
+                    @endif
+
+                    @if ($errors->any())
+                        <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mb-4" role="alert">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
+
+                    <div class="flex justify-between items-center mb-6">
+                        <h1 class="text-2xl font-bold text-gray-800">Categories</h1>
+                        <div>
+                            <a href="{{ route('admin.categories.trashed') }}" class="text-sm text-gray-600 hover:text-gray-900">
+                                Trashed Categories&nbsp;&nbsp;&nbsp;
+                            </a>
+                            <a href="{{ route('admin.categories.create') }}" class="inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 focus:outline-none focus:border-gray-900 focus:ring ring-gray-300 disabled:opacity-25 transition ease-in-out duration-150">
+                                Create Category
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+                        <table class="w-full text-sm text-left text-gray-500">
+                            <thead class="text-xs text-gray-700 uppercase bg-gray-50">
+                                <tr>
+                                    <th scope="col" class="px-6 py-3">ID</th>
+                                    <th scope="col" class="px-6 py-3">Category Name</th>
+                                    <th scope="col" class="px-6 py-3">Slug</th>
+                                    <th scope="col" class="px-6 py-3">Sort Order</th>
+                                    <th scope="col" class="px-6 py-3"><span class="sr-only">Actions</span></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @forelse ($categories as $category)
+                                    <tr class="bg-white border-b hover:bg-gray-50">
+                                        <td class="px-6 py-4">{{ $category->categories_id }}</td>
+                                        <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                                            <a href="{{ route('admin.categories.show', $category) }}" class="hover:underline">
+                                                {{ $category->category_name }}
+                                            </a>
+                                        </td>
+                                        <td class="px-6 py-4">{{ $category->slug }}</td>
+                                        <td class="px-6 py-4">{{ $category->sort_order }}</td>
+                                        <td class="px-6 py-4 text-right">
+                                            <form action="{{ route('admin.categories.destroy', $category) }}" method="POST" onsubmit="return confirm('Are you sure you want to delete this category?');">
+                                                <a href="{{ route('admin.categories.edit', $category) }}" class="font-medium text-blue-600 hover:underline">Edit</a>
+
+                                                @csrf
+                                                @method('DELETE')
+                                                <button type="submit" class="font-medium text-red-600 hover:underline ml-4">Delete</button>
+                                            </form>
+                                        </td>
+                                    </tr>
+                                @empty
+                                    <tr class="bg-white border-b">
+                                        <td colspan="5" class="px-6 py-4 text-center text-gray-500">No categories found.</td>
+                                    </tr>
+                                @endforelse
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="mt-6">
+                        {{ $categories->links() }}
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</x-admin-layout>
