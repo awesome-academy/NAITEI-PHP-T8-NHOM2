@@ -12,7 +12,7 @@
                 <a href="#" class="block hover:bg-gray-700 p-2 rounded">Manage Products</a>
             </li>
             <li class="mb-2">
-                <a href="#" class="block hover:bg-gray-700 p-2 rounded">Manage Categories</a>
+                <a href="{{ route('admin.categories.index') }}" class="block hover:bg-gray-700 p-2 rounded {{ request()->routeIs('admin.categories.*') ? 'bg-gray-900' : '' }}">Manage Categories</a>
             </li>
             <li class="mb-2">
                 <a href="#" class="block hover:bg-gray-700 p-2 rounded">Manage Orders</a>
