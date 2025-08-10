@@ -5,6 +5,7 @@ use App\Http\Middleware\AdminMiddleware;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\Admin\ProductController as AdminProductController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -37,9 +38,17 @@ Route::get('/dashboard', function () {
 Route::middleware(['auth', AdminMiddleware::class])->prefix('admin')->name('admin.')->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
     Route::resource('users', UserController::class);
+    // categories
     Route::get('categories/trashed', [CategoryController::class, 'trashed'])->name('categories.trashed');
     Route::post('categories/{category}/restore', [CategoryController::class, 'restore'])->name('categories.restore')->withTrashed();
     Route::resource('categories', CategoryController::class);
+    // products
+    Route::get('products/trashed', [AdminProductController::class, 'trashed'])
+        ->name('products.trashed');
+    Route::post('products/{product}/restore', [AdminProductController::class, 'restore'])
+        ->name('products.restore')->withTrashed();
+    Route::resource('products', AdminProductController::class);
 });
+
 
 require __DIR__.'/auth.php';

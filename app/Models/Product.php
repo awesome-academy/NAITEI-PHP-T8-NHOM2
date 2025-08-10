@@ -3,13 +3,21 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Product extends Model
 {
-    //
+    use HasFactory, SoftDeletes;
+
     protected $table = 'products';
     protected $primaryKey = 'products_id'; // Assuming you have a primary key for products
-    protected $fillable = ['categories_id', 'product_name', 'description', 'product_price', 'stock_quantity', 'image_path', 'specifications'];
+    protected $fillable = ['categories_id', 'product_name', 'description', 'product_price', 'stock_quantity', 'image_path', 'specifications','slug', 'status'];
+    protected $casts = [
+    'specifications' => 'array',
+    'status' => 'boolean',
+    ];
 
     public function category()
     {
@@ -29,6 +37,20 @@ class Product extends Model
     public function shoppingCarts()
     {
         return $this->hasMany(Shopping_cart::class, 'products_id');
+    }
+
+    // Query Scopes
+
+    // Sản phẩm đang hiển thị cho người dùng
+    public function scopeActive($query)
+    {
+        return $query->where('status', 1);
+    }
+
+    // Tìm theo tên (để dùng ở search cơ bản)
+    public function scopeNameLike($query, string $keyword)
+    {
+        return $query->where('product_name', 'like', "%{$keyword}%");
     }
 
 }
