@@ -7,6 +7,7 @@ use App\Models\Category;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
 use Illuminate\Support\Arr;
+use Illuminate\Support\Facades\Storage;
 
 class ProductFactory extends Factory
 {
@@ -95,6 +96,19 @@ class ProductFactory extends Factory
             $careOne
         );
 
+        // Chọn ảnh local trong storage/app/public/products
+        $disk = Storage::disk('public');
+        $dir  = 'products';
+
+        $localImages = collect($disk->files($dir))
+            ->filter(fn ($p) => preg_match('/\.(jpe?g|png|webp)$/i', $p))
+            ->values()
+            ->all();
+
+        $chosenLocal = $localImages
+            ? $this->faker->randomElement($localImages)
+            : null;
+
         // Description = [SPEC]{json}[/SPEC] + free text
         $description = "[SPEC]".json_encode($spec, JSON_UNESCAPED_UNICODE)."[/SPEC]\n\n".$descFree;
 
@@ -106,8 +120,7 @@ class ProductFactory extends Factory
             'product_price'  => $price,
             'stock_quantity' => $this->faker->numberBetween(0, 120),
             'status'         => $this->faker->boolean(75) ? 1 : 0,
-            // Lưu tạm đường placeholder, sau này sẽ thay bằng ảnh thật
-            'image_path'     => 'https://via.placeholder.com/800x1000.png?text=' . urlencode($name),
+            'image_path' => $chosenLocal ?: 'https://via.placeholder.com/800x1000.png?text=' . urlencode($name),
             //Cập nhật thông tin trong json
             'specifications' => json_encode($spec, JSON_UNESCAPED_UNICODE),
         ];

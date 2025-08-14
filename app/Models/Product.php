@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Support\Str;
 
 class Product extends Model
 {
@@ -18,6 +19,8 @@ class Product extends Model
     'specifications' => 'array',
     'status' => 'boolean',
     ];
+
+    protected $appends = ['image_url'];
 
     public function category()
     {
@@ -53,4 +56,24 @@ class Product extends Model
         return $query->where('product_name', 'like', "%{$keyword}%");
     }
 
+    public function getImageUrlAttribute(): string
+    {
+        $path = (string) ($this->image_path ?? '');
+
+        // nếu là đường dẫn tuyệt đối (http/https) -> dùng luôn
+        if ($path !== '' && filter_var($path, FILTER_VALIDATE_URL)) {
+            return $path;
+        }
+
+        // bỏ public/ nếu lỡ lưu kèm
+        $path = preg_replace('#^public/#', '', $path);
+
+        // nếu có đường dẫn tương đối -> trỏ qua storage symlink
+        if ($path !== '') {
+            return asset('storage/' . ltrim($path, '/'));
+        }
+
+        // fallback
+        return asset('images/placeholder.png');
+    }
 }
