@@ -1,0 +1,100 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use App\Models\Order;
+use App\Models\Order_items;
+use App\Models\Product;
+use App\Models\Shopping_cart;
+use Illuminate\Support\Facades\Auth;
+use Carbon\Carbon;
+
+class CheckoutController extends Controller
+{
+    /**
+     * Hiển thị form thanh toán
+     */
+    public function checkoutForm()
+    {
+        $cartItems = Shopping_cart::with('product')
+            ->where('user_id', Auth::id())
+            ->get();
+
+        if ($cartItems->isEmpty()) {
+            return redirect()->route('cart.index')
+                ->with('error', 'Giỏ hàng của bạn đang trống.');
+        }
+
+        return view('checkout.index', compact('cartItems'));
+    }
+
+    /**
+     * Xử lý đặt hàng
+     */
+    public function placeOrder(Request $request)
+    {
+        $request->validate([
+            'shipping_address' => 'required|string|max:255',
+            'payment_method'   => 'required|string|max:50'
+        ]);
+
+        $cartItems = Shopping_cart::with('product')
+            ->where('user_id', Auth::id())
+            ->get();
+
+        if ($cartItems->isEmpty()) {
+            return redirect()->route('cart.index')
+                ->with('error', 'Giỏ hàng của bạn đang trống.');
+        }
+
+        // 1. Tính tổng tiền
+        $totalAmount = $cartItems->sum(function ($item) {
+            return $item->product->product_price * $item->quantity;
+        });
+
+        // 2. Lưu đơn hàng
+        $order = Order::create([
+            'user_id'         => Auth::id(),
+            'total_amount'    => $totalAmount,
+            'status'          => 'pending',
+            'shipping_address'=> $request->shipping_address,
+            'payment_method'  => $request->payment_method,
+            'order_date'      => Carbon::now(),
+        ]);
+
+        // 3. Lưu chi tiết đơn hàng và trừ tồn kho
+        foreach ($cartItems as $item) {
+            Order_items::create([
+                'orders_id'   => $order->orders_id,
+                'products_id' => $item->products_id,
+                'quantity'    => $item->quantity,
+                'price'       => $item->product->product_price,
+                'sub_total'   => $item->product->product_price * $item->quantity,
+            ]);
+
+            // Trừ số lượng tồn kho
+            $item->product->decrement('stock_quantity', $item->quantity);
+        }
+
+        // 4. Xóa giỏ hàng sau khi đặt
+        Shopping_cart::where('user_id', Auth::id())->delete();
+
+        // 5. Chuyển hướng về trang chi tiết đơn hàng
+        return redirect()->route('orders.show', $order->orders_id)
+            ->with('success', 'Đơn hàng đã được đặt thành công!');
+    }
+
+    /**
+     * Hiển thị chi tiết đơn hàng
+     */
+    public function showOrder($id)
+    {
+        $order = Order::with('orderItems.product')
+            ->where('user_id', Auth::id())
+            ->findOrFail($id);
+
+        return view('orders.show', compact('order'));
+    }
+}
+

@@ -12,7 +12,7 @@
                     $plain = preg_replace('/\[SPEC\].*?\[\/SPEC\]/s', '', $p->description ?? '');
                     $short = \Illuminate\Support\Str::limit(trim($plain), 50);
 
-                    // Format giá vnd: 1.234.567 ₫
+                    // Format giá VND: 1.234.567 ₫
                     $price = number_format((float) $p->product_price, 0, ',', '.') . ' ₫';
                 @endphp
 
@@ -27,6 +27,19 @@
                     <p class="text-sm text-gray-500 mt-1">{{ $short }}</p>
                     <div class="mt-auto pt-3">
                         <div class="text-lg font-semibold text-gray-900">{{ $price }}</div>
+
+                        {{-- Nút thêm vào giỏ hàng --}}
+                        @auth
+                            <a href="{{ route('cart.add', $p->products_id) }}"
+                               class="mt-2 inline-block w-full border border-black bg-white text-black text-center py-2 px-4 rounded-lg hover:bg-black hover:text-white transition">
+                                Thêm vào giỏ
+                            </a>
+                        @else
+                            <a href="{{ route('login') }}"
+                               class="mt-2 inline-block w-full border border-gray-400 bg-white text-gray-600 text-center py-2 px-4 rounded-lg hover:bg-gray-600 hover:text-white transition">
+                                Đăng nhập để mua
+                            </a>
+                        @endauth
                     </div>
                 </div>
             @empty
@@ -40,3 +53,4 @@
         </div>
     </div>
 </x-user-layout>
+
