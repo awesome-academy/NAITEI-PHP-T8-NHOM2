@@ -4,6 +4,9 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Middleware\AdminMiddleware;
+use App\Http\Controllers\CartController;
+use App\Http\Controllers\CheckoutController;
+use App\Http\Controllers\OrderController;
 
 // Admin Controllers
 use App\Http\Controllers\Admin\DashboardController;
@@ -60,5 +63,16 @@ Route::middleware(['auth'])->prefix('user')->name('user.')->group(function () {
     Route::get('/products', [ProductController::class, 'index'])->name('products.index');
 });
 
+Route::middleware('auth')->group(function () {
+    Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
+    Route::get('/cart/add/{id}', [CartController::class, 'add'])->name('cart.add');
+    Route::post('/cart/update/{id}', [CartController::class, 'update'])->name('cart.update');
+    Route::delete('/cart/remove/{id}', [CartController::class, 'remove'])->name('cart.remove');
+    Route::get('/checkout', [CheckoutController::class, 'checkoutForm'])->name('checkout.index');
+    Route::post('/checkout', [CheckoutController::class, 'placeOrder'])->name('checkout.place');
+    Route::get('/orders/{id}', [CheckoutController::class, 'showOrder'])->name('checkout.orders.show');
+    Route::get('/orders', [OrderController::class, 'index'])->name('orders.index');
+    Route::get('/orders/{id}', [OrderController::class, 'show'])->name('orders.show');
+});
 
 require __DIR__.'/auth.php';
