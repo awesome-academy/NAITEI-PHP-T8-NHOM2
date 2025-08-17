@@ -191,9 +191,17 @@ class ProductController extends Controller
         $data['description']    = $this->buildDescriptionFromSpec($spec, $free);
         $data['specifications'] = $spec; // nếu muốn giữ thêm cột JSON chuẩn hóa
 
-        // Ảnh: có file mới thì xóa file cũ
+        // Ảnh
+        if ($request->boolean('remove_image')) {
+            if ($this->isLocalImagePath($product->image_path)) {
+                Storage::disk('public')->delete($product->image_path);
+            }
+            $data['image_path'] = null;
+        }
+
+        // Upload ảnh mới -> xóa ảnh cũ (nếu là ảnh local)
         if ($request->hasFile('image')) {
-            if ($product->image_path) {
+            if ($this->isLocalImagePath($product->image_path)) {
                 Storage::disk('public')->delete($product->image_path);
             }
             $data['image_path'] = $request->file('image')->store('products', 'public');
@@ -238,7 +246,13 @@ class ProductController extends Controller
         return back()->with('success', 'Khôi phục sản phẩm thành công.');
     }
 
-    // FGom Spec với Description
+    private function isLocalImagePath(?string $path): bool
+    {
+        return !empty($path) && filter_var($path, FILTER_VALIDATE_URL) === false;
+    }
+
+
+    // Gom Spec với Description
     private function parseSpecFromDescription(?string $desc): array
     {
         $spec = [];

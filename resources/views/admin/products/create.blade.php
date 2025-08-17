@@ -71,6 +71,7 @@
             <div>
               <label class="block text-sm mb-1">Image</label>
               <input type="file" name="image" accept="image/*" class="border rounded px-3 py-2 w-full">
+              @error('image') <p class="text-sm text-red-600 mt-1">{{ $message }}</p> @enderror
             </div>
 
             {{-- Specifications --}}

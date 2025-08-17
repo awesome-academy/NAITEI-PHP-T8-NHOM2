@@ -68,12 +68,20 @@
             <div>
               <label class="block text-sm mb-1">Image</label>
               <input type="file" name="image" accept="image/*" class="border rounded px-3 py-2 w-full">
-              @if($product->image_path)
-                <div class="mt-2">
-                  <img src="{{ \Illuminate\Support\Facades\Storage::url($product->image_path) }}" alt="" style="max-height:120px">
-                </div>
-              @endif
+              <div class="mt-2">
+                <img
+                  src="{{ $product->image_url ?: asset('images/placeholder.png') }}"
+                  alt="{{ $product->product_name ?: 'No image available' }}"
+                  style="max-height:120px">
+              </div>
+
+              <label class="inline-flex items-center gap-2 mt-2">
+                <input type="checkbox" name="remove_image" value="1" class="rounded" {{ old('remove_image') ? 'checked' : '' }}>
+                <span>Xóa ảnh hiện tại</span>
+              </label>
+              @error('image') <p class="text-sm text-red-600 mt-1">{{ $message }}</p> @enderror
             </div>
+
 
             {{-- Specifications --}}
             {{-- Size (dropdown multi, Alpine, không dùng biến trung gian) --}}

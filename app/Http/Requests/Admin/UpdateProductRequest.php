@@ -40,6 +40,7 @@ class UpdateProductRequest extends FormRequest
             'stock_quantity' => ['required', 'integer', 'min:0'],
             'status'         => ['required', 'integer', 'in:0,1'],
             'image'          => ['nullable', 'image', 'mimes:jpg,jpeg,png,webp', 'max:2048'],
+            'remove_image'   => ['nullable', 'boolean'],
 
             // specs
             'spec_size'      => ['array'],
