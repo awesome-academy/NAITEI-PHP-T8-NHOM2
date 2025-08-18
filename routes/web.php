@@ -10,9 +10,10 @@ use App\Http\Controllers\OrderController;
 
 // Admin Controllers
 use App\Http\Controllers\Admin\DashboardController;
-use App\Http\Controllers\Admin\UserController; 
+use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\ProductController as AdminProductController;
+use App\Http\Controllers\Admin\OrderController as AdminOrderController;
 
 // User Controllers
 use App\Http\Controllers\User\ProductController;
@@ -56,6 +57,10 @@ Route::middleware(['auth', AdminMiddleware::class])->prefix('admin')->name('admi
     Route::post('products/{product}/restore', [AdminProductController::class, 'restore'])
         ->name('products.restore')->withTrashed();
     Route::resource('products', AdminProductController::class);
+    // orders
+    Route::get('orders', [AdminOrderController::class, 'index'])->name('orders.index');
+    Route::get('orders/{order}', [AdminOrderController::class, 'show'])->name('orders.show');
+    Route::patch('orders/{order}/status', [AdminOrderController::class, 'updateStatus'])->name('orders.updateStatus');
 });
 
 // User Routes
