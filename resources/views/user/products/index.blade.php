@@ -17,22 +17,36 @@
                 @endphp
 
                 <div class="bg-white rounded-2xl shadow-sm hover:shadow p-4 flex flex-col transition">
-                    <img
-                        src="{{ $p->image_url }}"
-                        alt="{{ $p->product_name }}"
-                        class="rounded-xl aspect-[3/4] object-cover mb-3 w-full"
-                        loading="lazy"
-                    >
-                    <h3 class="font-medium text-gray-900 line-clamp-2">{{ $p->product_name }}</h3>
+                    <a href="{{ route('user.products.show', ['product' => $p->slug]) }}" class="block">
+                        <img
+                            src="{{ $p->image_url }}"
+                            alt="{{ $p->product_name }}"
+                            class="rounded-xl aspect-[3/4] object-cover mb-3 w-full"
+                            loading="lazy"
+                        >
+                    </a>
+
+                    <h3 class="font-medium text-gray-900 line-clamp-2">
+                        <a href="{{ route('user.products.show', $p->slug) }}" class="hover:underline">
+                            {{ $p->product_name }}
+                        </a>
+                    </h3>
+
                     <p class="text-sm text-gray-500 mt-1">{{ $short }}</p>
+                    
                     <div class="mt-auto pt-3">
                         <div class="text-lg font-semibold text-gray-900">{{ $price }}</div>
 
                         {{-- Nút thêm vào giỏ hàng --}}
                         @auth
-                            <a href="{{ route('cart.add', $p->products_id) }}"
+                            <a href="{{ route('cart.add', ['id' => $p->products_id, 'qty' => 1]) }}"
                                class="mt-2 inline-block w-full border border-black bg-white text-black text-center py-2 px-4 rounded-lg hover:bg-black hover:text-white transition">
                                 Thêm vào giỏ
+                            </a>
+
+                            <a href="{{ route('cart.add', ['id' => $p->products_id, 'qty' => 1, 'redirect' => 'checkout']) }}"
+                                class="mt-2 inline-block w-full border border-black bg-white text-black text-center py-2 px-4 rounded-lg hover:bg-black hover:text-white transition">
+                                Mua ngay
                             </a>
                         @else
                             <a href="{{ route('login') }}"

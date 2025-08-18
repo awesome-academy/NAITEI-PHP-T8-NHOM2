@@ -20,23 +20,37 @@ class CartController extends Controller
     }
 
     // Thêm sản phẩm vào giỏ hàng
-    public function add($productId)
+    public function add(Request $request, $id)
     {
-        $product = Product::findOrFail($productId);
+        $product = Product::findOrFail($id);
+
+        // qty truyền qua query ?qty=
+        $qty = max(1, (int) $request->input('qty', 1));
 
         $cartItem = Shopping_cart::where('user_id', Auth::id())
-            ->where('products_id', $productId)
+            ->where('products_id', $id)
             ->first();
 
         if ($cartItem) {
-            $cartItem->quantity += 1;
+            $cartItem->quantity += $qty;
             $cartItem->save();
         } else {
             Shopping_cart::create([
                 'user_id'     => Auth::id(),
-                'products_id' => $productId,
-                'quantity'    => 1,
+                'products_id' => $id,
+                'quantity'    => $qty,
             ]);
+        }
+
+        // nếu redirect=checkout thì đi thẳng tới checkout
+        $redirect = $request->query('redirect');
+        if ($redirect === 'checkout') {
+            return redirect()->route('checkout.index')
+                ->with('success', 'Đã thêm vào giỏ, chuyển tới thanh toán.');
+        }
+        if ($redirect === 'cart') {
+            return redirect()->route('cart.index')
+                ->with('success', 'Đã thêm vào giỏ hàng.');
         }
 
         return redirect()->back()->with('success', 'Sản phẩm đã được thêm vào giỏ hàng!');

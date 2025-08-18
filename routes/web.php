@@ -61,8 +61,10 @@ Route::middleware(['auth', AdminMiddleware::class])->prefix('admin')->name('admi
 // User Routes
 Route::middleware(['auth'])->prefix('user')->name('user.')->group(function () {
     Route::get('/products', [ProductController::class, 'index'])->name('products.index');
+    Route::get('/products/{product:slug}', [ProductController::class, 'show'])->name('products.show');
 });
 
+// Cart and Checkout Routes
 Route::middleware('auth')->group(function () {
     Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
     Route::get('/cart/add/{id}', [CartController::class, 'add'])->name('cart.add');
