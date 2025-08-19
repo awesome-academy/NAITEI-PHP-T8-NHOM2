@@ -5,6 +5,8 @@ namespace App\Http\Controllers\User;
 use App\Http\Controllers\Controller;
 use App\Models\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
+use App\Models\Category;
 
 class ProductController extends Controller
 {
@@ -12,17 +14,67 @@ class ProductController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
-    {
-        $products = Product::query()
-            ->active() // status = 1
-            ->select(['products_id','product_name','description','product_price','image_path','created_at','slug',])
-            ->latest() // created_at desc
-            ->paginate(10)
-            ->withQueryString();  
+    public function index(Request $request)
+{
+    $query = Product::query()
+        ->active()
+        ->select([
+            'products_id',
+            'product_name',
+            'description',
+            'product_price',
+            'image_path',
+            'created_at',
+            'slug',
+            'categories_id'
+        ]);
 
-        return view('user.products.index', compact('products'));
+    // Search theo tên
+    if ($search = $request->input('search')) {
+        $query->where('product_name', 'LIKE', '%' . $search . '%');
     }
+
+    // Filter theo category
+    if ($categoryId = $request->input('category')) {
+        $query->where('categories_id', $categoryId);
+    }
+
+    // Filter theo khoảng giá
+    if ($min = $request->input('min_price')) {
+        $query->where('product_price', '>=', $min);
+    }
+    if ($max = $request->input('max_price')) {
+        $query->where('product_price', '<=', $max);
+    }
+
+    // Sắp xếp
+    switch ($request->input('sort')) {
+        case 'price_asc':
+            $query->orderBy('product_price', 'asc');
+            break;
+        case 'price_desc':
+            $query->orderBy('product_price', 'desc');
+            break;
+        case 'name_asc':
+            $query->orderBy('product_name', 'asc');
+            break;
+        case 'name_desc':
+            $query->orderBy('product_name', 'desc');
+            break;
+        default: // latest
+            $query->latest();
+            break;
+    }
+
+    $products = $query->paginate(10)->withQueryString();
+
+    // Lấy categories để đổ ra filter
+    $categories = \App\Models\Category::select(['categories_id', 'category_name'])->get();
+
+    return view('user.products.index', compact('products','categories'));
+}
+
+
 
     /**
      * Show the form for creating a new resource.
