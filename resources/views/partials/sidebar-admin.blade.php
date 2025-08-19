@@ -20,7 +20,7 @@
             </li>
             <!-- Order Management -->
             <li class="mb-2">
-                <a href="#" class="block hover:bg-gray-700 p-2 rounded">Manage Orders</a>
+                <a href="{{ route('admin.orders.index') }}" class="block hover:bg-gray-700 p-2 rounded {{ request()->routeIs('admin.orders.*') ? 'bg-gray-900' : '' }}">Manage Orders</a>
             </li>
         </ul>
     </nav>
