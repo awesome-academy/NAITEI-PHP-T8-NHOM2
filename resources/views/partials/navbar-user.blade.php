@@ -19,11 +19,15 @@
 
             <!-- Search Bar -->
             <div class="flex items-center flex-grow justify-center px-4">
-                <div class="relative w-full max-w-md">
-                    <input type="text" name="search" placeholder="Search products..." class="w-full pl-8 pr-4 py-2 rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
-                    
-                </div>
+                <form action="{{ route('user.products.index') }}" method="GET" class="relative w-full max-w-md">
+                    <input type="text" name="search"
+                        value="{{ request('search') }}"
+                        placeholder="Search products..."
+                        class="w-full pl-8 pr-4 py-2 rounded-md border-gray-300 shadow-sm
+                                focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+                </form>
             </div>
+
 
             <!-- Right Side Navigation (Cart, Profile, Auth) -->
             <div class="hidden sm:flex sm:items-center sm:ml-6">
