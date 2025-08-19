@@ -14,6 +14,12 @@
                     <x-nav-link :href="route('user.products.index')" :active="request()->routeIs('user.products.index')">
                         {{ __('Products') }}
                     </x-nav-link>
+
+                    @auth
+                        <x-nav-link :href="route('orders.index')" :active="request()->routeIs('orders.*')">
+                            {{ __('Orders') }}
+                        </x-nav-link>
+                    @endauth
                 </div>
             </div>
 
@@ -53,6 +59,10 @@
                         <x-slot name="content">
                             <x-dropdown-link :href="route('profile.edit')">
                                 {{ __('Profile') }}
+                            </x-dropdown-link>
+
+                            <x-dropdown-link :href="route('orders.index')">
+                                {{ __('My Orders') }}
                             </x-dropdown-link>
 
                             <!-- Authentication -->

@@ -1,9 +1,28 @@
-<x-app-layout>
+<x-user-layout>
     <x-slot name="header">
-        Đơn hàng của tôi
+        <h2 class="font-semibold text-xl text-gray-800 leading-tight">Đơn hàng của tôi</h2>
     </x-slot>
 
     <div class="max-w-6xl mx-auto p-6 bg-white shadow rounded">
+
+    {{-- Filter --}}
+      <form method="GET" action="{{ route('orders.index') }}" class="mb-4 grid grid-cols-1 sm:grid-cols-5 gap-3">
+          <input name="search" value="{{ request('search') }}" placeholder="Tìm mã đơn…" class="border rounded px-3 py-2 sm:col-span-2">
+          <select name="status" class="border rounded px-3 py-2">
+              <option value="">Tất cả trạng thái</option>
+              @isset($statuses)
+                  @foreach($statuses as $st)
+                      <option value="{{ $st }}" @selected(request('status')===$st)>{{ ucfirst($st) }}</option>
+                  @endforeach
+              @endisset
+          </select>
+          <input type="date" name="date" value="{{ request('date') }}" class="border rounded px-3 py-2">
+          <div class="sm:col-span-5 flex gap-2">
+              <button class="px-4 py-2 bg-gray-900 text-white rounded">Lọc</button>
+              <a href="{{ route('orders.index') }}" class="px-4 py-2 border rounded">Hoàn tác</a>
+          </div>
+      </form>
+
         @if($orders->count() > 0)
             <table class="w-full border">
                 <thead>
@@ -47,4 +66,4 @@
             <p>Bạn chưa có đơn hàng nào.</p>
         @endif
     </div>
-</x-app-layout>
+</x-user-layout>

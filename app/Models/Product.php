@@ -14,10 +14,11 @@ class Product extends Model
 
     protected $table = 'products';
     protected $primaryKey = 'products_id'; // Assuming you have a primary key for products
-    protected $fillable = ['categories_id', 'product_name', 'description', 'product_price', 'stock_quantity', 'image_path', 'specifications','slug', 'status'];
+    protected $fillable = ['categories_id', 'product_name', 'description', 'product_price', 'stock_quantity', 'image_path', 'specifications', 'slug', 'status', 'rating_count', 'rating_avg'];
     protected $casts = [
-    'specifications' => 'array',
-    'status' => 'boolean',
+        'specifications' => 'array',
+        'status' => 'boolean',
+        'rating_avg' => 'decimal:2',
     ];
 
     protected $appends = ['image_url'];
