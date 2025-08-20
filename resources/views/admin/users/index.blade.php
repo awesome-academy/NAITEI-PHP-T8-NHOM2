@@ -21,9 +21,9 @@
                     @endif
 
                     <div class="flex justify-between items-center mb-6">
-                        <h1 class="text-2xl font-bold text-gray-800">Users</h1>
+                        <h1 class="text-2xl font-bold text-gray-800">{{ __('users.users') }}</h1>
                         <a href="{{ route('admin.users.create') }}" class="inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 focus:outline-none focus:border-gray-900 focus:ring ring-gray-300 disabled:opacity-25 transition ease-in-out duration-150">
-                            Create User
+                            {{ __('users.create_user') }}
                         </a>
                     </div>
 
@@ -31,11 +31,11 @@
                         <table class="w-full text-sm text-left text-gray-500">
                             <thead class="text-xs text-gray-700 uppercase bg-gray-50">
                                 <tr>
-                                    <th scope="col" class="px-6 py-3">Display Name</th>
-                                    <th scope="col" class="px-6 py-3">Username</th>
-                                    <th scope="col" class="px-6 py-3">Email</th>
-                                    <th scope="col" class="px-6 py-3">Role</th>
-                                    <th scope="col" class="px-6 py-3"><span class="sr-only">Actions</span></th>
+                                    <th scope="col" class="px-6 py-3">{{ __('users.display_name') }}</th>
+                                    <th scope="col" class="px-6 py-3">{{ __('users.username') }}</th>
+                                    <th scope="col" class="px-6 py-3">{{ __('users.email') }}</th>
+                                    <th scope="col" class="px-6 py-3">{{ __('users.role') }}</th>
+                                    <th scope="col" class="px-6 py-3"><span class="sr-only">{{ __('users.actions') }}</span></th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -54,18 +54,18 @@
                                             </span>
                                         </td>
                                         <td class="px-6 py-4 text-right">
-                                            <form action="{{ route('admin.users.destroy', $user) }}" method="POST" onsubmit="return confirm('Are you sure you want to delete this user?');">
-                                                <a href="{{ route('admin.users.edit', $user) }}" class="font-medium text-blue-600 hover:underline">Edit</a>
+                                            <form action="{{ route('admin.users.destroy', $user) }}" method="POST" onsubmit="return confirm('{{ __('users.delete_user_confirm') }}');">
+                                                <a href="{{ route('admin.users.edit', $user) }}" class="font-medium text-blue-600 hover:underline">{{ __('common.edit') }}</a>
 
                                                 @csrf
                                                 @method('DELETE')
-                                                <button type="submit" class="font-medium text-red-600 hover:underline ml-4">Delete</button>
+                                                <button type="submit" class="font-medium text-red-600 hover:underline ml-4">{{ __('common.delete') }}</button>
                                             </form>
                                         </td>
                                     </tr>
                                 @empty
                                     <tr class="bg-white border-b">
-                                        <td colspan="3" class="px-6 py-4 text-center text-gray-500">No users found.</td>
+                                        <td colspan="5" class="px-6 py-4 text-center text-gray-500">{{ __('users.no_users_found') }}</td>
                                     </tr>
                                 @endforelse
                             </tbody>

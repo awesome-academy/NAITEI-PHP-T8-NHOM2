@@ -20,6 +20,10 @@ use App\Http\Controllers\User\ProductController;
 use App\Http\Controllers\User\FeedbackController;
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\LanguageController;
+
+// Language switching routes
+Route::get('/language/{locale}', [LanguageController::class, 'switch'])->name('language.switch');
 
 Route::get('/', function () {
     return view('welcome');

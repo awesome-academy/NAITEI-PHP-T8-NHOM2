@@ -1,6 +1,6 @@
 <x-user-layout>
     <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">Sản phẩm</h2>
+        <h2 class="font-semibold text-xl text-gray-800 leading-tight">{{ __('products.products') }}</h2>
     </x-slot>
 
 <div x-data="{ openFilter: false }" class="max-w-7xl mx-auto pt-6 pb-0 px-4 sm:px-6 lg:px-8">
@@ -16,9 +16,9 @@
             </button>
 
             <p class="text-sm text-gray-600">
-                Hiển thị {{ $products->count() }} trong tổng số {{ $products->total() }} sản phẩm
+                {{ __('products.showing_products', ['count' => $products->count(), 'total' => $products->total()]) }}
                 @if(request()->hasAny(['search','category','min_price','max_price','sort']))
-                    (đã áp dụng bộ lọc)
+                    {{ __('products.filter_applied') }}
                 @endif
             </p>
         </div>
@@ -33,10 +33,10 @@
 
                 {{-- Danh mục --}}
                 <div>
-                    <label for="category" class="block text-sm font-medium text-gray-700 mb-1">Danh mục</label>
+                    <label for="category" class="block text-sm font-medium text-gray-700 mb-1">{{ __('products.category') }}</label>
                     <select name="category" id="category"
                             class="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500">
-                        <option value="">Tất cả</option>
+                        <option value="">{{ __('products.all') }}</option>
                         @foreach($categories as $category)
                             <option value="{{ $category->categories_id }}" {{ request('category') == $category->categories_id ? 'selected' : '' }}>
                                 {{ $category->category_name }}
@@ -47,28 +47,28 @@
 
                 {{-- Giá từ --}}
                 <div>
-                    <label class="block text-sm font-medium text-gray-700 mb-1">Giá từ</label>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">{{ __('products.price_from') }}</label>
                     <input type="number" name="min_price" value="{{ request('min_price') }}" min="0"
                            class="w-full px-3 py-2 border rounded-lg">
                 </div>
 
                 {{-- Giá đến --}}
                 <div>
-                    <label class="block text-sm font-medium text-gray-700 mb-1">Giá đến</label>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">{{ __('products.price_to') }}</label>
                     <input type="number" name="max_price" value="{{ request('max_price') }}" min="0"
                            class="w-full px-3 py-2 border rounded-lg">
                 </div>
 
                 {{-- Sắp xếp --}}
                 <div>
-                    <label for="sort" class="block text-sm font-medium text-gray-700 mb-1">Sắp xếp</label>
+                    <label for="sort" class="block text-sm font-medium text-gray-700 mb-1">{{ __('products.sort') }}</label>
                     <select name="sort" id="sort"
                             class="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500">
-                        <option value="latest" {{ request('sort') == 'latest' ? 'selected' : '' }}>Mới nhất</option>
-                        <option value="price_asc" {{ request('sort') == 'price_asc' ? 'selected' : '' }}>Giá thấp → cao</option>
-                        <option value="price_desc" {{ request('sort') == 'price_desc' ? 'selected' : '' }}>Giá cao → thấp</option>
-                        <option value="name_asc" {{ request('sort') == 'name_asc' ? 'selected' : '' }}>Tên A-Z</option>
-                        <option value="name_desc" {{ request('sort') == 'name_desc' ? 'selected' : '' }}>Tên Z-A</option>
+                        <option value="latest" {{ request('sort') == 'latest' ? 'selected' : '' }}>{{ __('products.sort_by_latest') }}</option>
+                        <option value="price_asc" {{ request('sort') == 'price_asc' ? 'selected' : '' }}>{{ __('products.sort_by_price_asc') }}</option>
+                        <option value="price_desc" {{ request('sort') == 'price_desc' ? 'selected' : '' }}>{{ __('products.sort_by_price_desc') }}</option>
+                        <option value="name_asc" {{ request('sort') == 'name_asc' ? 'selected' : '' }}>{{ __('products.sort_by_name_asc') }}</option>
+                        <option value="name_desc" {{ request('sort') == 'name_desc' ? 'selected' : '' }}>{{ __('products.sort_by_name_desc') }}</option>
                     </select>
                 </div>
 
@@ -76,11 +76,11 @@
                 <div class="sm:col-span-2 lg:col-span-4 flex gap-2">
                     <button type="submit"
                             class="flex-1 text-center bg-gray-800 text-white px-4 py-2 rounded-lg hover:bg-gray-700 transition">
-                        Áp dụng
+                        {{ __('products.apply') }}
                     </button>
                     <a href="{{ route('user.products.index') }}"
                        class="flex-1 text-center bg-gray-500 text-white px-4 py-2 rounded-lg hover:bg-gray-600 transition">
-                        Xóa
+                        {{ __('products.clear') }}
                     </a>
                 </div>
             </form>
@@ -125,23 +125,23 @@
                         @auth
                             <a href="{{ route('cart.add', ['id' => $p->products_id, 'qty' => 1]) }}"
                                class="mt-2 inline-block w-full border border-black bg-white text-black text-center py-2 px-4 rounded-lg hover:bg-black hover:text-white transition">
-                                Thêm vào giỏ
+                                {{ __('products.add_to_cart') }}
                             </a>
 
                             <a href="{{ route('cart.add', ['id' => $p->products_id, 'qty' => 1, 'redirect' => 'checkout']) }}"
                                 class="mt-2 inline-block w-full border border-black bg-white text-black text-center py-2 px-4 rounded-lg hover:bg-black hover:text-white transition">
-                                Mua ngay
+                                {{ __('products.buy_now') }}
                             </a>
                         @else
                             <a href="{{ route('login') }}"
                                class="mt-2 inline-block w-full border border-gray-400 bg-white text-gray-600 text-center py-2 px-4 rounded-lg hover:bg-gray-600 hover:text-white transition">
-                                Đăng nhập để mua
+                                {{ __('products.login_to_buy') }}
                             </a>
                         @endauth
                     </div>
                 </div>
             @empty
-                <p class="text-gray-600 col-span-full">Chưa có sản phẩm nào.</p>
+                <p class="text-gray-600 col-span-full">{{ __('products.no_products_available') }}</p>
             @endforelse
         </div>
 

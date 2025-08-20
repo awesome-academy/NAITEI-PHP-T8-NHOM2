@@ -7,7 +7,7 @@
            stroke-linejoin="round" stroke-width="2"
            d="M4 6h16M4 12h16M4 18h16"/></svg>
     </button>
-    <span class="text-xl font-bold">Dashboard</span>
+    <span class="text-xl font-bold">{{ __('common.dashboard') }}</span>
   </div>
   <div class="flex items-center space-x-4">
     <span class="text-gray-700">Xin chào, {{ Auth::user()->name }}</span>

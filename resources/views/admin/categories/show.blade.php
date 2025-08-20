@@ -18,34 +18,34 @@
                 <div class="p-6 sm:px-20 bg-white border-b border-gray-200">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
-                            <h3 class="text-lg font-medium text-gray-900">Category Details</h3>
+                            <h3 class="text-lg font-medium text-gray-900">{{ __('common.category_details') }}</h3>
                             <dl class="mt-2 text-sm text-gray-600 space-y-4">
                                 <div class="flex justify-between">
-                                    <dt class="font-medium">ID</dt>
+                                    <dt class="font-medium">{{ __('common.id') }}</dt>
                                     <dd class="text-gray-900">{{ $category->categories_id }}</dd>
                                 </div>
                                 <div class="flex justify-between">
-                                    <dt class="font-medium">Slug</dt>
+                                    <dt class="font-medium">{{ __('common.slug') }}</dt>
                                     <dd class="text-gray-900">{{ $category->slug }}</dd>
                                 </div>
                                 <div class="flex justify-between">
-                                    <dt class="font-medium">Sort Order</dt>
+                                    <dt class="font-medium">{{ __('common.sort_order') }}</dt>
                                     <dd class="text-gray-900">{{ $category->sort_order }}</dd>
                                 </div>
                                 <div class="flex justify-between">
-                                    <dt class="font-medium">Created At</dt>
+                                    <dt class="font-medium">{{ __('common.created_at') }}</dt>
                                     <dd class="text-gray-900">{{ $category->created_at->format('M d, Y') }}</dd>
                                 </div>
                                 <div class="flex justify-between">
-                                    <dt class="font-medium">Last Updated</dt>
+                                    <dt class="font-medium">{{ __('common.last_updated') }}</dt>
                                     <dd class="text-gray-900">{{ $category->updated_at->format('M d, Y') }}</dd>
                                 </div>
                             </dl>
                         </div>
                         <div>
-                            <h3 class="text-lg font-medium text-gray-900">Description</h3>
+                            <h3 class="text-lg font-medium text-gray-900">{{ __('common.description') }}</h3>
                             <div class="mt-2 text-sm text-gray-600">
-                                {{ $category->description ?? 'No description provided.' }}
+                                {{ $category->description ?? __('common.no_description') }}
                             </div>
                         </div>
                     </div>
@@ -56,10 +56,10 @@
                         <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
                         </svg>
-                        Back
+                        {{ __('common.back') }}
                     </a>
                     <a href="{{ route('admin.categories.edit', $category) }}" class="inline-flex items-center px-4 py-2 bg-yellow-400 border border-transparent rounded-md font-semibold text-xs text-gray-800 uppercase tracking-widest hover:bg-yellow-500 active:bg-yellow-600 focus:outline-none focus:border-yellow-700 focus:ring ring-yellow-300 disabled:opacity-25 transition ease-in-out duration-150">
-                        Edit Category
+                        {{ __('common.edit') }} {{ __('common.categories') }}
                     </a>
                 </div>
             </div>

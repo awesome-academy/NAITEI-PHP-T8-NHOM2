@@ -14,15 +14,15 @@
           @endif
 
           <div class="flex justify-between items-center mb-6">
-            <h1 class="text-2xl font-bold text-gray-800">Edit Product #{{ $product->products_id }}</h1>
-            <a href="{{ route('admin.products.index') }}" class="text-sm text-gray-600 hover:text-gray-900">← Back</a>
+            <h1 class="text-2xl font-bold text-gray-800">{{ __('products.edit_product') }} #{{ $product->products_id }}</h1>
+            <a href="{{ route('admin.products.index') }}" class="text-sm text-gray-600 hover:text-gray-900">{{ __('products.back') }}</a>
           </div>
 
           <form action="{{ route('admin.products.update', $product) }}" method="post" enctype="multipart/form-data" class="space-y-4">
             @csrf @method('PUT')
 
             <div>
-              <label class="block text-sm mb-1">Category</label>
+              <label class="block text-sm mb-1">{{ __('products.category') }}</label>
               <select name="categories_id" class="border rounded px-3 py-2 w-64" required>
                 @foreach($categories as $c)
                   <option value="{{ $c->categories_id }}" @selected(old('categories_id', $product->categories_id) == $c->categories_id)>
@@ -33,51 +33,51 @@
             </div>
 
             <div>
-              <label class="block text-sm mb-1">Name</label>
+              <label class="block text-sm mb-1">{{ __('products.product_name') }}</label>
               <input name="product_name" value="{{ old('product_name', $product->product_name) }}" class="border rounded px-3 py-2 w-full" required>
             </div>
 
             <div>
-              <label class="block text-sm mb-1">Slug</label>
+              <label class="block text-sm mb-1">{{ __('products.slug_label') }}</label>
               <input name="slug" value="{{ old('slug', $product->slug) }}" class="border rounded px-3 py-2 w-full">
             </div>
 
             <div>
-              <label class="block text-sm mb-1">Description</label>
+              <label class="block text-sm mb-1">{{ __('products.description') }}</label>
               <textarea name="description" rows="4" class="border rounded px-3 py-2 w-full">{{ old('description', $freeDesc ?? '') }}</textarea>
             </div>
 
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
               <div>
-                <label class="block text-sm mb-1">Price</label>
+                <label class="block text-sm mb-1">{{ __('products.price') }}</label>
                 <input type="number" step="1" min="0" name="product_price" value="{{ old('product_price', $product->product_price) }}" class="border rounded px-3 py-2 w-full number-noarrow" required>
               </div>
               <div>
-                <label class="block text-sm mb-1">Stock</label>
+                <label class="block text-sm mb-1">{{ __('products.stock') }}</label>
                 <input type="number" step="1" min="0" name="stock_quantity" value="{{ old('stock_quantity', $product->stock_quantity) }}" class="border rounded px-3 py-2 w-full number-noarrow" required>
               </div>
               <div>
-                <label class="block text-sm mb-1">Status</label>
+                <label class="block text-sm mb-1">{{ __('products.status') }}</label>
                 <select name="status" class="border rounded px-3 py-2 w-full">
-                  <option value="1" @selected(old('status', $product->status)==1)>Available</option>
-                  <option value="0" @selected(old('status', $product->status)==0)>Unavailable</option>
+                  <option value="1" @selected(old('status', $product->status)==1)>{{ __('products.available') }}</option>
+                  <option value="0" @selected(old('status', $product->status)==0)>{{ __('products.unavailable') }}</option>
                 </select>
               </div>
             </div>
 
             <div>
-              <label class="block text-sm mb-1">Image</label>
+              <label class="block text-sm mb-1">{{ __('products.image') }}</label>
               <input type="file" name="image" accept="image/*" class="border rounded px-3 py-2 w-full">
               <div class="mt-2">
                 <img
                   src="{{ $product->image_url ?: asset('images/placeholder.png') }}"
-                  alt="{{ $product->product_name ?: 'No image available' }}"
+                  alt="{{ $product->product_name ?: __('products.image_alt') }}"
                   style="max-height:120px">
               </div>
 
               <label class="inline-flex items-center gap-2 mt-2">
                 <input type="checkbox" name="remove_image" value="1" class="rounded" {{ old('remove_image') ? 'checked' : '' }}>
-                <span>Xóa ảnh hiện tại</span>
+                <span>{{ __('products.delete_current_image') }}</span>
               </label>
               @error('image') <p class="text-sm text-red-600 mt-1">{{ $message }}</p> @enderror
             </div>
@@ -94,11 +94,11 @@
                    )))),
                    selected: @js(array_values((array) old('spec_size', $specSize ?? [])))
                  }">
-              <label class="block text-sm mb-1">Size</label>
+              <label class="block text-sm mb-1">{{ __('products.size') }}</label>
 
               <button type="button" @click="open = !open"
                       class="w-full bg-white border border-gray-300 rounded px-3 py-2 flex items-center justify-between text-left text-gray-900 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-gray-200 focus:border-gray-400">
-                <span class="truncate" x-text="selected.length ? selected.join(', ') : 'Chọn size'"></span>
+                <span class="truncate" x-text="selected.length ? selected.join(', ') : '{{ __('products.fit_placeholder') }}'"></span>
                 <svg class="w-4 h-4 opacity-70" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.939l3.71-3.71a.75.75 0 111.06 1.061l-4.24 4.24a.75.75 0 01-1.06 0l-4.24-4.24a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
               </button>
 
@@ -120,14 +120,14 @@
             </div>
 
             <div>
-              <label class="block text-sm mb-1">Color (nhập nhiều, ngăn cách bởi dấu phẩy)</label>
+              <label class="block text-sm mb-1">{{ __('products.color') }} ({{ __('products.color_placeholder') }})</label>
               <input name="spec_color" value="{{ old('spec_color', $specColorStr ?? '') }}" class="border rounded px-3 py-2 w-full" placeholder="Đen, Trắng, Be...">
             </div>
 
             <div>
-              <label class="block text-sm mb-1">Fit (phom)</label>
+              <label class="block text-sm mb-1">{{ __('products.fit') }} (phom)</label>
               <select name="spec_fit" class="border rounded px-3 py-2 w-full" required>
-                <option value="" disabled {{ old('spec_fit', $specFit ?? '') ? '' : 'selected' }}>Chọn fit</option>
+                <option value="" disabled {{ old('spec_fit', $specFit ?? '') ? '' : 'selected' }}>{{ __('products.fit_placeholder') }}</option>
                 @foreach($fits as $fit)
                   <option value="{{ $fit }}" @selected(old('spec_fit', $specFit ?? '') === $fit)>{{ $fit }}</option>
                 @endforeach
@@ -135,9 +135,9 @@
             </div>
 
             <div>
-              <label class="block text-sm mb-1">Brand</label>
+              <label class="block text-sm mb-1">{{ __('products.brand') }}</label>
               <select name="spec_brand" class="border rounded px-3 py-2 w-full" required>
-                <option value="" disabled {{ old('spec_brand', $specBrand ?? '') ? '' : 'selected' }}>Chọn brand</option>
+                <option value="" disabled {{ old('spec_brand', $specBrand ?? '') ? '' : 'selected' }}>{{ __('products.brand_placeholder') }}</option>
                 @foreach($brands as $b)
                   <option value="{{ $b }}" @selected(old('spec_brand', $specBrand ?? '') === $b)>{{ $b }}</option>
                 @endforeach
@@ -145,9 +145,9 @@
             </div>
 
             <div>
-              <label class="block text-sm mb-1">Material (chất liệu)</label>
+              <label class="block text-sm mb-1">{{ __('products.material') }} (chất liệu)</label>
               <select name="spec_material" class="border rounded px-3 py-2 w-full" required>
-                <option value="" disabled {{ old('spec_material', $specMaterial ?? '') ? '' : 'selected' }}>Chọn chất liệu</option>
+                <option value="" disabled {{ old('spec_material', $specMaterial ?? '') ? '' : 'selected' }}>{{ __('products.material_placeholder') }}</option>
                 @foreach($materials as $m)
                   <option value="{{ $m }}" @selected(old('spec_material', $specMaterial ?? '') === $m)>{{ $m }}</option>
                 @endforeach
@@ -155,9 +155,9 @@
             </div>
 
             <div class="sm:col-span-2 lg:col-span-3">
-              <label class="block text-sm mb-1">Care (hướng dẫn bảo quản)</label>
+              <label class="block text-sm mb-1">{{ __('products.care') }} (hướng dẫn bảo quản)</label>
               <select name="spec_care" class="border rounded px-3 py-2 w-full" required>
-                <option value="" disabled {{ old('spec_care', $specCare ?? '') ? '' : 'selected' }}>Chọn hướng dẫn bảo quản</option>
+                <option value="" disabled {{ old('spec_care', $specCare ?? '') ? '' : 'selected' }}>{{ __('products.care_placeholder') }}</option>
                 @foreach($careOps as $c)
                   <option value="{{ $c }}" @selected(old('spec_care', $specCare ?? '') === $c)>{{ $c }}</option>
                 @endforeach
@@ -166,11 +166,11 @@
 
             <div class="flex gap-3">
               <button class="inline-flex items-center px-4 py-2 rounded-md font-semibold text-xs uppercase tracking-widest bg-gray-800 text-white hover:bg-gray-700">
-                Update
+                {{ __('products.update') }}
               </button>
               <a href="{{ route('admin.products.index') }}"
                  class="inline-flex items-center px-4 py-2 rounded-md font-semibold text-xs uppercase tracking-widest border border-gray-300 text-gray-700 hover:bg-gray-50">
-                Cancel
+                {{ __('products.cancel') }}
               </a>
             </div>
           </form>

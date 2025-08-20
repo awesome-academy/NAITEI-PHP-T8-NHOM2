@@ -12,12 +12,12 @@
                 <!-- Navigation Links with increased spacing -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-24 sm:flex">
                     <x-nav-link :href="route('user.products.index')" :active="request()->routeIs('user.products.index')">
-                        {{ __('Products') }}
+                        {{ __('common.products') }}
                     </x-nav-link>
 
                     @auth
                         <x-nav-link :href="route('orders.index')" :active="request()->routeIs('orders.*')">
-                            {{ __('Orders') }}
+                            {{ __('common.orders') }}
                         </x-nav-link>
                     @endauth
                 </div>
@@ -28,7 +28,7 @@
                 <form action="{{ route('user.products.index') }}" method="GET" class="relative w-full max-w-md">
                     <input type="text" name="search"
                         value="{{ request('search') }}"
-                        placeholder="Search products..."
+                        placeholder="{{ __('common.search_placeholder') }}"
                         class="w-full pl-8 pr-4 py-2 rounded-md border-gray-300 shadow-sm
                                 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
                 </form>
@@ -37,6 +37,8 @@
 
             <!-- Right Side Navigation (Cart, Profile, Auth) -->
             <div class="hidden sm:flex sm:items-center sm:ml-6">
+                                                            <x-language-switcher />
+
                 <!-- Cart Icon (Placeholder) -->
                 <a href="{{ route('cart.index') }}" class="p-2 text-gray-500 hover:text-gray-700 focus:outline-none focus:text-gray-700 transition duration-150 ease-in-out">
                     <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
@@ -58,11 +60,11 @@
 
                         <x-slot name="content">
                             <x-dropdown-link :href="route('profile.edit')">
-                                {{ __('Profile') }}
+                                {{ __('common.profile') }}
                             </x-dropdown-link>
 
                             <x-dropdown-link :href="route('orders.index')">
-                                {{ __('My Orders') }}
+                                {{ __('common.my_orders') }}
                             </x-dropdown-link>
 
                             <!-- Authentication -->
@@ -72,16 +74,16 @@
                                 <x-dropdown-link :href="route('logout')"
                                         onclick="event.preventDefault();
                                                     this.closest('form').submit();">
-                                    {{ __('Log Out') }}
+                                    {{ __('common.logout') }}
                                 </x-dropdown-link>
                             </form>
                         </x-slot>
                     </x-dropdown>
                 @else
-                    <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Log in</a>
+                    <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">{{ __('auth.login') }}</a>
 
                     @if (Route::has('register'))
-                        <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">Register</a>
+                        <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">{{ __('auth.register') }}r</a>
                     @endif
                 @endauth
             </div>

@@ -1,34 +1,34 @@
 <x-user-layout>
     <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">Thanh toán</h2>
+        <h2 class="font-semibold text-xl text-gray-800 leading-tight">{{ __('common.checkout') }}</h2>
     </x-slot>
 
     <div class="max-w-4xl mx-auto p-6 bg-white shadow rounded">
         <form action="{{ route('checkout.place') }}" method="POST">
             @csrf
-            <h2 class="text-lg font-bold mb-4">Thông tin giao hàng</h2>
+            <h2 class="text-lg font-bold mb-4">{{ __('common.shipping_information') }}</h2>
 
             <div class="mb-4">
-                <label class="block font-medium mb-1">Địa chỉ giao hàng</label>
+                <label class="block font-medium mb-1">{{ __('common.shipping_address') }}</label>
                 <input type="text" name="shipping_address" class="w-full border p-2 rounded" required>
             </div>
 
             <div class="mb-4">
-                <label class="block font-medium mb-1">Phương thức thanh toán</label>
+                <label class="block font-medium mb-1">{{ __('common.payment_method') }}</label>
                 <select name="payment_method" class="w-full border p-2 rounded" required>
-                    <option value="COD">Thanh toán khi nhận hàng (COD)</option>
-                    <option value="Bank">Chuyển khoản ngân hàng</option>
+                    <option value="COD">{{ __('common.payment_cod') }}</option>
+                    <option value="Bank">{{ __('common.payment_bank') }}</option>
                 </select>
             </div>
 
-            <h2 class="text-lg font-bold mb-4">Sản phẩm</h2>
+            <h2 class="text-lg font-bold mb-4">{{ __('products.products') }}</h2>
             <table class="w-full border mb-4">
                 <thead>
                     <tr class="bg-gray-100">
-                        <th class="p-2 border">Sản phẩm</th>
-                        <th class="p-2 border">Số lượng</th>
-                        <th class="p-2 border">Giá</th>
-                        <th class="p-2 border">Tổng</th>
+                        <th class="p-2 border">{{ __('products.product') }}</th>
+                        <th class="p-2 border">{{ __('products.quantity') }}</th>
+                        <th class="p-2 border">{{ __('products.price') }}</th>
+                        <th class="p-2 border">{{ __('common.total') }}</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -49,8 +49,8 @@
             </table>
 
             <div class="flex justify-between items-center">
-                <div class="text-lg font-bold">Tổng cộng: {{ number_format($total, 0, ',', '.') }} đ</div>
-                <button type="submit" class="checkout-confirm-btn">Xác nhận đặt hàng</button>
+                <div class="text-lg font-bold">{{ __('common.grand_total') }}: {{ number_format($total, 0, ',', '.') }} đ</div>
+                <button type="submit" class="checkout-confirm-btn">{{ __('common.confirm_order') }}</button>
             </div>
         </form>
     </div>
