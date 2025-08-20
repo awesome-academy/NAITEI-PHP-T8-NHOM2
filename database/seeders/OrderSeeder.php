@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Arr;
 use App\Models\Order;
 use App\Models\Order_items as OrderItem;
 use App\Models\User;
@@ -11,64 +12,91 @@ use Carbon\Carbon;
 
 class OrderSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     */
     public function run(): void
     {
-        // Get the test user and product
-        $user = User::where('email', 'test@gmail.com')->first();
-        $product = Product::find(1);
-
-        if (!$user) {
-            $this->command->error('User with email test@gmail.com not found!');
+        // Lấy 1 nhóm user role=user đã seed sẵn
+        $users = User::where('role', 'user')->inRandomOrder()->take(25)->get();
+        if ($users->isEmpty()) {
+            $this->command->error('No users found to create orders!');
             return;
         }
 
-        if (!$product) {
-            $this->command->error('Product with ID 1 not found!');
+        // Lấy toàn bộ sản phẩm đang active
+        $products = Product::active()->get();
+        if ($products->isEmpty()) {
+            $this->command->error('No active products found!');
             return;
         }
 
-        $statuses = [Order::STATUS_PENDING];
-        $paymentMethods = ['COD'];
+        // Pool trạng thái (thiên về COMPLETED để có feedback)
+        $statusPool = [
+            Order::STATUS_COMPLETED,
+            Order::STATUS_COMPLETED,
+            Order::STATUS_SHIPPING,
+            Order::STATUS_PROCESSING,
+            Order::STATUS_PENDING,
+        ];
+        $paymentMethods = ['COD', 'Bank'];
 
-        // Create 15 sample orders
-        for ($i = 1; $i <= 15; $i++) {
-            $quantity = rand(1, 5);
-            $price = $product->product_price; 
-            $subtotal = $price * $quantity;
-            
-            $order = Order::create([
-                'user_id' => $user->id,
-                'total_amount' => $subtotal,
-                'status' => $statuses[array_rand($statuses)],
-                'payment_method' => $paymentMethods[array_rand($paymentMethods)],
-                'shipping_address' => $this->generateRandomAddress(),
-                'order_date' => Carbon::now()->subDays(rand(1, 90))->subHours(rand(0, 23))->subMinutes(rand(0, 59)),
-                'delivery_date' => rand(0, 1) ? Carbon::now()->addDays(rand(1, 14)) : null,
-                'created_at' => Carbon::now()->subDays(rand(1, 90)),
-                'updated_at' => Carbon::now()->subDays(rand(0, 30)),
-            ]);
+        foreach ($users as $user) {
+            // Mỗi user 2–5 đơn
+            $orderCount = rand(2, 5);
 
-            // Create order item
-            OrderItem::create([
-                'orders_id' => $order->orders_id,
-                'products_id' => $product->products_id,
-                'quantity' => $quantity,
-                'price' => $price,
-                'sub_total' => $subtotal,
-            ]);
+            for ($i = 0; $i < $orderCount; $i++) {
+                $status    = Arr::random($statusPool);
+                $orderDate = Carbon::now()
+                    ->subDays(rand(1, 60))
+                    ->subHours(rand(0, 23))
+                    ->subMinutes(rand(0, 59));
 
-            $this->command->info("Created order #{$order->orders_id} with {$quantity} items");
+                // Tạo đơn rỗng trước, lát nữa cộng total_amount
+                $order = Order::create([
+                    'user_id'          => $user->id,
+                    'total_amount'     => 0,
+                    'status'           => $status,
+                    'payment_method'   => Arr::random($paymentMethods),
+                    'shipping_address' => $this->generateRandomAddress(),
+                    'order_date'       => $orderDate,
+                    'delivery_date'    => $status === Order::STATUS_COMPLETED
+                        ? (clone $orderDate)->addDays(rand(1, 7))
+                        : null,
+                ]);
+
+                // -------- 1–3 item/đơn (chuẩn hóa kiểu trả về) --------
+                $pickCount = min(rand(1, 3), $products->count());
+                $selected  = $products->random($pickCount);
+
+                // random(1) => Model; random(n>1) => Collection
+                $items = $selected instanceof \Illuminate\Support\Collection
+                    ? $selected
+                    : collect([$selected]);
+
+                $total = 0;
+                foreach ($items as $p) {
+                    $qty   = rand(1, 3);
+                    $price = (float) $p->product_price;
+                    $sub   = $qty * $price;
+
+                    OrderItem::create([
+                        'orders_id'   => $order->orders_id,
+                        'products_id' => $p->products_id,
+                        'quantity'    => $qty,
+                        'price'       => $price,
+                        'sub_total'   => $sub,
+                    ]);
+
+                    $total += $sub;
+                }
+
+                $order->update(['total_amount' => $total]);
+
+                $this->command->info("User {$user->id} -> order #{$order->orders_id} ({$status}) - items: {$order->orderItems()->count()}");
+            }
         }
 
         $this->command->info('Order seeding completed successfully!');
     }
 
-    /**
-     * Generate a random shipping address
-     */
     private function generateRandomAddress(): string
     {
         $addresses = [
@@ -84,6 +112,6 @@ class OrderSeeder extends Seeder
             '741 Spruce Street, San Jose, CA 95101',
         ];
 
-        return $addresses[array_rand($addresses)];
+        return Arr::random($addresses);
     }
 }

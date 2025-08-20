@@ -17,6 +17,7 @@ use App\Http\Controllers\Admin\OrderController as AdminOrderController;
 
 // User Controllers
 use App\Http\Controllers\User\ProductController;
+use App\Http\Controllers\User\FeedbackController;
 
 use App\Http\Controllers\ProfileController;
 
@@ -67,6 +68,10 @@ Route::middleware(['auth', AdminMiddleware::class])->prefix('admin')->name('admi
 Route::middleware(['auth'])->prefix('user')->name('user.')->group(function () {
     Route::get('/products', [ProductController::class, 'index'])->name('products.index');
     Route::get('/products/{product:slug}', [ProductController::class, 'show'])->name('products.show');
+    // reviews
+    Route::post('/products/{product:slug}/feedbacks',                             [FeedbackController::class,'store'])->name('products.feedbacks.store');
+    Route::match(['put','patch'],'/products/{product:slug}/feedbacks/{feedback}', [FeedbackController::class,'update'])->name('products.feedbacks.update');
+    Route::delete('/products/{product:slug}/feedbacks/{feedback}',                [FeedbackController::class,'destroy'])->name('products.feedbacks.destroy');
 });
 
 // Cart and Checkout Routes

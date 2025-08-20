@@ -4,9 +4,14 @@ namespace App\Http\Controllers\User;
 
 use App\Http\Controllers\Controller;
 use App\Models\Product;
-use Illuminate\Http\Request;
-use Illuminate\Support\Str;
+use App\Models\Feedback;
 use App\Models\Category;
+
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
+
 
 class ProductController extends Controller
 {
@@ -114,9 +119,55 @@ class ProductController extends Controller
         $material= $spec['material'] ?? null;
         $care    = $spec['care']     ?? null;
 
+        // ------Feedback-------
+        $productId = $product->products_id;
+
+        // filter theo số sao (?stars=1..5)
+        $stars = (int) request('stars', 0);
+        if ($stars < 1 || $stars > 5) $stars = 0;
+
+        // danh sách feedback hiển thị (paginate 10, giữ query string)
+        $reviews = Feedback::with('user')
+            ->where('products_id', $productId)
+            ->where('is_hidden', false)
+            ->when($stars > 0, fn($q) => $q->where('rating', $stars))
+            ->orderByDesc('created_at')
+            ->paginate(10)
+            ->withQueryString();
+
+        // breakdown đếm theo sao để render filter
+        $breakdown = Feedback::where('products_id', $productId)
+            ->where('is_hidden', false)
+            ->selectRaw('rating, COUNT(*) as c')
+            ->groupBy('rating')
+            ->pluck('c', 'rating'); // [5=>N,4=>M,...]
+
+        // xác định quyền hiển thị form create/update
+        $userId = Auth::id();
+        $hasCompletedOrder = false;
+        $userFeedback = null;
+        $canReview = false;
+
+        if ($userId) {
+            $hasCompletedOrder = DB::table('orders')
+                ->join('order_items','orders.orders_id','=','order_items.orders_id')
+                ->where('orders.user_id', $userId)
+                ->where('order_items.products_id', $productId)
+                ->whereRaw('LOWER(orders.status) = ?', ['completed'])
+                ->exists();
+
+            $userFeedback = Feedback::where('user_id', $userId)
+                ->where('products_id', $productId)
+                ->first();
+
+            $canReview = $hasCompletedOrder && !$userFeedback;
+        }
+
         return view('user.products.show', compact(
-            'product','freeDesc','sizes','colors','fit','brand','material','care'
+            'product','freeDesc','sizes','colors','fit','brand','material','care',
+            'reviews','breakdown','stars','canReview','userFeedback','hasCompletedOrder'
         ));
+
     }
 
     private function parseSpecFromDescription(?string $desc): array

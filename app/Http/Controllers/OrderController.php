@@ -8,15 +8,32 @@ use Illuminate\Support\Facades\Auth;
 
 class OrderController extends Controller
 {
-    //
-    public function index()
+    
+    public function index(Request $request)
     {
-        $orders = Order::with('orderItems.product')
+        $query = Order::with('orderItems.product');
+        
+        if ($s = trim((string)$request->get('search'))) {
+                $query->search($s);                 // search theo orders_id
+            }
+
+        if ($st = $request->get('status')) {
+            $query->byStatus($st);
+            }
+
+        if ($date = $request->get('date')) {
+            $query->whereDate('order_date', $date);
+        }
+
+        $orders = $query
             ->where('user_id', Auth::id())
             ->orderBy('order_date', 'desc')
-            ->get();
+            ->paginate(10)
+            ->withQueryString();
 
-        return view('orders.index', compact('orders'));
+        $statuses = Order::getAllStatuses();
+
+        return view('orders.index', compact('orders', 'statuses'));
     }
 
     // Xem chi tiết đơn hàng
