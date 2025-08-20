@@ -11,10 +11,10 @@
           @endif
 
           <div class="flex justify-between items-center mb-6">
-            <h1 class="text-2xl font-bold text-gray-800">Trashed Products</h1>
+            <h1 class="text-2xl font-bold text-gray-800">{{ __('products.trashed_products') }}</h1>
             <a href="{{ route('admin.products.index') }}"
                class="inline-flex items-center px-4 py-2 border-2 border-gray-800 bg-white text-gray-800 rounded-md font-semibold text-xs uppercase tracking-widest hover:bg-gray-800 hover:text-white transition">
-              ← Back to Products
+              {{ __('products.back_to_products') }}
             </a>
           </div>
 
@@ -22,10 +22,10 @@
             <table class="w-full text-sm text-left text-gray-500">
               <thead class="text-xs text-gray-700 uppercase bg-gray-50">
                 <tr>
-                  <th class="px-6 py-3">ID</th>
-                  <th class="px-6 py-3">Name</th>
-                  <th class="px-6 py-3">Category</th>
-                  <th class="px-6 py-3">Deleted At</th>
+                  <th class="px-6 py-3">{{ __('common.id') }}</th>
+                  <th class="px-6 py-3">{{ __('products.product_name') }}</th>
+                  <th class="px-6 py-3">{{ __('products.category') }}</th>
+                  <th class="px-6 py-3">{{ __('common.deleted_at') }}</th>
                   <th class="px-6 py-3 text-right"><span class="sr-only">Actions</span></th>
                 </tr>
               </thead>
@@ -40,15 +40,15 @@
                     <td class="px-6 py-4">{{ optional($p->deleted_at)->format('Y-m-d H:i') }}</td>
                     <td class="px-6 py-4 text-right">
                       <form action="{{ route('admin.products.restore', $p) }}" method="POST"
-                            onsubmit="return confirm('Khôi phục sản phẩm này?');" class="inline">
+                            onsubmit="return confirm('{{ __('products.restore_product_confirm') }}');" class="inline">
                         @csrf
-                        <button type="submit" class="font-medium text-blue-600 hover:underline">Restore</button>
+                        <button type="submit" class="font-medium text-blue-600 hover:underline">{{ __('products.restore') }}</button>
                       </form>
                     </td>
                   </tr>
                 @empty
                   <tr class="bg-white border-b">
-                    <td colspan="5" class="px-6 py-4 text-center text-gray-500">No trashed products.</td>
+                    <td colspan="5" class="px-6 py-4 text-center text-gray-500">{{ __('products.no_trashed_products') }}</td>
                   </tr>
                 @endforelse
               </tbody>

@@ -11,9 +11,9 @@
                     @endif
 
                     <div class="flex justify-between items-center mb-6">
-                        <h1 class="text-2xl font-bold text-gray-800">Trashed Categories</h1>
+                        <h1 class="text-2xl font-bold text-gray-800">{{ __('common.trashed_categories') }}</h1>
                         <a href="{{ route('admin.categories.index') }}" class="inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 focus:outline-none focus:border-gray-900 focus:ring ring-gray-300 disabled:opacity-25 transition ease-in-out duration-150">
-                            Back to Categories
+                            {{ __('common.back_to_categories') }}
                         </a>
                     </div>
 
@@ -22,9 +22,9 @@
                             <thead class="text-xs text-gray-700 uppercase bg-gray-50">
                                 <tr>
                                     <th scope="col" class="px-6 py-3">ID</th>
-                                    <th scope="col" class="px-6 py-3">Category Name</th>
-                                    <th scope="col" class="px-6 py-3">Slug</th>
-                                    <th scope="col" class="px-6 py-3">Deleted At</th>
+                                    <th scope="col" class="px-6 py-3">{{ __('common.category_name') }}</th>
+                                    <th scope="col" class="px-6 py-3">{{ __('common.slug') }}</th>
+                                    <th scope="col" class="px-6 py-3">{{ __('common.deleted_at') }}</th>
                                     <th scope="col" class="px-6 py-3"><span class="sr-only">Actions</span></th>
                                 </tr>
                             </thead>
@@ -40,13 +40,13 @@
                                         <td class="px-6 py-4 text-right">
                                             <form action="{{ route('admin.categories.restore', $category) }}" method="POST" onsubmit="return confirm('Are you sure you want to restore this category?');">
                                                 @csrf
-                                                <button type="submit" class="font-medium text-blue-600 hover:underline">Restore</button>
+                                                <button type="submit" class="font-medium text-blue-600 hover:underline">{{ __('common.restore_category') }}</button>
                                             </form>
                                         </td>
                                     </tr>
                                 @empty
                                     <tr class="bg-white border-b">
-                                        <td colspan="5" class="px-6 py-4 text-center text-gray-500">No trashed categories found.</td>
+                                        <td colspan="5" class="px-6 py-4 text-center text-gray-500">{{ __('common.no_trashed_categories_found') }}</td>
                                     </tr>
                                 @endforelse
                             </tbody>

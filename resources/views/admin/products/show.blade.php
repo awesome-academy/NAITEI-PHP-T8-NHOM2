@@ -40,39 +40,39 @@
 
               {{-- Product Details --}}
               <section>
-                <h3 class="text-xl font-semibold text-gray-900 mb-4">Product Details</h3>
+                <h3 class="text-xl font-semibold text-gray-900 mb-4">{{ __('products.product_details') }}</h3>
                 <dl class="text-base text-gray-700 leading-7 space-y-2">
                   <div class="flex justify-between">
-                    <dt class="font-medium text-gray-600">Category</dt>
+                    <dt class="font-medium text-gray-600">{{ __('products.category') }}</dt>
                     <dd class="text-gray-900">{{ $product->category->category_name ?? '-' }}</dd>
                   </div>
                   <div class="flex justify-between">
-                    <dt class="font-medium text-gray-600">Slug</dt>
+                    <dt class="font-medium text-gray-600">{{ __('products.slug_label') }}</dt>
                     <dd class="text-gray-900 break-all">{{ $product->slug }}</dd>
                   </div>
                   <div class="flex justify-between">
-                    <dt class="font-medium text-gray-600">Price</dt>
+                    <dt class="font-medium text-gray-600">{{ __('products.price') }}</dt>
                     <dd class="text-gray-900">{{ number_format($product->product_price, 0, ',', '.') }}</dd>
                   </div>
                   <div class="flex justify-between">
-                    <dt class="font-medium text-gray-600">Stock</dt>
+                    <dt class="font-medium text-gray-600">{{ __('products.stock') }}</dt>
                     <dd class="text-gray-900">{{ $product->stock_quantity }}</dd>
                   </div>
                   <div class="flex justify-between">
-                    <dt class="font-medium text-gray-600">Status</dt>
+                    <dt class="font-medium text-gray-600">{{ __('products.status') }}</dt>
                     <dd>
                       <span class="px-2.5 py-0.5 text-xs font-semibold rounded-full
                         {{ $product->status ? 'bg-green-100 text-green-800' : 'bg-gray-200 text-gray-800' }}">
-                        {{ $product->status ? 'Available' : 'Unavailable' }}
+                        {{ $product->status ? __('products.available') : __('products.unavailable') }}
                       </span>
                     </dd>
                   </div>
                   <div class="flex justify-between">
-                    <dt class="font-medium text-gray-600">Created At</dt>
+                    <dt class="font-medium text-gray-600">{{ __('products.created_at') }}</dt>
                     <dd class="text-gray-900">{{ $product->created_at?->format('Y-m-d H:i') }}</dd>
                   </div>
                   <div class="flex justify-between">
-                    <dt class="font-medium text-gray-600">Updated At</dt>
+                    <dt class="font-medium text-gray-600">{{ __('products.updated_at') }}</dt>
                     <dd class="text-gray-900">{{ $product->updated_at?->format('Y-m-d H:i') }}</dd>
                   </div>
                 </dl>
@@ -80,7 +80,7 @@
 
               {{-- Image --}}
               <section>
-                <h3 class="text-xl font-semibold text-gray-900 mb-4">Image</h3>
+                <h3 class="text-xl font-semibold text-gray-900 mb-4">{{ __('products.image') }}</h3>
                 @if ($product->image_path)
                   <img
                     class="w-full max-h-[360px] rounded-md border bg-gray-50 object-contain"
@@ -91,14 +91,14 @@
                   >
                 @else
                   <div class="h-64 grid place-items-center border rounded-md text-gray-400 bg-gray-50">
-                    No image
+                    {{ __('products.no_image_available') }}
                   </div>
                 @endif
               </section>
 
               {{-- Specifications --}}
               <section>
-                <h3 class="text-xl font-semibold text-gray-900 mb-4">Specifications</h3>
+                <h3 class="text-xl font-semibold text-gray-900 mb-4">{{ __('products.specifications') }}</h3>
                 <dl class="text-base text-gray-700 leading-7 space-y-2">
                   <div class="flex justify-between">
                     <dt class="font-medium text-gray-600">Brand</dt>
@@ -133,7 +133,7 @@
 
               {{-- Description --}}
               <section>
-                <h3 class="text-xl font-semibold text-gray-900 mb-4">Description</h3>
+                <h3 class="text-xl font-semibold text-gray-900 mb-4">{{ __('products.description') }}</h3>
                 <div class="text-base text-gray-800 leading-7">
                   {!! nl2br(e($description)) ?: '-' !!}
                 </div>
@@ -151,7 +151,7 @@
             <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
             </svg>
-            Back
+            {{ __('products.back') }}
           </a>
 
           <a href="{{ route('admin.products.edit', $product) }}"
@@ -159,7 +159,7 @@
                     font-semibold text-xs text-gray-800 uppercase tracking-widest hover:bg-yellow-500
                     active:bg-yellow-600 focus:outline-none focus:border-yellow-700 focus:ring ring-yellow-300
                     transition">
-            Edit Product
+            {{ __('products.edit_product') }}
           </a>
         </div>
 

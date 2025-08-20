@@ -13,26 +13,26 @@
 
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
-                            <h3 class="text-lg font-medium text-gray-900">User Information</h3>
+                            <h3 class="text-lg font-medium text-gray-900">{{ __('users.user_information')}}</h3>
                             <dl class="mt-2 text-sm text-gray-600 space-y-2">
                                 <div class="py-2 sm:grid sm:grid-cols-3 sm:gap-4">
-                                    <dt class="font-medium">Username</dt>
+                                    <dt class="font-medium">{{ __('users.username')}}</dt>
                                     <dd class="mt-1 sm:mt-0 sm:col-span-2">{{ $user->username }}</dd>
                                 </div>
                                 <div class="py-2 sm:grid sm:grid-cols-3 sm:gap-4">
-                                    <dt class="font-medium">Full Name</dt>
+                                    <dt class="font-medium">{{ __('users.full_name')}}</dt>
                                     <dd class="mt-1 sm:mt-0 sm:col-span-2">{{ $user->first_name }} {{ $user->last_name }}</dd>
                                 </div>
                                 <div class="py-2 sm:grid sm:grid-cols-3 sm:gap-4">
-                                    <dt class="font-medium">Display Name</dt>
+                                    <dt class="font-medium">{{ __('users.display_name')}}</dt>
                                     <dd class="mt-1 sm:mt-0 sm:col-span-2">{{ $user->name }}</dd>
                                 </div>
                                 <div class="py-2 sm:grid sm:grid-cols-3 sm:gap-4">
-                                    <dt class="font-medium">Email Address</dt>
+                                    <dt class="font-medium">{{ __('users.email')}}</dt>
                                     <dd class="mt-1 sm:mt-0 sm:col-span-2">{{ $user->email }}</dd>
                                 </div>
                                 <div class="py-2 sm:grid sm:grid-cols-3 sm:gap-4">
-                                    <dt class="font-medium">Role</dt>
+                                    <dt class="font-medium">{{ __('users.role')}}</dt>
                                     <dd class="mt-1 sm:mt-0 sm:col-span-2">
                                         <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full {{ $user->role === 'admin' ? 'bg-red-100 text-red-800' : 'bg-green-100 text-green-800' }}">
                                             {{ ucfirst($user->role) }}
@@ -40,7 +40,7 @@
                                     </dd>
                                 </div>
                                 <div class="py-2 sm:grid sm:grid-cols-3 sm:gap-4">
-                                    <dt class="font-medium">Member Since</dt>
+                                    <dt class="font-medium">{{ __('users.member_since')}}</dt>
                                     <dd class="mt-1 sm:mt-0 sm:col-span-2">{{ $user->created_at->format('M d, Y') }}</dd>
                                 </div>
                             </dl>
@@ -49,7 +49,7 @@
 
                     <div class="mt-6">
                         <a href="{{ route('admin.users.edit', $user) }}" class="inline-flex items-center px-4 py-2 bg-yellow-400 border border-transparent rounded-md font-semibold text-xs text-gray-800 uppercase tracking-widest hover:bg-yellow-500 active:bg-yellow-600 focus:outline-none focus:border-yellow-700 focus:ring ring-yellow-300 disabled:opacity-25 transition ease-in-out duration-150">
-                            Edit User
+                            {{ __('common.edit') }} {{ __('users.user') }}
                         </a>
                     </div>
                 </div>

@@ -21,13 +21,13 @@
                     @endif
 
                     <div class="flex justify-between items-center mb-6">
-                        <h1 class="text-2xl font-bold text-gray-800">Categories</h1>
+                        <h1 class="text-2xl font-bold text-gray-800">{{ __('common.categories') }}</h1>
                         <div>
                             <a href="{{ route('admin.categories.trashed') }}" class="text-sm text-gray-600 hover:text-gray-900">
-                                Trashed Categories&nbsp;&nbsp;&nbsp;
+                                {{ __('common.trashed_categories') }}&nbsp;&nbsp;&nbsp;
                             </a>
                             <a href="{{ route('admin.categories.create') }}" class="inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 focus:outline-none focus:border-gray-900 focus:ring ring-gray-300 disabled:opacity-25 transition ease-in-out duration-150">
-                                Create Category
+                                {{ __('common.create') }} {{ __('common.categories') }}
                             </a>
                         </div>
                     </div>
@@ -37,9 +37,9 @@
                             <thead class="text-xs text-gray-700 uppercase bg-gray-50">
                                 <tr>
                                     <th scope="col" class="px-6 py-3">ID</th>
-                                    <th scope="col" class="px-6 py-3">Category Name</th>
-                                    <th scope="col" class="px-6 py-3">Slug</th>
-                                    <th scope="col" class="px-6 py-3">Sort Order</th>
+                                    <th scope="col" class="px-6 py-3">{{ __('common.category_name') }}</th>
+                                    <th scope="col" class="px-6 py-3">{{ __('common.slug') }}</th>
+                                    <th scope="col" class="px-6 py-3">{{ __('common.sort_order') }}</th>
                                     <th scope="col" class="px-6 py-3"><span class="sr-only">Actions</span></th>
                                 </tr>
                             </thead>
@@ -56,17 +56,17 @@
                                         <td class="px-6 py-4">{{ $category->sort_order }}</td>
                                         <td class="px-6 py-4 text-right">
                                             <form action="{{ route('admin.categories.destroy', $category) }}" method="POST" onsubmit="return confirm('Are you sure you want to delete this category?');">
-                                                <a href="{{ route('admin.categories.edit', $category) }}" class="font-medium text-blue-600 hover:underline">Edit</a>
+                                                <a href="{{ route('admin.categories.edit', $category) }}" class="font-medium text-blue-600 hover:underline">{{ __('common.edit') }}</a>
 
                                                 @csrf
                                                 @method('DELETE')
-                                                <button type="submit" class="font-medium text-red-600 hover:underline ml-4">Delete</button>
+                                                <button type="submit" class="font-medium text-red-600 hover:underline ml-4">{{ __('common.delete') }}</button>
                                             </form>
                                         </td>
                                     </tr>
                                 @empty
                                     <tr class="bg-white border-b">
-                                        <td colspan="5" class="px-6 py-4 text-center text-gray-500">No categories found.</td>
+                                        <td colspan="5" class="px-6 py-4 text-center text-gray-500">{{ __('common.no_categories_found') }}</td>
                                     </tr>
                                 @endforelse
                             </tbody>

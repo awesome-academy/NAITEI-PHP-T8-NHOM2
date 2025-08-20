@@ -1,7 +1,7 @@
 <x-user-layout>
   <x-slot name="header">
     <nav class="text-sm text-gray-500">
-      <a href="{{ route('user.products.index') }}" class="hover:text-gray-800">Sản phẩm</a>
+      <a href="{{ route('user.products.index') }}" class="hover:text-gray-800">{{ __('products.products') }}</a>
       <span class="mx-2">/</span>
       <span class="text-gray-900">{{ $product->product_name }}</span>
     </nav>
@@ -34,19 +34,19 @@
             {{ number_format((float)$product->product_price, 0, ',', '.') }} đ
           </div>
           @if($product->stock_quantity > 0)
-            <span class="text-sm text-green-600">Còn {{ $product->stock_quantity }} sp</span>
+            <span class="text-sm text-green-600">{{ __('products.stock_left', ['count' => $product->stock_quantity]) }}</span>
           @else
-            <span class="text-sm text-red-600">Hết hàng</span>
+            <span class="text-sm text-red-600">{{ __('products.unavailable') }}</span>
           @endif
         </div>
 
         <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-2 text-sm">
-          <div>Danh mục: <span class="font-medium">{{ $product->category?->category_name }}</span></div>
+          <div>{{ __('products.category') }}: <span class="font-medium">{{ $product->category?->category_name }}</span></div>
           @if(!empty($brand))    <div>Brand:    <span class="font-medium">{{ $brand }}</span></div>@endif
           @if(!empty($fit))      <div>Phom:     <span class="font-medium">{{ $fit }}</span></div>@endif
           @if(!empty($material)) <div>Chất liệu: <span class="font-medium">{{ $material }}</span></div>@endif
-          @if(!empty($sizes))    <div>Size:     <span class="font-medium">{{ $sizes }}</span></div>@endif
-          @if(!empty($colors))   <div>Màu:      <span class="font-medium">{{ $colors }}</span></div>@endif
+          @if(!empty($sizes))    <div>{{ __('products.size') }}:     <span class="font-medium">{{ $sizes }}</span></div>@endif
+          @if(!empty($colors))   <div>{{ __('products.color') }}:      <span class="font-medium">{{ $colors }}</span></div>@endif
         </div>
 
         @if(!empty($freeDesc))
@@ -57,7 +57,7 @@
 
         {{-- Quantity + buttons --}}
         <div class="mt-8">
-          <label class="block text-sm mb-1 text-gray-700">Số lượng</label>
+          <label class="block text-sm mb-1 text-gray-700">{{ __('products.quantity') }}</label>
           <div class="flex items-center gap-3">
             <div class="flex items-center border rounded-lg overflow-hidden">
               <button id="qty-minus" type="button" class="px-3 py-2 hover:bg-gray-50">−</button>
@@ -70,18 +70,18 @@
               <a id="btn-add"
                  href="{{ route('cart.add', ['id' => $product->products_id, 'qty' => 1, 'redirect' => 'cart']) }}"
                  class="inline-flex items-center px-5 py-3 rounded-xl border border-gray-900 text-gray-900 hover:bg-gray-900 hover:text-white">
-                Thêm vào giỏ
+                {{ __('products.add_to_cart') }}
               </a>
 
               <a id="btn-buy"
                  href="{{ route('cart.add', ['id' => $product->products_id, 'qty' => 1, 'redirect' => 'checkout']) }}"
                  class="inline-flex items-center px-5 py-3 rounded-xl border border-gray-900 text-gray-900 hover:bg-gray-900 hover:text-white">
-                Mua ngay
+                {{ __('products.buy_now') }}
               </a>
             @else
               <a href="{{ route('login') }}"
                  class="inline-flex items-center px-5 py-3 rounded-xl bg-gray-900 text-white hover:bg-gray-800">
-                Đăng nhập để mua
+                {{ __('products.login_to_buy') }}
               </a>
             @endauth
           </div>
@@ -97,7 +97,7 @@
             <div class="flex items-center gap-4">
               <x-star-rating :value="$product->rating_avg" :size="4" />
               <div class="text-sm text-gray-600">
-                <div><strong>{{ $product->rating_count }}</strong> lượt đánh giá</div>
+                <div><strong>{{ $product->rating_count }}</strong> {{ __('products.reviews_count', ['count' => $product->rating_count]) }}</div>
                 <div class="flex flex-wrap items-center gap-2 mt-2">
                   @for($s=5;$s>=1;$s--)
                     @php $cnt = (int) ($breakdown[$s] ?? 0); @endphp
@@ -108,7 +108,7 @@
                   @endfor
                   <a href="{{ route('user.products.show', ['product'=>$product->slug]) }}"
                     class="text-xs px-2 py-1 rounded border {{ request('stars') ? 'bg-gray-50 border-gray-200' : 'bg-yellow-100 border-yellow-300' }}">
-                    Tất cả
+                    {{ __('products.all') }}
                   </a>
                 </div>
               </div>
@@ -129,63 +129,63 @@
           <div class="bg-white p-4 rounded-xl shadow">
             @auth
               @if ($canReview)
-                <h3 class="font-semibold mb-2">Viết đánh giá của bạn</h3>
+                <h3 class="font-semibold mb-2">{{ __('products.write_your_review') }}</h3>
                 <form method="POST" action="{{ route('user.products.feedbacks.store', $product->slug) }}" class="space-y-3">
                   @csrf
                   <div>
-                    <label class="text-sm">Số sao</label>
+                    <label class="text-sm">{{ __('products.rating') }}</label>
                     <input type="number" name="rating" min="1" max="5" value="5" class="border rounded p-2 w-24">
                     @error('rating') <p class="text-red-600 text-sm">{{ $message }}</p> @enderror
                   </div>
                   <div>
-                    <label class="text-sm">Nhận xét (≤100 ký tự)</label>
-                    <input type="text" name="comment" maxlength="100" class="border rounded p-2 w-full" placeholder="Ví dụ: Hàng ổn áp">
+                    <label class="text-sm">{{ __('products.comment_max_chars') }}</label>
+                    <input type="text" name="comment" maxlength="100" class="border rounded p-2 w-full" placeholder="{{ __('products.comment_placeholder') }}">
                     @error('comment') <p class="text-red-600 text-sm">{{ $message }}</p> @enderror
                   </div>
-                  <button class="px-4 py-2 bg-gray-900 text-white rounded-lg">Gửi đánh giá</button>
+                  <button class="px-4 py-2 bg-gray-900 text-white rounded-lg">{{ __('products.submit_review') }}</button>
                 </form>
               @elseif ($userFeedback)
-                <h3 class="font-semibold mb-2">Đánh giá của bạn</h3>
+                <h3 class="font-semibold mb-2">{{ __('products.your_review') }}</h3>
                 <div class="border rounded p-3 mb-3">
                   <div class="flex items-center justify-between">
                     <x-star-rating :value="$userFeedback->rating" :size="3" />
-                    <span class="text-xs text-gray-500">Đã mua hàng</span>
+                    <span class="text-xs text-gray-500">{{ __('products.verified_purchase') }}</span>
                   </div>
                   <p class="mt-2 text-sm text-gray-700">{{ $userFeedback->comment }}</p>
                 </div>
 
                 {{-- Sửa --}}
                 <details class="mb-2">
-                  <summary class="cursor-pointer text-sm text-blue-600">Sửa đánh giá</summary>
+                  <summary class="cursor-pointer text-sm text-blue-600">{{ __('products.edit_review') }}</summary>
                   <form method="POST" action="{{ route('user.products.feedbacks.update', [$product->slug, $userFeedback->getKey()]) }}" class="space-y-3 mt-3">
                     @csrf @method('PATCH')
                     <div>
-                      <label class="text-sm">Số sao</label>
+                      <label class="text-sm">{{ __('products.rating') }}</label>
                       <input type="number" name="rating" min="1" max="5" value="{{ $userFeedback->rating }}" class="border rounded p-2 w-24">
                       @error('rating') <p class="text-red-600 text-sm">{{ $message }}</p> @enderror
                     </div>
                     <div>
-                      <label class="text-sm">Nhận xét (≤100 ký tự)</label>
+                      <label class="text-sm">{{ __('products.comment_max_chars') }}</label>
                       <input type="text" name="comment" maxlength="100" value="{{ $userFeedback->comment }}" class="border rounded p-2 w-full">
                       @error('comment') <p class="text-red-600 text-sm">{{ $message }}</p> @enderror
                     </div>
-                    <button class="px-4 py-2 bg-gray-900 text-white rounded-lg">Cập nhật</button>
+                    <button class="px-4 py-2 bg-gray-900 text-white rounded-lg">{{ __('products.update') }}</button>
                   </form>
                 </details>
 
                 {{-- Xoá --}}
                 <form method="POST" action="{{ route('user.products.feedbacks.destroy', [$product->slug, $userFeedback->getKey()]) }}"
-                      onsubmit="return confirm('Xoá đánh giá?')" class="inline">
+                      onsubmit="return confirm('{{ __('products.delete_review_confirm') }}')" class="inline">
                   @csrf @method('DELETE')
-                  <button class="px-3 py-2 bg-red-600 text-white rounded-lg text-sm">Xoá đánh giá</button>
+                  <button class="px-3 py-2 bg-red-600 text-white rounded-lg text-sm">{{ __('products.delete_review') }}</button>
                 </form>
               @else
                 @if(!$hasCompletedOrder)
-                  <p class="text-sm text-gray-600">Bạn cần mua sản phẩm (đơn đã hoàn tất) để viết đánh giá.</p>
+                  <p class="text-sm text-gray-600">{{ __('products.need_to_purchase') }}</p>
                 @endif
               @endif
             @else
-              <p class="text-sm text-gray-600">Vui lòng <a class="text-blue-600 underline" href="{{ route('login') }}">đăng nhập</a> để viết đánh giá.</p>
+              <p class="text-sm text-gray-600">{{ __('products.login_to_review', ['url' => route('login')]) }}</p>
             @endauth
           </div>
 
@@ -195,18 +195,18 @@
               <article class="bg-white p-4 rounded-xl shadow">
                 <div class="flex items-center justify-between">
                   <div class="flex items-center gap-3">
-                    <div class="text-sm font-medium">{{ $rv->user->name ?? 'Người dùng' }}</div>
+                    <div class="text-sm font-medium">{{ $rv->user->name ?? __('products.user') }}</div>
                     <span class="text-xs text-gray-500">{{ $rv->created_at->diffForHumans() }}</span>
                   </div>
                   @if($rv->verified_purchase)
-                    <span class="text-xs px-2 py-1 rounded bg-green-100 text-green-700">Đã mua hàng</span>
+                    <span class="text-xs px-2 py-1 rounded bg-green-100 text-green-700">{{ __('products.verified_purchase') }}</span>
                   @endif
                 </div>
                 <div class="mt-2"><x-star-rating :value="$rv->rating" :size="3" /></div>
                 <p class="mt-2 text-sm text-gray-700">{{ $rv->comment }}</p>
               </article>
             @empty
-              <p class="text-sm text-gray-600">Chưa có đánh giá nào.</p>
+              <p class="text-sm text-gray-600">{{ __('products.no_reviews') }}</p>
             @endforelse
           </div>
 

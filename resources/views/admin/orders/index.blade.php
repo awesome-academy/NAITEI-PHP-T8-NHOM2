@@ -21,7 +21,7 @@
                     @endif
 
                     <div class="flex justify-between items-center mb-6">
-                        <h1 class="text-2xl font-bold text-gray-800">Orders</h1>
+                        <h1 class="text-2xl font-bold text-gray-800">{{ __('orders.orders') }}</h1>
                     </div>
 
                     <!-- Compact Search and Filter Form -->
@@ -32,7 +32,7 @@
                                 <div class="lg:col-span-2">
                                     <input type="text" name="search" id="search"
                                            value="{{ request('search') }}"
-                                           placeholder="Search orders, customers..."
+                                           placeholder="{{ __('orders.search_orders_customers') }}"
                                            class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 text-sm">
                                 </div>
 
@@ -40,7 +40,7 @@
                                 <div>
                                     <select name="status" id="status"
                                             class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 text-sm">
-                                        <option value="">All Statuses</option>
+                                        <option value="">{{ __('orders.all_statuses') }}</option>
                                         @foreach(\App\Models\Order::getAllStatuses() as $statusOption)
                                             <option value="{{ $statusOption }}"
                                                     {{ request('status') == $statusOption ? 'selected' : '' }}>
@@ -69,16 +69,16 @@
                                 <div class="flex space-x-2">
                                     <button type="submit"
                                             class="inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 focus:outline-none focus:border-gray-900 focus:ring ring-gray-300 disabled:opacity-25 transition ease-in-out duration-150 mr-2">
-                                        Filter
+                                        {{ __('orders.filter') }}
                                     </button>
                                     <a href="{{ route('admin.orders.index') }}"
                                        class="inline-flex items-center px-4 py-2 bg-white border border-gray-300 rounded-md font-semibold text-xs text-gray-700 uppercase tracking-widest hover:bg-gray-50 focus:outline-none focus:border-blue-300 focus:ring ring-blue-200 disabled:opacity-25 transition ease-in-out duration-150">
-                                        Clear
+                                        {{ __('orders.clear') }}
                                     </a>
                                 </div>
                                 
                                 <div class="text-sm text-gray-600">
-                                    Showing {{ $orders->firstItem() ?? 0 }} to {{ $orders->lastItem() ?? 0 }} of {{ $orders->total() }} orders
+                                    {{ __('orders.showing_orders', ['from' => $orders->firstItem() ?? 0, 'to' => $orders->lastItem() ?? 0, 'total' => $orders->total()]) }}
                                 </div>
                             </div>
                         </form>
@@ -89,12 +89,12 @@
                         <table class="w-full text-sm text-left text-gray-500">
                             <thead class="text-xs text-gray-700 uppercase bg-gray-50">
                                 <tr>
-                                    <th scope="col" class="px-6 py-3">Order ID</th>
-                                    <th scope="col" class="px-6 py-3">Customer</th>
-                                    <th scope="col" class="px-6 py-3">Total</th>
-                                    <th scope="col" class="px-6 py-3">Status</th>
-                                    <th scope="col" class="px-6 py-3">Date</th>
-                                    <th scope="col" class="px-6 py-3"><span class="sr-only">Actions</span></th>
+                                    <th scope="col" class="px-6 py-3">{{ __('orders.order_id') }}</th>
+                                    <th scope="col" class="px-6 py-3">{{ __('orders.customer') }}</th>
+                                    <th scope="col" class="px-6 py-3">{{ __('orders.total') }}</th>
+                                    <th scope="col" class="px-6 py-3">{{ __('orders.status') }}</th>
+                                    <th scope="col" class="px-6 py-3">{{ __('orders.date') }}</th>
+                                    <th scope="col" class="px-6 py-3"><span class="sr-only">{{ __('orders.actions') }}</span></th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -131,7 +131,7 @@
                                         </td>
                                         <td class="px-6 py-4 text-right">
                                             <a href="{{ route('admin.orders.show', $order) }}"
-                                               class="font-medium text-blue-600 hover:underline">View</a>
+                                               class="font-medium text-blue-600 hover:underline">{{ __('orders.view') }}</a>
                                         </td>
                                     </tr>
                                 @empty
@@ -139,8 +139,8 @@
                                         <td colspan="6" class="px-6 py-8 text-center text-gray-500">
                                             <div class="flex flex-col items-center">
                                                 
-                                                <p class="text-lg font-medium">No orders found</p>
-                                                <p class="text-sm">Try adjusting your search or filter criteria</p>
+                                                <p class="text-lg font-medium">{{ __('orders.no_orders_found') }}</p>
+                                                <p class="text-sm">{{ __('orders.try_adjusting_search') }}</p>
                                             </div>
                                         </td>
                                     </tr>
