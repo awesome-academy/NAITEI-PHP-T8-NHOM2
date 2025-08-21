@@ -104,7 +104,7 @@
     <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
         <div class="pt-2 pb-3 space-y-1">
             <x-responsive-nav-link :href="route('user.products.index')" :active="request()->routeIs('user.products.index')">
-                {{ __('Products') }}
+                {{ __('common.products') }}
             </x-responsive-nav-link>
         </div>
 
@@ -118,7 +118,7 @@
 
                 <div class="mt-3 space-y-1">
                     <x-responsive-nav-link :href="route('profile.edit')">
-                        {{ __('Profile') }}
+                        {{ __('common.profile') }}
                     </x-responsive-nav-link>
 
                     <!-- Authentication -->
