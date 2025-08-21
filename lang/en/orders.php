@@ -78,5 +78,48 @@ return [
     'delivery_date_not_set' => 'Delivery date not set',
     'product_not_found' => 'Product not found',
     'total_colon' => 'Total:',
+    
+    // Email subject
+    'email_subject_order_status_changed' => 'Order Status Update',
+    
+    // Email header
+    'email_order_notification' => 'Order Notification',
+    
+    // Email body
+    'email_greeting' => 'Hello :name,',
+    'email_status_update_intro' => 'We\'re writing to let you know that your order status has been updated.',
+    
+    // Order summary section
+    'email_order_summary' => 'Order Summary',
+    'email_order_number' => 'Order Number',
+    'email_order_date' => 'Order Date',
+    'email_total_amount' => 'Total Amount',
+    
+    // Status update section
+    'email_status_update' => 'Status Update',
+    
+    // Status-specific messages
+    'email_next_steps' => 'What\'s Next?',
+    'email_processing_message' => 'Your order is now being prepared by our team.',
+    'email_processing_timeline' => 'We\'ll notify you once your order is ready for shipment.',
+    
+    'email_shipping_info' => 'Shipping Information',
+    'email_shipping_message' => 'Your order has been shipped and is on its way to you. You should receive it within 3-5 business days.',
+    
+    'email_delivery_confirmation' => 'Delivery Confirmation',
+    'email_completed_message' => 'Your order has been successfully delivered. Thank you for your purchase!',
+    
+    'email_cancellation_notice' => 'Order Cancellation',
+    'email_cancellation_message' => 'Your order has been cancelled as requested.',
+    'email_cancellation_support' => 'If you have any questions, please don\'t hesitate to contact our customer support team.',
+    
+    // Closing
+    'email_thank_you_message' => 'Thank you for choosing us. We appreciate your business and look forward to serving you again.',
+    'email_best_regards' => 'Best regards,',
+    'email_team_signature' => 'The :app_name Team',
+    
+    // Footer
+    'email_contact_info' => 'If you have any questions about your order, please contact our customer service team.',
+    'email_all_rights_reserved' => 'All rights reserved.',
 
 ];

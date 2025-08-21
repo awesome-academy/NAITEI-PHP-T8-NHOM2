@@ -5,7 +5,9 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\UpdateOrderStatusRequest;
 use App\Models\Order;
+use App\Mail\OrderStatusChanged;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class OrderController extends Controller
 {
@@ -70,9 +72,25 @@ class OrderController extends Controller
         if ($newStatus === Order::STATUS_COMPLETED && !$order->delivery_date) {
             $order->delivery_date = now();
         }
+        
         $oldStatus = $order->status;
         
+        // Update the order status
         $order->update(['status' => $newStatus]);
+
+        // Send email notification if status changed from pending to processing or cancelled
+        if ($oldStatus === Order::STATUS_PENDING &&
+            ($newStatus === Order::STATUS_PROCESSING || $newStatus === Order::STATUS_CANCELLED)) {
+            
+            try {
+                $locale = app()->getLocale();
+                
+                Mail::to($order->user->email)->send(new OrderStatusChanged($order, $oldStatus, $newStatus, $locale));
+            } catch (\Exception $e) {
+                // Log the error but don't prevent the status update
+                \Log::error('Failed to send order status email: ' . $e->getMessage());
+            }
+        }
 
         return redirect()->route('admin.orders.show', $order)
             ->with('success', "Order status updated from '{$oldStatus}' to '{$newStatus}' successfully.");
