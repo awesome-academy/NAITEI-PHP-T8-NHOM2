@@ -113,4 +113,12 @@ return [
     'manage_products' => 'Manage Products',
     'manage_categories' => 'Manage Categories',
     'manage_orders' => 'Manage Orders',
+
+    // Notifications
+    'notifications' => 'Notifications',
+    'new_notifications' => 'New Notifications',
+    'no_notifications' => 'No notifications found.',
+    'new_order_notification' => 'New Order: #:id',
+    'order_details_notification' => 'Placed by: :name | Total: $:amount',
+    'clear_all' => 'Clear All',
 ];

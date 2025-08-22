@@ -113,4 +113,12 @@ return [
     'manage_products' => 'Quản lý sản phẩm',
     'manage_categories' => 'Quản lý danh mục',
     'manage_orders' => 'Quản lý đơn hàng',
+
+    // Notifications
+    'notifications' => 'Thông báo',
+    'new_notifications' => 'Thông báo mới',
+    'no_notifications' => 'Không có thông báo nào.',
+    'new_order_notification' => 'Đơn hàng mới: #:id',
+    'order_details_notification' => 'Người đặt: :name | Tổng tiền: :amount ₫',
+    'clear_all' => 'Xóa tất cả',
 ];
