@@ -28,8 +28,8 @@
                             <td class="p-2 border text-center">
                                 <div class="flex justify-center items-center">
                                     <button class="qty-btn px-2 border" data-change="-1">-</button>
-                                    <input type="number" class="qty-input w-16 text-center border-t border-b" value="{{ $item->quantity }}" min="1">
-                                    <button class="qty-btn px-2 border" data-change="1">+</button>
+                                    <input type="number" class="qty-input w-16 text-center border-t border-b" value="{{ $item->quantity }}" min="1" max="{{ $item->product->stock_quantity }}">
+                                    <button class="qty-btn px-2 border" data-change="1" @if($item->quantity >= $item->product->stock_quantity) disabled style="opacity:0.5;cursor:not-allowed;" @endif>+</button>
                                 </div>
                             </td>
                             <td class="p-2 border sub-total">{{ number_format($subTotal, 0, ',', '.') }} đ</td>
@@ -63,7 +63,8 @@
                 let row = this.closest('tr');
                 let input = row.querySelector('.qty-input');
                 let change = parseInt(this.dataset.change);
-                let newQty = Math.max(1, parseInt(input.value) + change);
+                let maxQty = parseInt(input.getAttribute('max'));
+                let newQty = Math.max(1, Math.min(parseInt(input.value) + change, maxQty));
                 input.value = newQty;
 
                 updateCart(row.dataset.id, newQty, row);
@@ -83,6 +84,21 @@
             .then(data => {
                 row.querySelector('.sub-total').textContent = data.sub_total;
                 document.getElementById('total-price').textContent = data.total;
+
+                // Enable/disable nút + sau mỗi lần cập nhật
+                let input = row.querySelector('.qty-input');
+                let plusBtn = row.querySelector('.qty-btn[data-change="1"]');
+                let currentQty = parseInt(input.value);
+                let maxQty = parseInt(input.getAttribute('max'));
+                if (currentQty >= maxQty) {
+                    plusBtn.disabled = true;
+                    plusBtn.style.opacity = '0.5';
+                    plusBtn.style.cursor = 'not-allowed';
+                } else {
+                    plusBtn.disabled = false;
+                    plusBtn.style.opacity = '';
+                    plusBtn.style.cursor = '';
+                }
             })
             .catch(err => console.error(err));
         }

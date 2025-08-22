@@ -8,7 +8,9 @@ use App\Models\Order_items;
 use App\Models\Product;
 use App\Models\Shopping_cart;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Notification;
 use Carbon\Carbon;
+use App\Notifications\NewOrderNotification;
 
 class CheckoutController extends Controller
 {
@@ -80,7 +82,12 @@ class CheckoutController extends Controller
         // 4. Xóa giỏ hàng sau khi đặt
         Shopping_cart::where('user_id', Auth::id())->delete();
 
-        // 5. Chuyển hướng về trang chi tiết đơn hàng
+        // 5. Gửi thông báo cho admin
+        $order->load('user');
+        $admins = \App\Models\User::where('role', 'admin')->get();
+        Notification::send($admins, new NewOrderNotification($order));
+
+        // 6. Chuyển hướng về trang chi tiết đơn hàng
         return redirect()->route('orders.show', $order->orders_id)
             ->with('success', 'Đơn hàng đã được đặt thành công!');
     }
