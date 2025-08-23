@@ -24,7 +24,7 @@ class NewOrderNotificationTest extends TestCase
         $order = Order::factory()->create([
             'user_id' => $user->id,
             'total_amount' => 100000,
-            'status' => 'pending',
+            'status' => Order::STATUS_PENDING,
         ]);
 
         // Send notification
@@ -33,8 +33,16 @@ class NewOrderNotificationTest extends TestCase
         Notification::assertSentTo(
             [$admin],
             NewOrderNotification::class,
-            function ($notification, $channels) use ($order) {
-                return $notification->data['order_id'] === $order->id;
+            function ($notification, $channels,$notifiable) use ($order) {
+                $payload = method_exists($notification, 'toArray')
+                ? $notification->toArray($notifiable)
+                : (method_exists($notification, 'toDatabase')
+                    ? $notification->toDatabase($notifiable)
+                    : []);
+                
+                // hỗ trợ cả orders_id và order_id
+                $notiOrderId = $payload['orders_id'] ?? $payload['order_id'] ?? null;
+                return $notiOrderId === $order->orders_id;
             }
         );
     }

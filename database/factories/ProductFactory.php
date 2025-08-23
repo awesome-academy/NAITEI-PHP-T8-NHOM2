@@ -61,10 +61,10 @@ class ProductFactory extends Factory
 
         // giá theo category
         $price = match ($categoryName) {
-            'Shirts','T-Shirts','Shorts','Skirts','Blouses','Hoodies','Sweaters' => $this->faker->numberBetween(2, 150000, 1200000),
-            'Jeans','Trousers'                                                   => $this->faker->numberBetween(2, 350000, 1800000),
-            'Jackets','Coats','Suits','Dresses'                                  => $this->faker->numberBetween(2, 700000, 4500000),
-            default                                                              => $this->faker->numberBetween(2, 200000, 2000000),
+            'Shirts','T-Shirts','Shorts','Skirts','Blouses','Hoodies','Sweaters' => $this->faker->randomFloat(2, 150000, 1200000),
+            'Jeans','Trousers'                                                   => $this->faker->randomFloat(2, 350000, 1800000),
+            'Jackets','Coats','Suits','Dresses'                                  => $this->faker->randomFloat(2, 700000, 4500000),
+            default                                                              => $this->faker->randomFloat(2, 200000, 2000000),
         };
 
         // Name & slug

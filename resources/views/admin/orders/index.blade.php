@@ -1,80 +1,10 @@
 <x-admin-layout>
 
     <div class="py-12">
-        {{-- Notification badge and dropdown --}}
-        @php
-            $admin = Auth::user();
-            $unreadCount = $admin->unreadNotifications->count();
-        @endphp
-        <div class="flex justify-end mb-4">
-            <div class="relative">
-                <button id="notifBtn" class="relative px-4 py-2 bg-gray-800 text-white rounded-lg">
-                    <span>{{ __('common.notifications') }}</span>
-                    @if($unreadCount > 0)
-                        <span class="absolute -top-1 -right-1 flex h-5 w-5 items-center justify-center rounded-full bg-red-600 text-xs text-white">{{ $unreadCount }}</span>
-                    @endif
-                </button>
-                <div id="notifDropdown" class="hidden absolute right-0 mt-2 w-[36rem] bg-white border rounded-lg shadow-lg z-10">
-                    <div class="p-3 border-b font-bold">{{ __('common.new_notifications') }}</div>
-                    <ul>
-                        @forelse($admin->notifications as $notification)
-                            <li class="p-3 border-b @if($notification->read_at === null) bg-gray-100 @endif">
-                                @if(isset($notification->data['order_id']))
-                                    <a href="{{ route('admin.orders.show', $notification->data['order_id']) }}" class="font-semibold text-blue-700">
-                                        {{ __('common.new_order_notification', ['id' => $notification->data['order_id']]) }}
-                                    </a>
-                                    <div class="text-sm text-gray-600">
-                                        {{ __('common.order_details_notification', [
-                                            'name' => $notification->data['user_name'] ?? '',
-                                            'amount' => number_format($notification->data['total_amount'], 0, ',', '.')
-                                        ]) }}
-                                    </div>
-                                    <div class="text-xs text-gray-400">{{ $notification->created_at->diffForHumans() }}</div>
-                                @else
-                                    <span>{{ $notification->data['message'] ?? __('common.notifications') }}</span>
-                                @endif
-                            </li>
-                        @empty
-                            <li class="p-3 text-gray-500">{{ __('common.no_notifications') }}</li>
-                        @endforelse
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <script>
-            document.getElementById('notifBtn').addEventListener('click', function(e) {
-                e.stopPropagation();
-                var dropdown = document.getElementById('notifDropdown');
-                dropdown.classList.toggle('hidden');
-
-                // Mark notifications as read
-                let unreadBadge = this.querySelector('span.absolute');
-                if (unreadBadge) {
-                    fetch('{{ route("admin.notifications.markAsRead") }}', {
-                        method: 'POST',
-                        headers: {
-                            'X-CSRF-TOKEN': '{{ csrf_token() }}',
-                            'Content-Type': 'application/json'
-                        }
-                    }).then(response => response.json())
-                    .then(data => {
-                        if(data.status === 'success') {
-                            unreadBadge.remove();
-                        }
-                    });
-                }
-            });
-            document.addEventListener('click', function(e) {
-                var btn = document.getElementById('notifBtn');
-                var dropdown = document.getElementById('notifDropdown');
-                if (!btn.contains(e.target) && !dropdown.contains(e.target)) {
-                    dropdown.classList.add('hidden');
-                }
-            });
-        </script>
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900">
+
                     @if ($message = Session::get('success'))
                         <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative mb-4" role="alert">
                             <span class="block sm:inline">{{ $message }}</span>
@@ -91,9 +21,93 @@
                         </div>
                     @endif
 
+                    @php
+                        $admin = Auth::user();
+                        $unreadCount = $admin->unreadNotifications->count();
+                    @endphp
+
+                    <!-- Header -->
                     <div class="flex justify-between items-center mb-6">
                         <h1 class="text-2xl font-bold text-gray-800">{{ __('orders.orders') }}</h1>
+
+                        <!-- Notification button + dropdown -->
+                        <div class="relative">
+                            <button id="notifBtn"
+                                class="relative inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md
+                                       font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700
+                                       focus:outline-none focus:border-gray-900 focus:ring ring-gray-300 transition">
+                                {{ __('common.notifications') }}
+                                @if($unreadCount > 0)
+                                    <span class="absolute -top-1 -right-1 flex h-5 w-5 items-center justify-center rounded-full bg-red-600 text-xs text-white">
+                                        {{ $unreadCount }}
+                                    </span>
+                                @endif
+                            </button>
+
+                            <div id="notifDropdown" class="hidden absolute right-0 top-full mt-2 w-[28rem] bg-white border rounded-lg shadow-lg z-10">
+                                <div class="p-3 border-b font-bold">{{ __('common.new_notifications') }}</div>
+                                <ul>
+                                    @forelse($admin->notifications as $notification)
+                                        <li class="p-3 border-b @if($notification->read_at === null) bg-gray-100 @endif">
+                                            @if(isset($notification->data['order_id']))
+                                                <a href="{{ route('admin.orders.show', $notification->data['order_id']) }}" class="font-semibold text-blue-700">
+                                                    {{ __('common.new_order_notification', ['id' => $notification->data['order_id']]) }}
+                                                </a>
+                                                <div class="text-sm text-gray-600">
+                                                    {{ __('common.order_details_notification', [
+                                                        'name' => $notification->data['user_name'] ?? '',
+                                                        'amount' => number_format($notification->data['total_amount'], 0, ',', '.')
+                                                    ]) }}
+                                                </div>
+                                                <div class="text-xs text-gray-400">{{ $notification->created_at->diffForHumans() }}</div>
+                                            @else
+                                                <span>{{ $notification->data['message'] ?? __('common.notifications') }}</span>
+                                            @endif
+                                        </li>
+                                    @empty
+                                        <li class="p-3 text-gray-500">{{ __('common.no_notifications') }}</li>
+                                    @endforelse
+                                </ul>
+                            </div>
+                        </div>
                     </div>
+
+                    <script>
+                        (function() {
+                            const btn = document.getElementById('notifBtn');
+                            const dropdown = document.getElementById('notifDropdown');
+
+                            if (!btn || !dropdown) return;
+
+                            btn.addEventListener('click', function(e) {
+                                e.stopPropagation();
+                                dropdown.classList.toggle('hidden');
+
+                                // Mark notifications as read
+                                let unreadBadge = this.querySelector('span.absolute');
+                                if (unreadBadge) {
+                                    fetch('{{ route("admin.notifications.markAsRead") }}', {
+                                        method: 'POST',
+                                        headers: {
+                                            'X-CSRF-TOKEN': '{{ csrf_token() }}',
+                                            'Content-Type': 'application/json'
+                                        }
+                                    }).then(response => response.json())
+                                    .then(data => {
+                                        if (data.status === 'success') {
+                                            unreadBadge.remove();
+                                        }
+                                    });
+                                }
+                            });
+
+                            document.addEventListener('click', function(e) {
+                                if (!btn.contains(e.target) && !dropdown.contains(e.target)) {
+                                    dropdown.classList.add('hidden');
+                                }
+                            });
+                        })();
+                    </script>
 
                     <!-- Compact Search and Filter Form -->
                     <div class="bg-gray-50 p-4 rounded-lg mb-6">
@@ -147,7 +161,7 @@
                                         {{ __('orders.clear') }}
                                     </a>
                                 </div>
-                                
+
                                 <div class="text-sm text-gray-600">
                                     {{ __('orders.showing_orders', ['from' => $orders->firstItem() ?? 0, 'to' => $orders->lastItem() ?? 0, 'total' => $orders->total()]) }}
                                 </div>
@@ -209,7 +223,6 @@
                                     <tr class="bg-white border-b">
                                         <td colspan="6" class="px-6 py-8 text-center text-gray-500">
                                             <div class="flex flex-col items-center">
-                                                
                                                 <p class="text-lg font-medium">{{ __('orders.no_orders_found') }}</p>
                                                 <p class="text-sm">{{ __('orders.try_adjusting_search') }}</p>
                                             </div>
