@@ -28,7 +28,7 @@ class UpdateCategoryRequest extends FormRequest
                 'nullable',
                 'string',
                 'max:255',
-                Rule::unique('categories', 'slug')->ignore($this->category->categories_id, 'categories_id'),
+                Rule::unique('categories', 'slug')->ignore($this->route('category'), 'categories_id'),
             ],
             'sort_order' => 'required|integer',
             'description' => 'nullable|string',
