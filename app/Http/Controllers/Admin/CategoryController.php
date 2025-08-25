@@ -6,16 +6,24 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\StoreCategoryRequest;
 use App\Http\Requests\Admin\UpdateCategoryRequest;
 use App\Models\Category;
+use App\Repositories\CategoryRepositoryInterface;
 use Illuminate\Support\Str;
 
 class CategoryController extends Controller
 {
+    protected $categoryRepository;
+
+    public function __construct(CategoryRepositoryInterface $categoryRepository)
+    {
+        $this->categoryRepository = $categoryRepository;
+    }
+
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $categories = Category::latest()->paginate(10);
+        $categories = $this->categoryRepository->getAll(10);
         return view('admin.categories.index', compact('categories'));
     }
 
@@ -24,16 +32,16 @@ class CategoryController extends Controller
      */
     public function trashed()
     {
-        $categories = Category::onlyTrashed()->latest()->paginate(10);
+        $categories = $this->categoryRepository->getTrashed(10);
         return view('admin.categories.trashed', compact('categories'));
     }
 
     /**
      * Restore the specified resource from storage.
      */
-    public function restore(Category $category)
+    public function restore($id)
     {
-        $category->restore();
+        $this->categoryRepository->restore($id);
 
         return redirect()->route('admin.categories.trashed')
             ->with('success', 'Category restored successfully.');
@@ -57,7 +65,7 @@ class CategoryController extends Controller
             $data['slug'] = Str::slug($data['category_name']);
         }
 
-        Category::create($data);
+        $this->categoryRepository->create($data);
 
         return redirect()->route('admin.categories.index')
             ->with('success', 'Category created successfully.');
@@ -66,30 +74,32 @@ class CategoryController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Category $category)
+    public function show($id)
     {
+        $category = $this->categoryRepository->findById($id);
         return view('admin.categories.show', compact('category'));
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Category $category)
+    public function edit($id)
     {
+        $category = $this->categoryRepository->findById($id);
         return view('admin.categories.edit', compact('category'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateCategoryRequest $request, Category $category)
+    public function update(UpdateCategoryRequest $request, $id)
     {
         $data = $request->validated();
         if (empty($data['slug'])) {
             $data['slug'] = Str::slug($data['category_name']);
         }
 
-        $category->update($data);
+        $this->categoryRepository->update($id, $data);
 
         return redirect()->route('admin.categories.index')
             ->with('success', 'Category updated successfully.');
@@ -98,9 +108,9 @@ class CategoryController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Category $category)
+    public function destroy($id)
     {
-        $category->delete();
+        $this->categoryRepository->delete($id);
 
         return redirect()->route('admin.categories.index')
             ->with('success', 'Category deleted successfully.');
