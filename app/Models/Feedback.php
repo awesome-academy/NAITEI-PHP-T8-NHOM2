@@ -26,7 +26,7 @@ class Feedback extends Model
 
     public function product(): BelongsTo
     {
-        return $this->belongsTo(Product::class, 'products_id', 'products_id');
+        return $this->belongsTo(Product::class, 'products_id', 'products_id')->withTrashed();
     }
 
     public function getRouteKeyName(): string

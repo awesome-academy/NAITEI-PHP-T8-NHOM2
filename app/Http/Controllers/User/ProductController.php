@@ -103,6 +103,7 @@ class ProductController extends Controller
      */
     public function show(Product $product)
     {
+        $product->loadMissing('images', 'primaryImage');
         // Chặn xem sản phẩm ẩn
         abort_if(!$product->status, 404);
 

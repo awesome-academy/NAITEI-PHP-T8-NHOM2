@@ -41,6 +41,9 @@ class StoreProductRequest extends FormRequest
             'stock_quantity' => ['required','integer','min:0'],
             'status'         => ['required','integer','in:0,1'],
             'image'          => ['nullable','image','mimes:jpg,jpeg,png,webp','max:2048'],
+            'images'         => ['nullable','array','max:5'],                              // mới: nhiều ảnh
+            'images.*'       => ['image','mimes:jpg,jpeg,png,webp','max:2048'],
+            
             // specs
             'spec_size'       => ['array'],
             "spec_size.*"     => ["in:$sizes"],

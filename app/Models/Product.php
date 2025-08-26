@@ -43,6 +43,18 @@ class Product extends Model
         return $this->hasMany(Shopping_cart::class, 'products_id');
     }
 
+    public function images(): HasMany
+    {
+        return $this->hasMany(\App\Models\ProductImage::class, 'products_id')
+                    ->orderBy('sort_order')->orderBy('product_image_id');
+    }
+
+    public function primaryImage()
+    {
+        return $this->hasOne(\App\Models\ProductImage::class, 'products_id')
+                    ->where('is_primary', true)->orderByDesc('product_image_id');
+    }
+
     // Query Scopes
 
     // Sản phẩm đang hiển thị cho người dùng
@@ -57,24 +69,21 @@ class Product extends Model
         return $query->where('product_name', 'like', "%{$keyword}%");
     }
 
+    // Ưu tiên ảnh chính nếu có, fallback ảnh cũ (giữ API image_url cũ không gãy UI)
     public function getImageUrlAttribute(): string
     {
+        $primary = $this->relationLoaded('images')
+            ? ($this->images->firstWhere('is_primary', true) ?? $this->images->first())
+            : ($this->primaryImage()->first() ?? $this->images()->first());
+
+        if ($primary) {
+        $u = (string) $primary->url;           // sẽ gọi accessor ở ProductImage
+        if ($u !== '') return $u;
+        }
+
         $path = (string) ($this->image_path ?? '');
-
-        // nếu là đường dẫn tuyệt đối (http/https) -> dùng luôn
-        if ($path !== '' && filter_var($path, FILTER_VALIDATE_URL)) {
-            return $path;
-        }
-
-        // bỏ public/ nếu lỡ lưu kèm
+        if ($path !== '' && filter_var($path, FILTER_VALIDATE_URL)) return $path;
         $path = preg_replace('#^public/#', '', $path);
-
-        // nếu có đường dẫn tương đối -> trỏ qua storage symlink
-        if ($path !== '') {
-            return asset('storage/' . ltrim($path, '/'));
-        }
-
-        // fallback
-        return asset('images/placeholder.png');
+        return $path !== '' ? asset('storage/'.ltrim($path,'/')) : asset('images/placeholder.png');
     }
 }
