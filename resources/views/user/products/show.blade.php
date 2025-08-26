@@ -57,34 +57,42 @@
 
         {{-- Quantity + buttons --}}
         <div class="mt-8">
-          <label class="block text-sm mb-1 text-gray-700">{{ __('products.quantity') }}</label>
-          <div class="flex items-center gap-3">
-            <div class="flex items-center border rounded-lg overflow-hidden">
-              <button id="qty-minus" type="button" class="px-3 py-2 hover:bg-gray-50">−</button>
-                <input id="qty-input" type="number" min="1" value="1"
-                  class="no-spinner w-16 text-center border-x py-2 focus:outline-none">
-              <button id="qty-plus" type="button" class="px-3 py-2 hover:bg-gray-50">+</button>
-            </div>
+            @if($product->stock_quantity > 0)
+                <label class="block text-sm mb-1 text-gray-700">{{ __('products.quantity') }}</label>
+                <div class="flex items-center gap-3">
+                    <div class="flex items-center border rounded-lg overflow-hidden">
+                        <button id="qty-minus" type="button" class="px-3 py-2 hover:bg-gray-50">−</button>
+                        <input id="qty-input" type="number" min="1" value="1"
+                               class="no-spinner w-16 text-center border-x py-2 focus:outline-none">
+                        <button id="qty-plus" type="button" class="px-3 py-2 hover:bg-gray-50">+</button>
+                    </div>
 
-            @auth
-              <a id="btn-add"
-                 href="{{ route('cart.add', ['id' => $product->products_id, 'qty' => 1, 'redirect' => 'cart']) }}"
-                 class="inline-flex items-center px-5 py-3 rounded-xl border border-gray-900 text-gray-900 hover:bg-gray-900 hover:text-white">
-                {{ __('products.add_to_cart') }}
-              </a>
+                    @auth
+                        <a id="btn-add"
+                           href="{{ route('cart.add', ['id' => $product->products_id, 'qty' => 1, 'redirect' => 'cart']) }}"
+                           class="inline-flex items-center px-5 py-3 rounded-xl border border-gray-900 text-gray-900 hover:bg-gray-900 hover:text-white">
+                            {{ __('products.add_to_cart') }}
+                        </a>
 
-              <a id="btn-buy"
-                 href="{{ route('cart.add', ['id' => $product->products_id, 'qty' => 1, 'redirect' => 'checkout']) }}"
-                 class="inline-flex items-center px-5 py-3 rounded-xl border border-gray-900 text-gray-900 hover:bg-gray-900 hover:text-white">
-                {{ __('products.buy_now') }}
-              </a>
+                        <a id="btn-buy"
+                           href="{{ route('cart.add', ['id' => $product->products_id, 'qty' => 1, 'redirect' => 'checkout']) }}"
+                           class="inline-flex items-center px-5 py-3 rounded-xl border border-gray-900 text-gray-900 hover:bg-gray-900 hover:text-white">
+                            {{ __('products.buy_now') }}
+                        </a>
+                    @else
+                        <a href="{{ route('login') }}"
+                           class="inline-flex items-center px-5 py-3 rounded-xl bg-gray-900 text-white hover:bg-gray-800">
+                            {{ __('products.login_to_buy') }}
+                        </a>
+                    @endauth
+                </div>
             @else
-              <a href="{{ route('login') }}"
-                 class="inline-flex items-center px-5 py-3 rounded-xl bg-gray-900 text-white hover:bg-gray-800">
-                {{ __('products.login_to_buy') }}
-              </a>
-            @endauth
-          </div>
+                <div class="mt-8">
+                    <span class="px-5 py-3 rounded-xl border bg-gray-200 text-gray-500">
+                        {{ __('common.out_of_stock') }}
+                    </span>
+                </div>
+            @endif
         </div>
       </div>
     </div>
@@ -251,5 +259,53 @@
       input?.addEventListener('input', updateLinks);
       updateLinks();
     })();
+  </script>
+
+  <script>
+      document.addEventListener('DOMContentLoaded', function () {
+          const btnAdd = document.getElementById('btn-add');
+          if (btnAdd) {
+              btnAdd.addEventListener('click', function (event) {
+                  event.preventDefault();
+                  const url = this.href;
+
+                  fetch(url, {
+                      method: 'GET',
+                      headers: {
+                          'X-Requested-With': 'XMLHttpRequest',
+                          'Accept': 'application/json',
+                      },
+                  })
+                  .then(response => response.json())
+                  .then(data => {
+                      console.log('Cart response:', data); // Debugging line
+                        if (data.success) {
+                            window.dispatchEvent(new CustomEvent('product-added-to-cart'));
+                            let cartBadge = document.getElementById('cart-badge');
+                            if (data.cartCount > 0) {
+                                if (!cartBadge) {
+                                    const cartLink = document.querySelector('a[href="{{ route('cart.index') }}"]');
+                                    if (cartLink) {
+                                        cartBadge = document.createElement('span');
+                                        cartBadge.id = 'cart-badge';
+                                        cartBadge.className = 'absolute -top-2 -right-2 inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-white bg-red-600 rounded-full';
+                                        cartLink.appendChild(cartBadge);
+                                    }
+                                }
+                                if (cartBadge) {
+                                    cartBadge.textContent = data.cartCount;
+                                    cartBadge.classList.remove('hidden');
+                                }
+                            } else if (cartBadge) {
+                                cartBadge.classList.add('hidden');
+                            }
+                        } else {
+                            alert(data.message);
+                        }
+                  })
+                  .catch(error => console.error('Error:', error));
+              });
+          }
+      });
   </script>
 </x-user-layout>

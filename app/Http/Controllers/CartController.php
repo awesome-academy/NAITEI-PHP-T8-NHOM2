@@ -23,23 +23,53 @@ class CartController extends Controller
     public function add(Request $request, $id)
     {
         $product = Product::findOrFail($id);
-
-        // qty truyền qua query ?qty=
         $qty = max(1, (int) $request->input('qty', 1));
+
+        if ($product->stock_quantity <= 0) {
+            if ($request->wantsJson()) {
+                return response()->json(['success' => false, 'message' => 'Sản phẩm đã hết hàng.']);
+            }
+            return redirect()->back()->with('error', 'Sản phẩm đã hết hàng!');
+        }
 
         $cartItem = Shopping_cart::where('user_id', Auth::id())
             ->where('products_id', $id)
             ->first();
 
         if ($cartItem) {
-            $cartItem->quantity += $qty;
+            if ($cartItem->quantity >= $product->stock_quantity) {
+                if ($request->wantsJson()) {
+                    $cartCount = Shopping_cart::where('user_id', Auth::id())->count();
+                    return response()->json([
+                        'success' => false,
+                        'message' => 'Số lượng sản phẩm trong giỏ đã đạt tối đa.',
+                        'cartCount' => $cartCount
+                    ]);
+                }
+                return redirect()->back()->with('error', 'Số lượng sản phẩm trong giỏ đã đạt tối đa.');
+            }
+
+            $newQuantity = $cartItem->quantity + $qty;
+            $cartItem->quantity = min($newQuantity, $product->stock_quantity);
             $cartItem->save();
         } else {
+            if ($qty > $product->stock_quantity) {
+                if ($request->wantsJson()) {
+                    return response()->json(['success' => false, 'message' => 'Không đủ số lượng sản phẩm.']);
+                }
+                return redirect()->back()->with('error', 'Không đủ số lượng sản phẩm.');
+            }
+
             Shopping_cart::create([
                 'user_id'     => Auth::id(),
                 'products_id' => $id,
                 'quantity'    => $qty,
             ]);
+        }
+
+        if ($request->wantsJson()) {
+            $cartCount = Shopping_cart::where('user_id', Auth::id())->count();
+            return response()->json(['success' => true, 'cartCount' => $cartCount]);
         }
 
         // nếu redirect=checkout thì đi thẳng tới checkout
@@ -89,6 +119,3 @@ class CartController extends Controller
         return redirect()->back()->with('success', 'Xóa sản phẩm thành công!');
     }
 }
-
-
-

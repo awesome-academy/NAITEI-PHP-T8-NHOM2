@@ -8,12 +8,19 @@ use App\Models\Order_items;
 use App\Models\Product;
 use App\Models\Shopping_cart;
 use Illuminate\Support\Facades\Auth;
+use App\Interfaces\ShippingFeeServiceInterface;
 use Illuminate\Support\Facades\Notification;
 use Carbon\Carbon;
 use App\Notifications\NewOrderNotification;
 
 class CheckoutController extends Controller
 {
+    protected $shippingFeeService;
+
+    public function __construct(ShippingFeeServiceInterface $shippingFeeService)
+    {
+        $this->shippingFeeService = $shippingFeeService;
+    }
     /**
      * Hiển thị form thanh toán
      */
@@ -28,7 +35,10 @@ class CheckoutController extends Controller
                 ->with('error', 'Giỏ hàng của bạn đang trống.');
         }
 
-        return view('checkout.index', compact('cartItems'));
+        $addresses = Auth::user()->addresses()->with('province')->get();
+        $provinces = \App\Models\Province::all();
+
+        return view('checkout.index', compact('cartItems', 'addresses', 'provinces'));
     }
 
     /**
@@ -37,6 +47,10 @@ class CheckoutController extends Controller
     public function placeOrder(Request $request)
     {
         $request->validate([
+            'recipient_name' => 'required|string|max:255',
+            'recipient_email' => 'required|email|max:255',
+            'recipient_phone' => 'required|string|max:20',
+            'province_id' => 'required|exists:provinces,id',
             'shipping_address' => 'required|string|max:255',
             'payment_method'   => 'required|string|max:50'
         ]);
@@ -55,6 +69,14 @@ class CheckoutController extends Controller
             return $item->product->product_price * $item->quantity;
         });
 
+        // Calculate shipping fee
+        $province = \App\Models\Province::find($request->province_id);
+        $totalWeight = $cartItems->sum(function ($item) {
+            return ($item->product->weight ?? 1) * $item->quantity;
+        });
+        $shippingFee = $this->shippingFeeService->calculateFee($totalWeight, $province->name, $totalAmount);
+        $totalAmount += $shippingFee;
+
         // 2. Lưu đơn hàng
         $order = Order::create([
             'user_id'         => Auth::id(),
@@ -63,6 +85,10 @@ class CheckoutController extends Controller
             'shipping_address'=> $request->shipping_address,
             'payment_method'  => $request->payment_method,
             'order_date'      => Carbon::now(),
+            'shipping_fee'    => $shippingFee,
+            'recipient_name'  => $request->recipient_name,
+            'recipient_email' => $request->recipient_email,
+            'recipient_phone' => $request->recipient_phone,
         ]);
 
         // 3. Lưu chi tiết đơn hàng và trừ tồn kho
@@ -104,4 +130,3 @@ class CheckoutController extends Controller
         return view('orders.show', compact('order'));
     }
 }
-

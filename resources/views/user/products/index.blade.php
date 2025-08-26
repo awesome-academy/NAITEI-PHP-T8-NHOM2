@@ -122,22 +122,28 @@
                         <div class="text-lg font-semibold text-gray-900">{{ $price }}</div>
 
                         {{-- Nút thêm vào giỏ hàng --}}
-                        @auth
-                            <a href="{{ route('cart.add', ['id' => $p->products_id, 'qty' => 1]) }}"
-                               class="mt-2 inline-block w-full border border-black bg-white text-black text-center py-2 px-4 rounded-lg hover:bg-black hover:text-white transition">
-                                {{ __('products.add_to_cart') }}
-                            </a>
+                        @if ($p->stock_quantity > 0)
+                            @auth
+                                <a href="{{ route('cart.add', ['id' => $p->products_id, 'qty' => 1]) }}"
+                                   class="btn-add-to-cart mt-2 inline-block w-full border border-black bg-white text-black text-center py-2 px-4 rounded-lg hover:bg-black hover:text-white transition">
+                                    {{ __('products.add_to_cart') }}
+                                </a>
 
-                            <a href="{{ route('cart.add', ['id' => $p->products_id, 'qty' => 1, 'redirect' => 'checkout']) }}"
-                                class="mt-2 inline-block w-full border border-black bg-white text-black text-center py-2 px-4 rounded-lg hover:bg-black hover:text-white transition">
-                                {{ __('products.buy_now') }}
-                            </a>
+                                <a href="{{ route('cart.add', ['id' => $p->products_id, 'qty' => 1, 'redirect' => 'checkout']) }}"
+                                    class="mt-2 inline-block w-full border border-black bg-white text-black text-center py-2 px-4 rounded-lg hover:bg-black hover:text-white transition">
+                                    {{ __('products.buy_now') }}
+                                </a>
+                            @else
+                                <a href="{{ route('login') }}"
+                                   class="mt-2 inline-block w-full border border-gray-400 bg-white text-gray-600 text-center py-2 px-4 rounded-lg hover:bg-gray-600 hover:text-white transition">
+                                    {{ __('products.login_to_buy') }}
+                                </a>
+                            @endauth
                         @else
-                            <a href="{{ route('login') }}"
-                               class="mt-2 inline-block w-full border border-gray-400 bg-white text-gray-600 text-center py-2 px-4 rounded-lg hover:bg-gray-600 hover:text-white transition">
-                                {{ __('products.login_to_buy') }}
-                            </a>
-                        @endauth
+                            <span class="mt-2 inline-block w-full border border-gray-300 bg-gray-200 text-gray-500 text-center py-2 px-4 rounded-lg">
+                                {{ __('common.out_of_stock') }}
+                            </span>
+                        @endif
                     </div>
                 </div>
             @empty
@@ -150,4 +156,52 @@
             {{ $products->onEachSide(1)->links() }}
         </div>
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const addButtons = document.querySelectorAll('.btn-add-to-cart');
+            addButtons.forEach(button => {
+                button.addEventListener('click', function (event) {
+                    event.preventDefault();
+                    const url = this.href;
+
+                    fetch(url, {
+                        method: 'GET',
+                        headers: {
+                            'X-Requested-With': 'XMLHttpRequest',
+                            'Accept': 'application/json',
+                        },
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        console.log('Cart response:', data); // Debugging line
+                        if (data.success) {
+                            window.dispatchEvent(new CustomEvent('product-added-to-cart'));
+                            let cartBadge = document.getElementById('cart-badge');
+                            if (data.cartCount > 0) {
+                                if (!cartBadge) {
+                                    const cartLink = document.querySelector('a[href="{{ route('cart.index') }}"]');
+                                    if (cartLink) {
+                                        cartBadge = document.createElement('span');
+                                        cartBadge.id = 'cart-badge';
+                                        cartBadge.className = 'absolute -top-2 -right-2 inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-white bg-red-600 rounded-full';
+                                        cartLink.appendChild(cartBadge);
+                                    }
+                                }
+                                if (cartBadge) {
+                                    cartBadge.textContent = data.cartCount;
+                                    cartBadge.classList.remove('hidden');
+                                }
+                            } else if (cartBadge) {
+                                cartBadge.classList.add('hidden');
+                            }
+                        } else {
+                            alert(data.message);
+                        }
+                    })
+                    .catch(error => console.error('Error:', error));
+                });
+            });
+        });
+    </script>
 </x-user-layout>

@@ -15,10 +15,12 @@ use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\ProductController as AdminProductController;
 use App\Http\Controllers\Admin\OrderController as AdminOrderController;
 use App\Http\Controllers\Admin\NotificationController;
+use App\Http\Controllers\Admin\ProvinceController;
 
 // User Controllers
 use App\Http\Controllers\User\ProductController;
 use App\Http\Controllers\User\FeedbackController;
+use App\Http\Controllers\User\UserAddressController;
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\LanguageController;
@@ -63,6 +65,8 @@ Route::middleware(['auth', AdminMiddleware::class])->prefix('admin')->name('admi
     Route::post('products/{product}/restore', [AdminProductController::class, 'restore'])
         ->name('products.restore')->withTrashed();
     Route::resource('products', AdminProductController::class);
+    // provinces
+    Route::resource('provinces', ProvinceController::class);
     // orders
     Route::get('orders', [AdminOrderController::class, 'index'])->name('orders.index');
     Route::get('orders/{order}', [AdminOrderController::class, 'show'])->name('orders.show');
@@ -76,6 +80,8 @@ Route::middleware(['auth', AdminMiddleware::class])->prefix('admin')->name('admi
 Route::middleware(['auth'])->prefix('user')->name('user.')->group(function () {
     Route::get('/products', [ProductController::class, 'index'])->name('products.index');
     Route::get('/products/{product:slug}', [ProductController::class, 'show'])->name('products.show');
+    // addresses
+    Route::resource('addresses', UserAddressController::class);
     // reviews
     Route::post('/products/{product:slug}/feedbacks',                             [FeedbackController::class,'store'])->name('products.feedbacks.store');
     Route::match(['put','patch'],'/products/{product:slug}/feedbacks/{feedback}', [FeedbackController::class,'update'])->name('products.feedbacks.update');

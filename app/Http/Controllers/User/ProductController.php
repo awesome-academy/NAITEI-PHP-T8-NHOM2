@@ -31,7 +31,8 @@ class ProductController extends Controller
             'image_path',
             'created_at',
             'slug',
-            'categories_id'
+            'categories_id',
+            'stock_quantity'
         ]);
 
     // Search theo tên

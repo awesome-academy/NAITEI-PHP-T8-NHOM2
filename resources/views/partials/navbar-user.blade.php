@@ -74,6 +74,10 @@
                                 {{ __('common.my_orders') }}
                             </x-dropdown-link>
 
+                            <x-dropdown-link :href="route('user.addresses.index')">
+                                {{ __('common.my_addresses') }}
+                            </x-dropdown-link>
+
                             <!-- Authentication -->
                             <form method="POST" action="{{ route('logout') }}">
                                 @csrf
