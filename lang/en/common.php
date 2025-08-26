@@ -117,6 +117,7 @@ return [
     'manage_products' => 'Manage Products',
     'manage_categories' => 'Manage Categories',
     'manage_orders' => 'Manage Orders',
+    'manage_reports'   => 'Manage reports',
     'recipient_name' => 'Recipient Name',
     'recipient_email' => 'Recipient Email',
     'recipient_phone' => 'Recipient Phone',
@@ -143,4 +144,14 @@ return [
 
     // User Addresses
     'my_addresses' => 'My Addresses',
+
+    // Reports (daily)
+    'reports_daily_title' => 'Daily revenue reports',
+    'no_reports'         => 'No reports yet.',
+    'date'               => 'Date',
+    'updated_at'         => 'Updated',
+    'size'               => 'Size',
+    'actions'            => 'Actions',
+    'download'           => 'Download',
+    'bytes'              => ':n bytes',
 ];

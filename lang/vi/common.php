@@ -124,6 +124,7 @@ return [
     'manage_products' => 'Quản lý sản phẩm',
     'manage_categories' => 'Quản lý danh mục',
     'manage_orders' => 'Quản lý đơn hàng',
+    'manage_reports'   => 'Quản lý báo cáo',
 
     // Notifications
     'notifications' => 'Thông báo',
@@ -143,4 +144,15 @@ return [
 
     // User Addresses
     'my_addresses' => 'Địa chỉ của tôi',
+
+    // Reports
+    'reports_daily_title' => 'Báo cáo doanh thu hằng ngày',
+    'no_reports'         => 'Chưa có báo cáo nào.',
+    'date'               => 'Ngày',
+    'updated_at'         => 'Cập nhật',
+    'size'               => 'Kích thước',
+    'actions'            => 'Tác vụ',
+    'download'           => 'Tải xuống',
+    'bytes'              => ':n bytes',
+
 ];

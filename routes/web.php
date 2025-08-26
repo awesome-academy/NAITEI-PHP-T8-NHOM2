@@ -16,6 +16,7 @@ use App\Http\Controllers\Admin\ProductController as AdminProductController;
 use App\Http\Controllers\Admin\OrderController as AdminOrderController;
 use App\Http\Controllers\Admin\NotificationController;
 use App\Http\Controllers\Admin\ProvinceController;
+use App\Http\Controllers\Admin\DailyReportController;
 
 // User Controllers
 use App\Http\Controllers\User\ProductController;
@@ -74,6 +75,9 @@ Route::middleware(['auth', AdminMiddleware::class])->prefix('admin')->name('admi
     // notifications
     Route::post('notifications/mark-as-read', [NotificationController::class, 'markAsRead'])->name('notifications.markAsRead');
     Route::delete('notifications/clear-all', [NotificationController::class, 'clearAll'])->name('notifications.clearAll');
+    // daily reports
+    Route::get('/reports', [DailyReportController::class, 'index'])->name('reports.index');
+    Route::get('/reports/{date}', [DailyReportController::class, 'download'])->name('reports.download');
 });
 
 // User Routes
