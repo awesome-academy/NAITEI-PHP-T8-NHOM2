@@ -93,6 +93,15 @@
                                 <div class="text-gray-600">{{ $order->user->phone ?? 'No phone' }}</div>
                             </div>
                         </div>
+                        <!-- Recipient Card -->
+                        <div class="bg-white border border-gray-200 rounded-lg p-4">
+                            <h3 class="text-lg font-medium text-gray-900 mb-3">{{ __('common.recipient_name') }}</h3>
+                            <div class="space-y-2">
+                                <div class="font-medium text-gray-900">{{ $order->recipient_name }}</div>
+                                <div class="text-gray-600">{{ $order->recipient_email }}</div>
+                                <div class="text-gray-600">{{ $order->recipient_phone }}</div>
+                            </div>
+                        </div>
 
                         <!-- Order Info Card -->
                         <div class="bg-white border border-gray-200 rounded-lg p-4">
@@ -161,6 +170,22 @@
                                             </td>
                                         </tr>
                                     @endforeach
+                                    <tr class="bg-gray-50">
+                                        <td colspan="3" class="px-6 py-4 text-sm font-medium text-gray-900 text-right">
+                                            {{ __('common.subtotal') }}
+                                        </td>
+                                        <td class="px-6 py-4 text-sm font-bold text-gray-900">
+                                            {{ number_format($order->total_amount - $order->shipping_fee, 0) }}đ
+                                        </td>
+                                    </tr>
+                                    <tr class="bg-gray-50">
+                                        <td colspan="3" class="px-6 py-4 text-sm font-medium text-gray-900 text-right">
+                                            {{ __('common.shipping_fee') }}
+                                        </td>
+                                        <td class="px-6 py-4 text-sm font-bold text-gray-900">
+                                            {{ number_format($order->shipping_fee, 0) }}đ
+                                        </td>
+                                    </tr>
                                     <tr class="bg-gray-50">
                                         <td colspan="3" class="px-6 py-4 text-sm font-medium text-gray-900 text-right">
                                             {{ __('orders.total_colon') }}

@@ -22,6 +22,10 @@
             <li class="mb-2">
                 <a href="{{ route('admin.orders.index') }}" class="block hover:bg-gray-700 p-2 rounded {{ request()->routeIs('admin.orders.*') ? 'bg-gray-900' : '' }}">{{ __('common.manage_orders') }}</a>
             </li>
+            <!-- Province Management -->
+            <li class="mb-2">
+                <a href="{{ route('admin.provinces.index') }}" class="block hover:bg-gray-700 p-2 rounded {{ request()->routeIs('admin.provinces.*') ? 'bg-gray-900' : '' }}">{{ __('common.manage_provinces') }}</a>
+            </li>
         </ul>
     </nav>
 </div>

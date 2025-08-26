@@ -53,6 +53,9 @@ return [
     'language' => 'Ngôn ngữ',
     'english' => 'Tiếng Anh',
     'vietnamese' => 'Tiếng Việt',
+    'manage_provinces' => 'Quản lý Tỉnh/Thành phố',
+    'name' => 'Tên Tỉnh/Thành phố',
+    'actions' => 'Hành động',
 
     // Status
     'active' => 'Hoạt động',
@@ -92,6 +95,7 @@ return [
     'restore_category_confirm' => 'Bạn có chắc chắn muốn khôi phục danh mục này?',
     'delete_category_confirm' => 'Bạn có chắc chắn muốn xóa danh mục này?',
     'deleted_at' => 'Ngày xóa',
+    'out_of_stock' => 'Hết hàng',
 
     // Cart and Checkout
     'cart' => 'Giỏ hàng',
@@ -107,6 +111,13 @@ return [
     'payment_cod' => 'Thanh toán khi nhận hàng (COD)',
     'payment_bank' => 'Chuyển khoản ngân hàng',
     'confirm_order' => 'Xác nhận đặt hàng',
+    'recipient_name' => 'Tên người nhận',
+    'recipient_email' => 'Email người nhận',
+    'recipient_phone' => 'Số điện thoại người nhận',
+    'subtotal' => 'Tổng phụ',
+    'shipping_fee' => 'Phí vận chuyển',
+    'select_address' => 'Chọn địa chỉ',
+    'select_address_placeholder' => 'Hoặc nhập địa chỉ mới bên dưới',
 
     'admin_menu' => 'Menu Quản trị viên',
     'manage_users' => 'Quản lý người dùng',
@@ -121,4 +132,15 @@ return [
     'new_order_notification' => 'Đơn hàng mới: #:id',
     'order_details_notification' => 'Người đặt: :name | Tổng tiền: :amount ₫',
     'clear_all' => 'Xóa tất cả',
+
+    // Provinces
+    'provinces' => 'Tỉnh/Thành phố',
+    'create_province' => 'Tạo Tỉnh/Thành phố',
+    'edit_province' => 'Sửa Tỉnh/Thành phố',
+    'are_you_sure' => 'Bạn có chắc không?',
+    'whoops' => 'Ôi!',
+    'problems_with_input' => 'Có một số vấn đề với đầu vào của bạn.',
+
+    // User Addresses
+    'my_addresses' => 'Địa chỉ của tôi',
 ];

@@ -32,5 +32,22 @@
                 {{ $slot }}
             </main>
         </div>
+
+        <div id="cart-notification" class="fixed top-20 right-5 bg-green-500 text-white py-2 px-4 rounded-lg shadow-md" style="display: none; z-index: 9999;">
+            {{ __('common.product_added_to_cart') }}
+        </div>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                window.addEventListener('product-added-to-cart', event => {
+                    const notification = document.getElementById('cart-notification');
+                    notification.style.display = 'block';
+
+                    setTimeout(() => {
+                        notification.style.display = 'none';
+                    }, 3000);
+                });
+            });
+        </script>
     </body>
 </html>

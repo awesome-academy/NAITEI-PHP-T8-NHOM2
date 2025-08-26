@@ -53,6 +53,9 @@ return [
     'language' => 'Language',
     'english' => 'English',
     'vietnamese' => 'Vietnamese',
+    'manage_provinces' => 'Manage Provinces',
+    'name' => 'Name Province',
+    'actions' => 'Actions',
 
     // Status
     'active' => 'Active',
@@ -92,6 +95,7 @@ return [
     'restore_category_confirm' => 'Are you sure you want to restore this category?',
     'delete_category_confirm' => 'Are you sure you want to delete this category?',
     'deleted_at' => 'Deleted At',
+    'out_of_stock' => 'Out of Stock',
 
     // Cart and Checkout
     'cart' => 'Cart',
@@ -113,6 +117,13 @@ return [
     'manage_products' => 'Manage Products',
     'manage_categories' => 'Manage Categories',
     'manage_orders' => 'Manage Orders',
+    'recipient_name' => 'Recipient Name',
+    'recipient_email' => 'Recipient Email',
+    'recipient_phone' => 'Recipient Phone',
+    'subtotal' => 'Subtotal',
+    'shipping_fee' => 'Shipping Fee',
+    'select_address' => 'Select Address',
+    'select_address_placeholder' => 'Or enter new address below',
 
     // Notifications
     'notifications' => 'Notifications',
@@ -121,4 +132,15 @@ return [
     'new_order_notification' => 'New Order: #:id',
     'order_details_notification' => 'Placed by: :name | Total: $:amount',
     'clear_all' => 'Clear All',
+
+    // Provinces
+    'provinces' => 'Provinces',
+    'create_province' => 'Create Province',
+    'edit_province' => 'Edit Province',
+    'are_you_sure' => 'Are you sure?',
+    'whoops' => 'Whoops!',
+    'problems_with_input' => 'There were some problems with your input.',
+
+    // User Addresses
+    'my_addresses' => 'My Addresses',
 ];

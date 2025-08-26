@@ -9,6 +9,42 @@
             <h2 class="text-lg font-bold mb-4">{{ __('common.shipping_information') }}</h2>
 
             <div class="mb-4">
+                <label for="address_id" class="block font-medium mb-1">{{ __('common.select_address') }}</label>
+                <select name="address_id" id="address_id" class="w-full border p-2 rounded">
+                    <option value="">{{ __('common.select_address_placeholder') }}</option>
+                    @foreach ($addresses as $address)
+                        <option value="{{ $address->id }}" data-address="{{ json_encode($address) }}" {{ $address->is_default ? 'selected' : '' }}>
+                            {{ $address->recipient_name }} - {{ $address->address }}, {{ $address->province->name }}
+                        </option>
+                    @endforeach
+                </select>
+            </div>
+
+            <div class="mb-4">
+                <label class="block font-medium mb-1">{{ __('common.recipient_name') }}</label>
+                <input type="text" name="recipient_name" class="w-full border p-2 rounded" value="{{ auth()->user()->name }}" required>
+            </div>
+
+            <div class="mb-4">
+                <label class="block font-medium mb-1">{{ __('common.recipient_email') }}</label>
+                <input type="email" name="recipient_email" class="w-full border p-2 rounded" value="{{ auth()->user()->email }}" required>
+            </div>
+
+            <div class="mb-4">
+                <label class="block font-medium mb-1">{{ __('common.recipient_phone') }}</label>
+                <input type="text" name="recipient_phone" class="w-full border p-2 rounded" required>
+            </div>
+
+            <div class="mb-4">
+                <label for="province_id" class="block text-sm font-medium text-gray-700">Province</label>
+                <select name="province_id" id="province_id" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm" required>
+                    @foreach ($provinces as $province)
+                        <option value="{{ $province->id }}" data-fee="{{ $province->shipping_fee }}">{{ $province->name }}</option>
+                    @endforeach
+                </select>
+            </div>
+
+            <div class="mb-4">
                 <label class="block font-medium mb-1">{{ __('common.shipping_address') }}</label>
                 <input type="text" name="shipping_address" class="w-full border p-2 rounded" required>
             </div>
@@ -48,8 +84,13 @@
                 </tbody>
             </table>
 
+            <div class="text-right mb-4">
+                <div class="text-lg font-bold">{{ __('common.subtotal') }}: {{ number_format($total, 0, ',', '.') }} đ</div>
+                <div class="text-lg font-bold">{{ __('common.shipping_fee') }}: <span id="shipping_fee">0</span> đ</div>
+                <div class="text-lg font-bold">{{ __('common.grand_total') }}: <span id="grand_total">{{ number_format($total, 0, ',', '.') }}</span> đ</div>
+            </div>
+
             <div class="flex justify-between items-center">
-                <div class="text-lg font-bold">{{ __('common.grand_total') }}: {{ number_format($total, 0, ',', '.') }} đ</div>
                 <button type="submit" class="checkout-confirm-btn">{{ __('common.confirm_order') }}</button>
             </div>
         </form>
@@ -72,15 +113,50 @@
 </style>
 
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-    var btn = document.querySelector('.checkout-confirm-btn');
-    if (btn) {
-        btn.addEventListener('mouseover', function() {
-            btn.style.backgroundColor = '#333';
+    document.addEventListener('DOMContentLoaded', function() {
+        const addressSelect = document.getElementById('address_id');
+        const recipientNameInput = document.querySelector('input[name="recipient_name"]');
+        const recipientPhoneInput = document.querySelector('input[name="recipient_phone"]');
+        const provinceSelect = document.getElementById('province_id');
+        const shippingAddressInput = document.querySelector('input[name="shipping_address"]');
+        const shippingFeeSpan = document.getElementById('shipping_fee');
+        const grandTotalSpan = document.getElementById('grand_total');
+        const subtotal = parseFloat('{{ $total }}');
+
+        function updateShippingFee() {
+            const selectedProvince = provinceSelect.options[provinceSelect.selectedIndex];
+            let fee = 0;
+            if (subtotal > 2000000) {
+                fee = 0;
+            } else if (selectedProvince) {
+                fee = parseFloat(selectedProvince.dataset.fee) || 0;
+            }
+            shippingFeeSpan.textContent = fee.toLocaleString('vi-VN');
+            grandTotalSpan.textContent = (subtotal + fee).toLocaleString('vi-VN');
+        }
+
+        addressSelect.addEventListener('change', function() {
+            const selectedOption = this.options[this.selectedIndex];
+            if (selectedOption && selectedOption.value) {
+                const addressData = JSON.parse(selectedOption.dataset.address);
+                recipientNameInput.value = addressData.recipient_name;
+                recipientPhoneInput.value = addressData.recipient_phone;
+                provinceSelect.value = addressData.province_id;
+                shippingAddressInput.value = addressData.address;
+            } else {
+                recipientNameInput.value = '{{ auth()->user()->name }}';
+                recipientPhoneInput.value = '';
+                provinceSelect.value = '';
+                shippingAddressInput.value = '';
+            }
+            updateShippingFee();
         });
-        btn.addEventListener('mouseout', function() {
-            btn.style.backgroundColor = 'black';
-        });
-    }
-});
+
+        provinceSelect.addEventListener('change', updateShippingFee);
+
+        // Trigger change on page load to set initial values
+        if (addressSelect) {
+            addressSelect.dispatchEvent(new Event('change'));
+        }
+    });
 </script>

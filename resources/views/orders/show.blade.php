@@ -5,6 +5,9 @@
 
     <div class="max-w-4xl mx-auto p-6 bg-white shadow rounded">
         <p><strong>{{ __('orders.order_status') }}:</strong> {{ $order->status }}</p>
+        <p><strong>{{ __('common.recipient_name') }}:</strong> {{ $order->recipient_name }}</p>
+        <p><strong>{{ __('common.recipient_email') }}:</strong> {{ $order->recipient_email }}</p>
+        <p><strong>{{ __('common.recipient_phone') }}:</strong> {{ $order->recipient_phone }}</p>
         <p><strong>{{ __('orders.shipping_address') }}:</strong> {{ $order->shipping_address }}</p>
         <p><strong>{{ __('orders.payment_method') }}:</strong> {{ $order->payment_method }}</p>
         <p><strong>{{ __('orders.order_date_colon') }}</strong> {{ optional($order->order_date)->format('d/m/Y H:i') }}</p>
@@ -47,9 +50,10 @@
             </tbody>
         </table>
 
-        <div class="text-lg font-bold">
-            {{ __('orders.total_colon') }} {{ number_format($order->total_amount, 0, ',', '.') }} đ
+        <div class="text-right mt-4">
+            <p><strong>{{ __('common.subtotal') }}:</strong> {{ number_format($order->total_amount - $order->shipping_fee, 0, ',', '.') }} đ</p>
+            <p><strong>{{ __('common.shipping_fee') }}:</strong> {{ number_format($order->shipping_fee, 0, ',', '.') }} đ</p>
+            <p class="text-lg font-bold"><strong>{{ __('orders.total_colon') }}</strong> {{ number_format($order->total_amount, 0, ',', '.') }} đ</p>
         </div>
     </div>
 </x-user-layout>
-
