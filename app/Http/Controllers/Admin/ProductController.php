@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Product;
 use App\Models\Category;
+use App\Models\ProductImage; 
 
 use Illuminate\Http\Request;  
 use App\Http\Requests\Admin\StoreProductRequest;
@@ -89,11 +90,42 @@ class ProductController extends Controller
         $data['specifications']  = $spec; // nếu muốn giữ thêm cột JSON chuẩn hóa
 
         // Upload ảnh
-        if ($request->hasFile('image')) {
-            $data['image_path'] = $request->file('image')->store('products', 'public');
-        }
+        $product = Product::create($data);
 
-        Product::create($data);
+        // Trường hợp form mới gửi 'images[]'
+        if ($request->hasFile('images')) {
+            $files = $request->file('images', []);
+            $files = array_slice($files, 0, 5); // giới hạn 5
+
+            $firstPath = null;
+            foreach ($files as $idx => $f) {
+                $path = $f->store('products', 'public');
+                ProductImage::create([
+                    'products_id' => $product->getKey(),
+                    'image_path'  => $path,
+                    'is_primary'  => $idx === 0,   // mặc định ảnh đầu là ảnh chính
+                    'sort_order'  => $idx,
+                ]);
+                $firstPath ??= $path;
+            }
+
+            if ($firstPath) {
+                $product->update(['image_path' => $firstPath]); // để UI cũ vẫn hiển thị
+            }
+        }
+        // Trường hợp chỉ có field cũ 'image'
+        elseif ($request->hasFile('image')) {
+            $path = $request->file('image')->store('products', 'public');
+            $product->update(['image_path' => $path]);
+
+            // đồng thời push vào bảng images để data đồng nhất
+            ProductImage::create([
+                'products_id' => $product->getKey(),
+                'image_path'  => $path,
+                'is_primary'  => true,
+                'sort_order'  => 0,
+            ]);
+        }
 
         return redirect()->route('admin.products.index', ['sort' => 'desc']) // redirect sau khi create, gán sort = desc ở URL. Khi này sẽ redirect đúng trang vừa create
                         ->with('success', 'Thêm sản phẩm thành công');
@@ -104,6 +136,8 @@ class ProductController extends Controller
      */
     public function show(\App\Models\Product $product)
     {
+        $product->loadMissing('images', 'primaryImage');
+
         $spec = is_array($product->specifications)
         ? $product->specifications
         : (json_decode($product->specifications ?? '[]', true) ?: []);
@@ -194,19 +228,88 @@ class ProductController extends Controller
         // Ảnh
         if ($request->boolean('remove_image')) {
             if ($this->isLocalImagePath($product->image_path)) {
-                Storage::disk('public')->delete($product->image_path);
+                Storage::disk('public')->delete($product->image_path); // xóa ảnh cũ nếu tick
             }
             $data['image_path'] = null;
         }
 
-        // Upload ảnh mới -> xóa ảnh cũ (nếu là ảnh local)
+        // 1) Xóa các ảnh con theo remove_image_ids[]
+        $removeIds = (array) $request->input('remove_image_ids', []);
+        if (!empty($removeIds)) {
+            $toDelete = $product->images()->whereIn('product_image_id', $removeIds)->get();
+            foreach ($toDelete as $img) {
+                if ($this->isLocalImagePath($img->image_path)) {
+                    Storage::disk('public')->delete($img->image_path);
+                }
+                $img->delete();
+            }
+        }
+
+        // 2) Upload ảnh mới từ images[] (giới hạn tổng ≤ 5)
+        $currentCount = $product->images()->count();
+        $canAdd = max(0, 5 - $currentCount);
+
+        if ($request->hasFile('images') && $canAdd > 0) {
+            $files = array_slice($request->file('images', []), 0, $canAdd);
+            foreach ($files as $idx => $f) {
+                $path = $f->store('products', 'public');
+                ProductImage::create([
+                    'products_id' => $product->getKey(),
+                    'image_path'  => $path,
+                    'is_primary'  => false,                       // sẽ set primary ở bước 4
+                    'sort_order'  => $currentCount + $idx,
+                ]);
+                // nếu image_path đang trống, đồng bộ theo ảnh đầu vừa thêm
+                if (!$product->image_path && $idx === 0) {
+                    $data['image_path'] = $path;
+                }
+            }
+        }
+
+        // 3) Trường hợp form cũ gửi 1 file qua 'image' → thay ảnh đơn + đẩy vào bảng images
         if ($request->hasFile('image')) {
             if ($this->isLocalImagePath($product->image_path)) {
                 Storage::disk('public')->delete($product->image_path);
             }
-            $data['image_path'] = $request->file('image')->store('products', 'public');
+            $path = $request->file('image')->store('products', 'public');
+            $data['image_path'] = $path;
+
+            // thêm vào bảng images nếu chưa đủ 5
+            if ($product->images()->count() < 5) {
+                ProductImage::create([
+                    'products_id' => $product->getKey(),
+                    'image_path'  => $path,
+                    'is_primary'  => false,                       // set primary ở bước 4
+                    'sort_order'  => $product->images()->count(),
+                ]);
+            }
         }
 
+        // 4) Set ảnh chính theo primary_image_id (nếu có)
+        $primaryId = $request->input('primary_image_id');
+        if ($primaryId) {
+            $owned = $product->images()->where('product_image_id', $primaryId)->exists();
+            if ($owned) {
+                $product->images()->update(['is_primary' => false]);
+                $product->images()->where('product_image_id', $primaryId)->update(['is_primary' => true]);
+
+                // đồng bộ image_path cho UI cũ
+                $newPrimary = $product->images()->where('product_image_id', $primaryId)->first();
+                if ($newPrimary) {
+                    $data['image_path'] = $newPrimary->image_path;
+                }
+            }
+        } else {
+            // nếu chưa có ảnh chính → chọn ảnh đầu theo sort_order
+            if (!$product->images()->where('is_primary', true)->exists()) {
+                $first = $product->images()->orderBy('sort_order')->first();
+                if ($first) {
+                    $first->update(['is_primary' => true]);
+                    $data['image_path'] = $image_path; // đồng bộ UI cũ
+                }
+            }
+        }
+        
         $product->update($data);
 
         return redirect()
@@ -219,13 +322,9 @@ class ProductController extends Controller
      */
     public function destroy(\App\Models\Product $product)
     {
-        if ($product->image_path && str_starts_with($product->image_path, 'products/')) {
-            Storage::disk('public')->delete($product->image_path);
-        }
-
         $product->delete();
 
-        return back()->with('success', 'Đã xóa sản phẩm (Có thể khôi phục trong Trashed).');
+        return back()->with('success', 'Đã đưa sản phẩm vào thùng rác (có thể khôi phục).');
     }
 
     public function trashed(Request $request)

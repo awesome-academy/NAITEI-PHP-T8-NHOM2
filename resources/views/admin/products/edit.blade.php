@@ -21,6 +21,7 @@
           <form action="{{ route('admin.products.update', $product) }}" method="post" enctype="multipart/form-data" class="space-y-4">
             @csrf @method('PUT')
 
+            {{-- Img --}}
             <div>
               <label class="block text-sm mb-1">{{ __('products.category') }}</label>
               <select name="categories_id" class="border rounded px-3 py-2 w-64" required>
@@ -67,20 +68,87 @@
 
             <div>
               <label class="block text-sm mb-1">{{ __('products.image') }}</label>
-              <input type="file" name="image" accept="image/*" class="border rounded px-3 py-2 w-full">
-              <div class="mt-2">
-                <img
-                  src="{{ $product->image_url ?: asset('images/placeholder.png') }}"
-                  alt="{{ $product->product_name ?: __('products.image_alt') }}"
-                  style="max-height:120px">
+
+              @php $existingImages = $product->images()->orderBy('sort_order')->get(); @endphp
+
+              {{-- A Gallery hiện có: chọn ảnh chính + đánh dấu xoá --}}
+              @if($existingImages->count())
+                <div class="mt-2">
+                  <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3">
+                    @foreach($existingImages as $img)
+                      <div class="border rounded p-2">
+                        <img src="{{ $img->url }}" alt="" class="w-full h-24 object-cover rounded">
+                        <div class="mt-2 space-y-1">
+                          <label class="flex items-center gap-2 text-sm">
+                            <input type="radio"
+                                  name="primary_image_id"
+                                  value="{{ $img->product_image_id }}"
+                                  class="rounded"
+                                  @checked(old('primary_image_id', optional($product->primaryImage()->first())->product_image_id) == $img->product_image_id)>
+                            <span>Đặt làm ảnh chính</span>
+                          </label>
+
+                          <label class="flex items-center gap-2 text-sm">
+                            <input type="checkbox"
+                                  name="remove_image_ids[]"
+                                  value="{{ $img->product_image_id }}"
+                                  class="rounded">
+                            <span>Xoá ảnh này</span>
+                          </label>
+                        </div>
+                      </div>
+                    @endforeach
+                  </div>
+                  <p class="text-xs text-gray-500 mt-2">
+                    Bạn có thể chọn 1 ảnh chính và đánh dấu xoá những ảnh không dùng.
+                  </p>
+                </div>
+              @endif
+
+              {{-- B Thêm ảnh mới (giới hạn còn lại ≤ 5) --}}
+              <div x-data="{ files: [], limit: Math.max(0, 5 - {{ $existingImages->count() }}) }" class="mt-4">
+                <label class="block text-sm mb-1">
+                  Thêm ảnh mới (tối đa còn lại: <span x-text="limit"></span>)
+                </label>
+
+                <input
+                  type="file"
+                  name="images[]"
+                  accept="image/*"
+                  multiple
+                  class="border rounded px-3 py-2 w-full"
+                  @change="files = Array.from($event.target.files).slice(0, limit)"
+                  :disabled="limit <= 0"
+                >
+                @error('images') <p class="text-sm text-red-600 mt-1">{{ $message }}</p> @enderror
+                @error('images.*') <p class="text-sm text-red-600 mt-1">{{ $message }}</p> @enderror
+
+                <div class="mt-3 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3" x-show="files.length">
+                  <template x-for="(f, idx) in files" :key="idx">
+                    <div class="border rounded p-1">
+                      <img :src="URL.createObjectURL(f)" class="w-full h-24 object-cover rounded">
+                      <div class="text-xs text-gray-500 mt-1" x-text="f.name"></div>
+                    </div>
+                  </template>
+                </div>
               </div>
 
-              <label class="inline-flex items-center gap-2 mt-2">
-                <input type="checkbox" name="remove_image" value="1" class="rounded" {{ old('remove_image') ? 'checked' : '' }}>
-                <span>{{ __('products.delete_current_image') }}</span>
-              </label>
-              @error('image') <p class="text-sm text-red-600 mt-1">{{ $message }}</p> @enderror
+              {{-- Fallback legacy: khi CHƯA có gallery, vẫn cho xoá ảnh cũ & xem preview --}}
+              @if($existingImages->count() == 0)
+                <div class="mt-2">
+                  <img
+                    src="{{ $product->image_url ?: asset('images/placeholder.png') }}"
+                    alt="{{ $product->product_name ?: __('products.image_alt') }}"
+                    style="max-height:120px">
+                </div>
+
+                <label class="inline-flex items-center gap-2 mt-2">
+                  <input type="checkbox" name="remove_image" value="1" class="rounded" {{ old('remove_image') ? 'checked' : '' }}>
+                  <span>{{ __('products.delete_current_image') }}</span>
+                </label>
+              @endif
             </div>
+
 
 
             {{-- Specifications --}}

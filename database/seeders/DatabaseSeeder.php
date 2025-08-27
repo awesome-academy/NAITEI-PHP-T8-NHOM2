@@ -31,6 +31,7 @@ class DatabaseSeeder extends Seeder
             FeedbackSeeder::class,
             ProvinceSeeder::class,
             UserAddressSeeder::class,
+            BackfillProductImagesSeeder::class,
         ]);
     }
 }

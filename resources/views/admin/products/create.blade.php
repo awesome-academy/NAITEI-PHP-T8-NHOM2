@@ -68,10 +68,37 @@
               </div>
             </div>
 
-            <div>
-              <label class="block text-sm mb-1">{{ __('products.image') }}</label>
-              <input type="file" name="image" accept="image/*" class="border rounded px-3 py-2 w-full">
-              @error('image') <p class="text-sm text-red-600 mt-1">{{ $message }}</p> @enderror
+            <div x-data="{ files: [], limit: 5 }">
+              <label class="block text-sm mb-1">{{ __('products.image') }} (tối đa 5 ảnh)</label>
+
+              <input
+                type="file"
+                name="images[]"
+                accept="image/*"
+                multiple
+                class="border rounded px-3 py-2 w-full"
+                @change="files = Array.from($event.target.files).slice(0, limit)"
+              >
+              @error('images') <p class="text-sm text-red-600 mt-1">{{ $message }}</p> @enderror
+              @error('images.*') <p class="text-sm text-red-600 mt-1">{{ $message }}</p> @enderror
+
+              {{-- preview đơn giản --}}
+              <div class="mt-3 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3" x-show="files.length">
+                <template x-for="(f, idx) in files" :key="idx">
+                  <div class="border rounded p-1">
+                    <img :src="URL.createObjectURL(f)" class="w-full h-24 object-cover rounded">
+                    <div class="text-xs text-gray-500 mt-1" x-text="f.name"></div>
+                    <div class="mt-1">
+                      <label class="inline-flex items-center gap-2 text-xs">
+                        <input type="radio" name="primary_image_id" disabled class="rounded" checked x-show="idx === 0">
+                        <span x-text="idx === 0 ? 'Ảnh chính (mặc định)' : ''"></span>
+                      </label>
+                    </div>
+                  </div>
+                </template>
+              </div>
+
+              <p class="text-xs text-gray-500 mt-1">Ảnh đầu tiên sẽ được đặt làm ảnh chính sau khi lưu.</p>
             </div>
 
             {{-- Specifications --}}

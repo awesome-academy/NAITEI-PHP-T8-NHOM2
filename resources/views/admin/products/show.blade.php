@@ -81,19 +81,45 @@
               {{-- Image --}}
               <section>
                 <h3 class="text-xl font-semibold text-gray-900 mb-4">{{ __('products.image') }}</h3>
-                @if ($product->image_path)
-                  <img
-                    class="w-full max-h-[360px] rounded-md border bg-gray-50 object-contain"
-                    src="{{ \Illuminate\Support\Str::startsWith($product->image_path, ['http://','https://'])
-                          ? $product->image_path
-                          : \Illuminate\Support\Facades\Storage::url($product->image_path) }}"
-                    alt="{{ $product->product_name }}"
-                  >
-                @else
-                  <div class="h-64 grid place-items-center border rounded-md text-gray-400 bg-gray-50">
-                    {{ __('products.no_image_available') }}
+
+                @php
+                  $gallery = $product->images;                       // đã eager load
+                  $primary = $gallery->firstWhere('is_primary', true) ?? $gallery->first();
+                  $mainUrl = $primary?->url ?? $product->image_url;  // fallback ảnh cũ
+                @endphp
+
+                <div id="admin-gallery" class="space-y-3">
+                  {{-- ảnh lớn --}}
+                  <div class="w-full rounded-md border bg-gray-50 grid place-items-center p-2">
+                    <img id="admin-gallery-main"
+                        src="{{ $mainUrl }}"
+                        alt="{{ $product->product_name }}"
+                        class="max-h-[420px] w-auto h-auto object-contain">
                   </div>
-                @endif
+
+                  {{-- thumbnails --}}
+                  <div class="flex gap-3 overflow-x-auto">
+                    @forelse($gallery as $img)
+                      <button type="button"
+                              class="h-20 w-20 border rounded overflow-hidden focus:ring-2 focus:ring-gray-300 {{ $img->is_primary ? 'ring-2 ring-gray-400' : '' }}"
+                              data-src="{{ $img->url }}">
+                        <img src="{{ $img->url }}" class="h-full w-full object-cover" alt="">
+                      </button>
+                    @empty
+                      {{-- không có gallery -> vẫn hiện ảnh cũ --}}
+                      <img src="{{ $product->image_url }}" class="h-20 w-20 border rounded object-cover" alt="">
+                    @endforelse
+                  </div>
+                </div>
+
+                <script>
+                  document.addEventListener('DOMContentLoaded', function () {
+                    const main = document.getElementById('admin-gallery-main');
+                    document.querySelectorAll('#admin-gallery [data-src]').forEach(btn => {
+                      btn.addEventListener('click', () => { main.src = btn.dataset.src; });
+                    });
+                  });
+                </script>
               </section>
 
               {{-- Specifications --}}

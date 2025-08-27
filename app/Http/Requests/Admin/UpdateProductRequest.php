@@ -3,6 +3,7 @@
 namespace App\Http\Requests\Admin;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
 use Illuminate\Support\Str;
 
 class UpdateProductRequest extends FormRequest
@@ -41,6 +42,23 @@ class UpdateProductRequest extends FormRequest
             'status'         => ['required', 'integer', 'in:0,1'],
             'image'          => ['nullable', 'image', 'mimes:jpg,jpeg,png,webp', 'max:2048'],
             'remove_image'   => ['nullable', 'boolean'],
+            'images'         => ['nullable','array','max:5'],               
+            'images.*'       => ['image','mimes:jpg,jpeg,png,webp','max:2048'],
+
+            // xóa các ảnh con theo id
+            'remove_image_ids'   => ['nullable','array'],
+            'remove_image_ids.*' => [
+                'integer',
+                Rule::exists('product_images','product_image_id')
+                    ->where(fn ($q) => $q->where('products_id', optional($this->route('product'))->getKey())),
+            ],
+
+            // chọn ảnh chính theo id
+            'primary_image_id' => [
+                'nullable','integer',
+                Rule::exists('product_images','product_image_id')
+                    ->where(fn ($q) => $q->where('products_id', optional($this->route('product'))->getKey())),
+            ],
 
             // specs
             'spec_size'      => ['array'],
