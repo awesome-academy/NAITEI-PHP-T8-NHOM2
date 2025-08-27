@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Order;
@@ -85,7 +86,7 @@ class DashboardController extends Controller
 
     private function getOrderStatusBreakdown()
     {
-        return Order::select('status', \DB::raw('count(*) as count'))
+    return Order::select('status', DB::raw('count(*) as count'))
             ->groupBy('status')
             ->get()
             ->keyBy('status')
@@ -115,13 +116,39 @@ class DashboardController extends Controller
 
     private function getTopProductsBySales($limit)
     {
-        return Product::select('products.*')
-	            ->leftJoin('order_items', 'products.products_id', '=', 'order_items.products_id')
-	            ->selectRaw('COALESCE(SUM(order_items.quantity), 0) as total_sold')
-	            ->selectRaw('COALESCE(SUM(order_items.price * order_items.quantity), 0) as total_revenue')
-	            ->with('category')
-	            ->groupBy('products.products_id')
-	            ->orderByDesc('total_sold')
+        return Product::select(
+                'products.products_id',
+                'products.categories_id',
+                'products.product_name',
+                'products.description',
+                'products.product_price',
+                'products.stock_quantity',
+                'products.image_path',
+                'products.specifications',
+                'products.slug',
+                'products.status',
+                'products.rating_count',
+                'products.rating_avg'
+            )
+            ->leftJoin('order_items', 'products.products_id', '=', 'order_items.products_id')
+            ->selectRaw('COALESCE(SUM(order_items.quantity), 0) as total_sold')
+            ->selectRaw('COALESCE(SUM(order_items.price * order_items.quantity), 0) as total_revenue')
+            ->with('category')
+            ->groupBy(
+                'products.products_id',
+                'products.categories_id',
+                'products.product_name',
+                'products.description',
+                'products.product_price',
+                'products.stock_quantity',
+                'products.image_path',
+                'products.specifications',
+                'products.slug',
+                'products.status',
+                'products.rating_count',
+                'products.rating_avg'
+            )
+            ->orderByDesc('total_sold')
             ->take($limit)
             ->get();
     }
@@ -165,7 +192,7 @@ class DashboardController extends Controller
         $averageRating = $totalReviews > 0 ? (float) $aggregates->average_rating : 0;
         
         $ratingDistribution = Feedback::visible()
-            ->select('rating', \DB::raw('count(*) as count'))
+            ->select('rating', DB::raw('count(*) as count'))
             ->groupBy('rating')
             ->orderBy('rating', 'desc')
             ->get()

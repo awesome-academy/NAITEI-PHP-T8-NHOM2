@@ -25,6 +25,7 @@ return [
     'search_products' => 'Tìm kiếm sản phẩm...',
     'no_products_found' => 'Không tìm thấy sản phẩm.',
     'delete_product_confirm' => 'Bạn có chắc chắn muốn xóa sản phẩm này?',
+    'sort' => 'Sắp xếp',
 
     // Product attributes
     'name' => 'Tên',

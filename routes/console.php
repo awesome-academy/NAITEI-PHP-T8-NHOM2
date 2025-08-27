@@ -15,6 +15,6 @@ Schedule::command('report:daily')
 
 if (app()->isLocal()) {
     Schedule::command('report:daily')
-        ->everyFiveMinute()
+        ->everyMinute()
         ->timezone(config('report.timezone'));
 }
