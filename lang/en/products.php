@@ -25,6 +25,7 @@ return [
     'search_products' => 'Search products...',
     'no_products_found' => 'No products found.',
     'delete_product_confirm' => 'Are you sure you want to delete this product?',
+    'sort' => 'Sort',
 
     // Product attributes
     'name' => 'Name',

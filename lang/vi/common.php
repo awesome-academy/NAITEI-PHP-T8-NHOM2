@@ -183,7 +183,7 @@ return [
     'sold' => 'đã bán',
     'reviews' => 'đánh giá',
     'revenue' => 'Doanh thu',
-    'orders' => 'đơn hàng',
+    'orders' => 'Đơn hàng',
     'status' => 'Trạng thái',
     'processing' => 'Đang xử lý',
     'shipping' => 'Đang giao hàng',

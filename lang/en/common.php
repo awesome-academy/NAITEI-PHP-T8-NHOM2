@@ -183,7 +183,7 @@ return [
     'sold' => 'sold',
     'reviews' => 'reviews',
     'revenue' => 'Revenue',
-    'orders' => 'orders',
+    'orders' => 'Orders',
     'processing' => 'Processing',
     'shipping' => 'Shipping',
     'status' => 'Status',
