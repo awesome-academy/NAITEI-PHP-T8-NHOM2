@@ -1,0 +1,24 @@
+{
+  "message": "Created",
+  "product": {
+    "id": 101,
+    "categories_id": 1,
+    "product_name": "Pamu Swim Shorts - Đen",
+    "description": "Quick-dry swim shorts in black.",
+    "product_price": 1165255.41,
+    "stock_quantity": 99,
+    "image_path": "products/2A8BwN43VqTKfK.jpg",
+    "specifications": {
+      "size": ["32", "34", "38"],
+      "color": ["Đen"],
+      "fit": "Regular"
+    },
+    "slug": "pamu-swim-shorts-den-Jk7ge",
+    "status": 1,
+    "deleted_at": null,
+    "rating_count": 0,
+    "rating_average": 0.0,
+    "created_at": "2025-08-29T09:00:00Z",
+    "updated_at": "2025-08-29T09:00:00Z"
+  }
+}

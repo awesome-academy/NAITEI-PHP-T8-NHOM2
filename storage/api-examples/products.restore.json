@@ -1,0 +1,24 @@
+{
+  "message": "Restored",
+  "product": {
+    "id": 10,
+    "categories_id": 2,
+    "product_name": "Niek Heavyweight - Ghi",
+    "description": "Heavyweight tee in gray.",
+    "product_price": 313541.36,
+    "stock_quantity": 69,
+    "image_path": "products/052557dq0g2xmen8c1389259573707.jpg",
+    "specifications": {
+      "size": ["XS", "M", "L"],
+      "color": ["Ghi"],
+      "fit": "Oversize"
+    },
+    "slug": "niek-heavyweight-ghi-uKlUD",
+    "status": 0,
+    "deleted_at": null,
+    "rating_count": 0,
+    "rating_average": 0.0,
+    "created_at": "2025-08-28T08:13:55Z",
+    "updated_at": "2025-08-29T09:00:00Z"
+  }
+}

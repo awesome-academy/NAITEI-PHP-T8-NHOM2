@@ -17,8 +17,15 @@ use Illuminate\Support\Facades\Storage;
 class ProductController extends Controller
 {
     /**
+     * @group Product
+     * @authenticated
      * Display a listing of the resource.
+     *
+     * @queryParam q string Search by name/SKU. Example: shirt
+     * @queryParam per_page integer. Example: 20
+     * @responseFile storage/api-examples/products.index.json
      */
+
     public function index(Request $request)
     {
         $sort = in_array($request->get('sort'), ['asc','desc']) ? $request->get('sort') : 'asc'; // Đọc tham số sort ở URL, mặc định là asc, sắp xếp từ 1 tăng dần
@@ -61,8 +68,17 @@ class ProductController extends Controller
     }
 
     /**
+     * @group Product
+     * @authenticated
      * Store a newly created resource in storage.
+     *
+     * @bodyParam name string required. Example: Áo thun basic
+     * @bodyParam sku string required. Example: TSHIRT-001
+     * @bodyParam price number required. Example: 199000
+     * @bodyParam active boolean. Example: true
+     * @responseFile 201 storage/api-examples/products.store.json
      */
+
     public function store(StoreProductRequest $request)
     {
         $data = $request->validated();
@@ -131,9 +147,15 @@ class ProductController extends Controller
                         ->with('success', 'Thêm sản phẩm thành công');
     }
 
-    /**
+     /**
+     * @group Product
+     * @authenticated
      * Display the specified resource.
+     *
+     * @urlParam product integer required ID. Example: 123
+     * @responseFile storage/api-examples/products.show.json
      */
+
     public function show(\App\Models\Product $product)
     {
         $product->loadMissing('images', 'primaryImage');
@@ -199,8 +221,17 @@ class ProductController extends Controller
     }
 
     /**
+     * @group Product
+     * @authenticated
      * Update the specified resource in storage.
+     *
+     * @urlParam product integer required ID. Example: 123
+     * @bodyParam name string. Example: Áo thun basic (mới)
+     * @bodyParam price number. Example: 249000
+     * @bodyParam active boolean. Example: false
+     * @responseFile storage/api-examples/products.update.json
      */
+
     public function update(UpdateProductRequest $request, Product $product)
     {
             $data = $request->validated();
@@ -305,7 +336,7 @@ class ProductController extends Controller
                 $first = $product->images()->orderBy('sort_order')->first();
                 if ($first) {
                     $first->update(['is_primary' => true]);
-                    $data['image_path'] = $image_path; // đồng bộ UI cũ
+                    $data['image_path'] = $first->image_path; // đồng bộ UI cũ
                 }
             }
         }
@@ -318,15 +349,35 @@ class ProductController extends Controller
     }
 
     /**
+     * @group Product
+     * @authenticated
+     * Remove the specified resource from storage (soft delete).
+     *
+     * @urlParam product integer required ID. Example: 123
+     * @response 204 {}
+     */
+    /**
      * Remove the specified resource from storage.
      */
     public function destroy(\App\Models\Product $product)
     {
+
+        if ($this->isLocalImagePath($product->image_path)) {
+            \Storage::disk('public')->delete($product->image_path);
+        }
+        
         $product->delete();
 
         return back()->with('success', 'Đã đưa sản phẩm vào thùng rác (có thể khôi phục).');
     }
 
+    /**
+     * @group Product
+     * @authenticated
+     * Display a listing of the trashed (soft-deleted) resource.
+     *
+     * @responseFile storage/api-examples/products.trashed.json
+     */
     public function trashed(Request $request)
     {
         $products = \App\Models\Product::onlyTrashed()
@@ -338,6 +389,14 @@ class ProductController extends Controller
         return view('admin.products.trashed', compact('products'));
     }
 
+    /**
+     * @group Product
+     * @authenticated
+     * Restore a soft-deleted resource.
+     *
+     * @urlParam product integer required ID. Example: 123
+     * @responseFile storage/api-examples/products.restore.json
+     */
     public function restore(\App\Models\Product $product)
     {
         $product->restore();

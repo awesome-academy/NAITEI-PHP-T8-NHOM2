@@ -32,14 +32,15 @@ class DailyRevenueReport extends Command
         $from = $date->copy()->startOfDay()->timezone('UTC');
         $to   = $date->copy()->endOfDay()->timezone('UTC');
 
-        // 2) Trạng thái đơn được tính doanh thu
+
+        // 2. Trạng thái đơn được tính doanh thu
         $statusesOpt = $this->option('statuses');
         $statuses = $statusesOpt
             ? array_filter(array_map('trim', explode(',', $statusesOpt)))
             : (array) config('report.paid_statuses', ['paid', 'completed']);
 
-        // 3) Tính toán
-        $query = Order::query()->whereBetween('created_at', [$from, $to]);
+        // 3. Tính toán
+        $query = Order::query()->whereBetween('delivery_date', [$from, $to]);
         if (!empty($statuses)) {
             $query->whereIn('status', $statuses);
         }
@@ -48,7 +49,7 @@ class DailyRevenueReport extends Command
         $count   = $orders->count();
         $revenue = (float) $orders->sum('total_amount');
 
-        // 4) Nội dung báo cáo
+        // 4. Nội dung báo cáo
         $reportTz = config('report.timezone', $appTz);
         $day = $date->copy()->timezone($reportTz)->toDateString(); // ví dụ 2025-08-20
 
@@ -81,7 +82,7 @@ class DailyRevenueReport extends Command
 
             // Nếu đã có file và KHÔNG có --force -> bỏ qua
         if ($disk->exists($fullPath) && ! $this->option('force')) {
-            $this->info("Bỏ qua: đã có sẵn storage/app/{$fullPath} (dùng --force để ghi đè).");
+            $this->info("Bỏ qua: đã có sẵn storage/app/{$fullPath}");
         } else {
             $disk->put($fullPath, $reportText);
             $this->info("Đã lưu: storage/app/{$fullPath}");
@@ -92,7 +93,7 @@ class DailyRevenueReport extends Command
             $this->info("Đã dọn {$removed} báo cáo cũ (>90 ngày).");
         }
 
-        // 6) Gửi mail cho admin (nếu cấu hình)
+        // 6. Gửi mail cho admin 
         if (in_array($delivery, ['mail', 'both'], true)) {
             $admins = User::where('role', 'admin')->get(['id','name','email']);
             if ($admins->isEmpty()) {
