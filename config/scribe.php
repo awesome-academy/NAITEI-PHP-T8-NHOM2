@@ -12,7 +12,7 @@ return [
     'title' => config('app.name') . ' API Documentation',
 
     // A short description of your API. Will be included in the docs webpage, Postman collection and OpenAPI spec.
-    'description' => '',
+    'description' => 'Category Management API - CRUD operations for categories',
 
     // Text to place in the "Introduction" section, right after the `description`. Markdown and HTML are supported.
     'intro_text' => <<<INTRO
@@ -39,7 +39,7 @@ return [
 
             // Include these routes even if they did not match the rules above.
             'include' => [
-                // 'users.index', 'POST /new', '/auth/*'
+                'admin.categories.*',
             ],
 
             // Exclude these routes even if they matched the rules above.
@@ -180,7 +180,9 @@ return [
         // You can override this by listing the groups, subgroups and endpoints here in the order you want them.
         // See https://scribe.knuckles.wtf/blog/laravel-v4#easier-sorting and https://scribe.knuckles.wtf/laravel/reference/config#order for details
         // Note: does not work for `external` docs types
-        'order' => [],
+        'order' => [
+            'Categories',
+        ],
     ],
 
     // Custom logo path. This will be used as the value of the src attribute for the <img> tag,

@@ -36,7 +36,7 @@ endpoints:
           access-control-allow-origin: '*'
           access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
           access-control-allow-headers: 'Content-Type, Authorization, X-Requested-With, X-XSRF-TOKEN'
-          set-cookie: 'app_locale=eyJpdiI6Imtkc0NETW5ET1NESUZZdUw0bi83NUE9PSIsInZhbHVlIjoianNvOGR5aHZVeWxVKzNVaThaRVkzcWRDYUNjZmVzRWVwcytVQVlXQStMd3RYb3BxSzZNR0Y3cEt2ekVwb3FNeiIsIm1hYyI6ImVhNGQwMGM2ODhmMzAwOGQxNmM0ODAyNjJjODRjMWVmNDc4ODBjMTc3N2E3MmVhMzM2MmI4YzI5ZGZhODhiYTkiLCJ0YWciOiIifQ%3D%3D; expires=Sat, 29 Aug 2026 04:39:45 GMT; Max-Age=31536000; path=/; httponly; samesite=lax; XSRF-TOKEN=eyJpdiI6Ik92WWJhQ2FHMGNaa3k3QUxySjJBZlE9PSIsInZhbHVlIjoiblREWm5yQjhISWlBMm13eWVLbUl6NHQ2dHBEaHh1MGVVOWRzZE5QSFVQUktnNS9KL2ZIL254aXdLeGVWV2NFUVIzSHVUeUI4dFVQQUx0RjlJQ1g4WTd3N0E4THNRcXVqa1NtQUxLaHpnRTk4L0tkMTFOMjlxN05DWjY1Uk11LzkiLCJtYWMiOiJiMGI1MGVjYTk3YTY2YjFkNWQ0ZDMzYzBjYjUzMjA1OWQ2NTAyMjYzODNkMWQ4MTQ5ZjcxNjdkNDlhZTdjMTA3IiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 06:39:45 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6ImRuME1iUU1JOHdxbE9aelZ3amtPL0E9PSIsInZhbHVlIjoiR2VHWlRwam1WRFZKQVEzZjZJbU50allXWnlEeEdSVnJGRjdOVkxUcG12M3NqTk5VckJBeEsvdUhVRTlMWmV6UHRuQll3MXZQblRSNW51K1QxNDZzZEpxNHkraWJFS2x4cXU4RFdFMk52cTBJWVUrZWx6UThITG5wdm9zaHJWNVgiLCJtYWMiOiJmZDQzYWRkNGRlNGJlNmQ1ODMzOWViMDAxYzIxNDllM2ZhMTE4NDk5NTliN2E0YmQ0YmNhMDU4ZWYyMWQ0NjI5IiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 06:39:45 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
+          set-cookie: 'app_locale=eyJpdiI6IjQvcU9wOGpMUDMzMTVFSjZ2QmlBMXc9PSIsInZhbHVlIjoiTW00Wk4zZnJibE9lb21hc2U3Yk05TEtOc3VJdTVuOHJPcjl1VEQxejFESlJOdUw4a202cnVROWo3NTNBLzZyRSIsIm1hYyI6IjRkZTI2ODFjODM1ODY3NTI5ZDA1NjgwMzhjZWRkNjIyYzJiNzA2YWRhODY2NjE2MGRiYmViNDRiOTI2ZDQ1Y2UiLCJ0YWciOiIifQ%3D%3D; expires=Sat, 29 Aug 2026 09:13:14 GMT; Max-Age=31536000; path=/; httponly; samesite=lax; XSRF-TOKEN=eyJpdiI6IndJL2VLOWtHYit0TzFZaGJlWWlUb3c9PSIsInZhbHVlIjoiS3VrZ0NzYkJzSDVVbllsR3hnTXBVbVYxNXFLcXNHc2FaM2ZRSWpLZWVvY09YbXZZSnpodSs3NmFjSWdZU1EyR3JJVjNnZGhVRE90cGtuRFUzM2QxNFZOZjV1ZVZzVDN2NGpYRTZvMloxVmZ5dFJYU080NnlweS9ER3E0UEhwMkQiLCJtYWMiOiJlNDUyMGNjODFmMDRhZTNiNjUzOTM2NmM0NmVkZmFkZTA1ZjFkN2FlY2NiYjI2NDRkMDZkYzc2YjJhMTc5YjBjIiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 11:13:14 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6Iko5OTFObGlFcGEwL0RlWUVpOGVCSHc9PSIsInZhbHVlIjoiK0FkamFDdDI1T3lrZXA0aHF3NG0wRm1hR011YkswYTVZOFNRa2I4RzFnZmd3VkkzVnBnN2IvMXB5SGlmZThwWWFCN2RNVHJWVEE4Yk5yR2VlVVRiais0M3UvTjVrQncrYnBPTWxUZzhTcXF1OC8vSE11ZDBCbXJzYlFTWmZCR2EiLCJtYWMiOiIxZDcyOTZlMjFlZWIxNTZkYjFjZjZkOWRkZjFhOWMwYTlmNmNlM2I1OGM4ODU1ZGI2ZjJmOTUxZTdiYjk0NDJmIiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 11:13:14 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
         description: null
         custom: []
     responseFields: []
@@ -115,7 +115,7 @@ endpoints:
                           <p class="mt-2 text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
                               HTTP request received.
 
-                                                      Response rendered in 6137ms.
+                                                      Response rendered in 969ms.
                                               </p>
                       </div>
                   </div>
@@ -195,7 +195,7 @@ endpoints:
           access-control-allow-origin: '*'
           access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
           access-control-allow-headers: 'Content-Type, Authorization, X-Requested-With, X-XSRF-TOKEN'
-          set-cookie: 'app_locale=eyJpdiI6Ii82YWExb1JEMW9pU01ONDY3MnN2MXc9PSIsInZhbHVlIjoibXZNZTJrd2NrVHplMGZpbW9XQnBxdWgxR1d0dktPTUxQbG9ORENOLzFpTWQxVEhaNjI1SjRnQStZZTNYeHJKZiIsIm1hYyI6ImE1NTU1MWM5Y2Y1YzVjMjFhZTg5ZDFmZjRmNDc5NWEwOTVkNTc0YTc0MDFiMmRkZmQzMTUyNWZiYmQxMTg1OGEiLCJ0YWciOiIifQ%3D%3D; expires=Sat, 29 Aug 2026 04:39:47 GMT; Max-Age=31536000; path=/; httponly; samesite=lax; XSRF-TOKEN=eyJpdiI6IjM1OFBIeUlXdXBmdVVOdEV0Qi9pU3c9PSIsInZhbHVlIjoiL1N4RERNSGdoYWg3bU8wQUZYZTN6YmNsOU5mVjhnb21EUml4ZjJNTXNGT0Vwd211Z29lUklEc1JVamdpVzlaOGI5SDMrTG53cGR2N2FWei85MHdPckh1em56WVI2STFmTWRiUFZtZ3ppMjBjV0tYdG5oUnoyNkI0dXQvYlkxemsiLCJtYWMiOiJhMjFjNjZhNWVmNGFmN2E3YTI2ZTUyOWFiMWZkOTM1YzZkMjYxM2ViN2U0N2E4NTNlNmUyYzM4MmQyNWMwZjFhIiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 06:39:47 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6InhCdkVBcE1PYkJnNGFXaXcweUZsREE9PSIsInZhbHVlIjoiRTV5R3I3U2dyMkM5eDNvWFpEZ3lSN28vRFpPakNIeDVsMnk5Si96dmJ4NkZYemZ6MENLWDhYYVo4a1hKNWU1NWNoWERYUjVERGNyWkJPUFlnZUJJZE4yeldCd3BsUTFIL2ZWVko1Q1NoOVkzalgvVG5Tb0dnM1JQUCtzNFhSVk4iLCJtYWMiOiJkZTM0Yjg2NDg1NTEyYmJlZTIxNzQ3ZWI2ODU1NzcyODJhNTdkNWM2YjY4MmJlMjNiZWQ2MjYwODE4NDYwMTlhIiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 06:39:47 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
+          set-cookie: 'app_locale=eyJpdiI6Ijg1OUV0Q2RNRlpyN1BLbldxdjlYOWc9PSIsInZhbHVlIjoiTU0zT01naHM5MUZ2NGdCODYyekN1UktwR1dLSkZoaDlFRkkwbEozVnM4c05JUUx6YkhlMzlDMFdxS3JkNXVKaSIsIm1hYyI6ImRlZTE4ODM5NjNmOTM2MTU3NmYxMTY5NmE3NTBhNzY2YTQ1MDMyOGY0NGJmNTRlMjk0OTM0Nzg2NzgyYWEyYjIiLCJ0YWciOiIifQ%3D%3D; expires=Sat, 29 Aug 2026 09:13:14 GMT; Max-Age=31536000; path=/; httponly; samesite=lax; XSRF-TOKEN=eyJpdiI6IlZ6K2ttdkt6S3phMSsrL2tiZDQzemc9PSIsInZhbHVlIjoiQi82bXpsWVNmRTFvOXJFcy9OM2ZsY2EvV0Y5MGlxVG1nN0dVNWZCbGJQeGpJMWl6YWFQalo0T3J0VkpnVElxSVBsNGJCSWN0Vmw4WUpsc2M4ZmxRTXpFUVpkV21jSHhaaU1MQjRnWktvdEVrL3VNa21sREZyajVuNy9wUnJoRjgiLCJtYWMiOiJiZmZhMGEyYWI2ZjE2NWZlMzM3Mjk4YWQ4Zjk2YmU5MTgwYjcwYjJjNGI5NGVhMmUyZTliNzZiZGJjZTZlNDViIiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 11:13:14 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6IjY3Yi9ERlRIVjhXR1NTcUJqU29tWVE9PSIsInZhbHVlIjoiaytmbk5DdVdsdU83Sk5ISjk0ekE0Tld2dUZkUExRbWJvMHUySFRkQktpbzlmZWtEbHord2lUV2V5OUxhZTQyQjB1WE5STHBmVEp4aUZxdjBvWERMUm1pTWgwQUJVekRncmhGai9FYlRudXBDLzVUVkxQNVNoZlA0c3hqOVJQR0MiLCJtYWMiOiJlYjE2ZTk0ZDZjMjg1ODZjMzgxMzJiN2YyOTc4NWRlZmExZmQwMWJlZWNjNTA0NmZiZTdhMmUwNDViMDdmYjE1IiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 11:13:14 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
         description: null
         custom: []
     responseFields: []
@@ -245,7 +245,7 @@ endpoints:
                   <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" />
 
                   <!-- Styles / Scripts -->
-                              <link rel="preload" as="style" href="http://127.0.0.1:8000/build/assets/app-GHg_Xo9N.css" /><link rel="modulepreload" as="script" href="http://127.0.0.1:8000/build/assets/app-DtCVKgHt.js" /><link rel="stylesheet" href="http://127.0.0.1:8000/build/assets/app-GHg_Xo9N.css" /><script type="module" src="http://127.0.0.1:8000/build/assets/app-DtCVKgHt.js"></script>            </head>
+                              <link rel="preload" as="style" href="http://127.0.0.1:8000/build/assets/app-BpQEJJqb.css" /><link rel="modulepreload" as="script" href="http://127.0.0.1:8000/build/assets/app-DtCVKgHt.js" /><link rel="stylesheet" href="http://127.0.0.1:8000/build/assets/app-BpQEJJqb.css" /><script type="module" src="http://127.0.0.1:8000/build/assets/app-DtCVKgHt.js"></script>            </head>
               <body class="bg-[#FDFDFC] dark:bg-[#0a0a0a] text-[#1b1b18] flex p-6 lg:p-8 items-center lg:justify-center min-h-screen flex-col">
                   <header class="w-full lg:max-w-4xl max-w-[335px] text-sm mb-6 not-has-[nav]:hidden">
                                       <nav class="flex items-center justify-end gap-4">
@@ -493,7 +493,7 @@ endpoints:
           access-control-allow-origin: '*'
           access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
           access-control-allow-headers: 'Content-Type, Authorization, X-Requested-With, X-XSRF-TOKEN'
-          set-cookie: 'app_locale=eyJpdiI6Ik9IWUZxdE1NNXR1ZG9LSXd1dUY3d2c9PSIsInZhbHVlIjoiV2dmTGs1cDdrc2JFWE9sbldrQlU1elRpbnVMZjl5SXdNRzZjNEFWT08wYkhaM3F0NURTandKSlJNUzVBSzRjZyIsIm1hYyI6ImU4Y2UwMTQ5NDA4MGJkYmFjZDQ4Njg4ZjBjY2EyNzAzYWZmNjVjYzM5Zjg0ODQ3YThhMjMzZmNlN2QzMjUxMmUiLCJ0YWciOiIifQ%3D%3D; expires=Sat, 29 Aug 2026 04:39:47 GMT; Max-Age=31536000; path=/; httponly; samesite=lax; XSRF-TOKEN=eyJpdiI6ImdJbEtsVkxtbVNnaFhwWUFZQ1JlUHc9PSIsInZhbHVlIjoiSUhhcmsyR1lURHIvK0FMU01xa1FlZ2ZTeFZyRDhERUtJS2VSRnBVaGhLcFFPQnQvUkEvNFNMN2F2ZHVNa0JoRzA5UTE4ejlMYXJtWVlOQmZuekJxM2MyVUw1c1c4amlvc05QdmFLTGQ5NkRqdHRBb3RrSXdsQngyK1pXT3NTOEkiLCJtYWMiOiIxODk2ODA5ZTg5NmQzNDk1OWM0NTlhYTM2NGM3N2JkYWQzYWI4ZDdiZWQyZmI5ZTFjNjZhNjY2MDQyMmEzYzA4IiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 06:39:47 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6IlFNcDBJd2lBN0IyYVZHMFZ4YWE1OEE9PSIsInZhbHVlIjoiZGliSVB4alhTcnVpanpQU2RvcWo1N1ZuTW5iaTdrQ283S3dXeW9RSXUvVTNmUE80NVBsNWo1WXR6Uld4c3VPa1U4aEFQeTE2Q0hLanhRNWoxS3d5Y25tdFc2ZWVVZlJ5dVlmTEJvYUJ5ckdZeTJZanJTZEo4ZVl3c2JGUm9rb3IiLCJtYWMiOiJlYzk0YzU3N2Q1ZWY2ZDQwZDk0NWJmMDI1YTg5ZDA0ZWEzZThhN2NlNTZhNjY3OTAzZDIwNWE1ZTBiY2I4ZmU5IiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 06:39:47 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
+          set-cookie: 'app_locale=eyJpdiI6ImplN3FXZDIxTWplUUZOMVZkMUlQVEE9PSIsInZhbHVlIjoiSkpjZm01MCtRV2o5VjgvTkhOZG1iTlBETnR4a1FTYjZmN3ZaWjJoSEd1WFkyRnJVS2N2ejJ3NVN4RGFzMldXOCIsIm1hYyI6ImQyZDk0ZThhOTFjY2IxNTk1MThjMWM2MDMwM2Q2ZDk2MjMzOWFkZmFjZDc4ODVlNDU1MDAxZWRlMzZmOTMzOGUiLCJ0YWciOiIifQ%3D%3D; expires=Sat, 29 Aug 2026 09:13:14 GMT; Max-Age=31536000; path=/; httponly; samesite=lax; XSRF-TOKEN=eyJpdiI6ImlOOE9ucWowOUg1YzhSbnQwaFVLQlE9PSIsInZhbHVlIjoieXQrWENOVkZlbGpKYVFTaVdBVGhDcCt4WHR3NlgrZXB6eTVxemRVUDZKbDZwb1NuT0tLUXdHYXowaE9hbFlpZkR5TVM2d1A4OFdCZUVMREhBdmF4UmRsN3BTVCtzSGp0dDZzWHhGc3ZaZzE4cnFQSk5EUW52cUFReEVTd0FnRGsiLCJtYWMiOiJiODdmZjViNDM5N2QyNjEwMTdmODdmMjk5NTgxODMyOTZjMzllZjI5YWE2ZDI4OTZjZTc0ZTA4MjBhNjVhZjdmIiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 11:13:14 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6IkNtY0xwb2JtcXRBQWlEMVZvY2ZteXc9PSIsInZhbHVlIjoiUWZmWkoyR05LT3RDM1huWGQ3RGNhZ1o1c2g4ZHNSQ3VxM1dzOHhPdUdoa1pIcjhuRG5vRCtMU2xnQjhwVDhwMzB3TmVnRHJwZk9xMlZnSWQxUnpmS2NNUFF1a3J6QjVCOEVXZVZhbFkvTDVBWjQ0VXgzUnk0MjdKL3o5SEtFZngiLCJtYWMiOiJhZjY1MjA1MTczNmRlZTQ5NGUzOGI2MGU0YjdlYjVhZWY0NDljMmZjNjI0OTNmMDY1MjFkMTNiYjdhYmI3OTEwIiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 11:13:14 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
         description: null
         custom: []
     responseFields: []
@@ -536,7 +536,7 @@ endpoints:
           access-control-allow-origin: '*'
           access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
           access-control-allow-headers: 'Content-Type, Authorization, X-Requested-With, X-XSRF-TOKEN'
-          set-cookie: 'XSRF-TOKEN=eyJpdiI6IkxRV1VHY0M0ZzBLS2l2NFFVYURBUUE9PSIsInZhbHVlIjoiODBPVDgwU2p5Z2xkVTh0ak5xdS8zZmQyTXZ6eXh4OUc3c2JRUXE0RGdYaDRTQTdXVHp6eitsWEFiQ25lNWtnK0kxbTh6MG4wZXZra0d4UWFYUVJ1V2srWCttQWlobWtXRk5BbmNZN2VKTmdONjFQb2hFRGI2b25QNzdpQkttN0QiLCJtYWMiOiJjMTRiNmYwZTI4MTQzZDM5MjM1ZTQ4Mzk2MDEwMGMzYjA0Y2UxMzI4NGFjNzlmMjE1ZWEzYWQ5MDJhZTI2NGZkIiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 06:39:47 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6InpTOHFvOHFwM0pXb1FJOElmc0VtMkE9PSIsInZhbHVlIjoiNlllZkJudG81eldvbUsrTUFZWnd4b0NRbUVmdGVBb3JZeWVFbzd3YlczbE1xeWpwOFZubVNjd0JSSFpMQVlhOEVtYUFNa2FVT2ZCZDVMaXBxbmpYYlc5Uk0yL2xxeFVnTFhpd0IybkhRV1lJN1YwU0phSU1BOHF0NDlmNUxFT1YiLCJtYWMiOiIzYjMwOWY5MTFlNmI4N2VkMWY0NWY2MTI0Y2Y5YTVmZDAxOTFiZWFmZGI3MmM0ZTgzZTZhZWY3ODEwNzY1M2ZlIiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 06:39:47 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
+          set-cookie: 'XSRF-TOKEN=eyJpdiI6Imw0L3hRdnNUdnE0SEtlL1kyVGFDV1E9PSIsInZhbHVlIjoibGIxblpyRGFPWk9jUWx4a2hKSmxnYzdHOEhRMUEvcVJ6dEs5MUVFa2hGbVhMbnNuaCtlUk1taHF0WkZZTU0yTlBZbnpFSDJDR0VUQXYxREl3WER1UDJLVmZDZXV4UXU4K0U3MFI2NXVTY1RrU0x6dTU0T3hOenhoUVdUSEZHWDQiLCJtYWMiOiI0YTI3YWEzMzcwZDA2Y2EwZGZkYmEyYmE1NWIxZjFjNTUxOTU4MTZkZDllYTJkMGU1YmY4MDYzMmYwNzY4YjIwIiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 11:13:14 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6Ik1vS0pYSVZPNTI5dy9xSnRWVUFmbkE9PSIsInZhbHVlIjoiN2ZDeEN6TWZ2WlZLZ0crcStjeUI5K1NRc1RTT213ZW9XYnBuenloR1FvR1IrcnV2enFERm8wc1A0VFVlbjR0WWFFRW9IRzRRUlZvNTRnRE5WZXdpSUdQWWJ4M01hQ1FhQ3JDdXFTa2ROYkRlMUxRcUJmWjZ5Z0FhOXdtOWlXaW8iLCJtYWMiOiJmNjRkYTM2NjQ4MzZmMjZjYTE3Y2MxNDE5NmQxNGQ2NjdiYTNhNmEzMDdhY2JmOTY4MjBmYzMzZGZhN2ZmM2E1IiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 11:13:14 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
         description: null
         custom: []
     responseFields: []
@@ -621,7 +621,7 @@ endpoints:
           access-control-allow-origin: '*'
           access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
           access-control-allow-headers: 'Content-Type, Authorization, X-Requested-With, X-XSRF-TOKEN'
-          set-cookie: 'XSRF-TOKEN=eyJpdiI6ImVrMHprU3kvTXp6Y0N2NUZLSXViQVE9PSIsInZhbHVlIjoieTFITERHZmUrUEdIY0pGM3Byb01kcnh1MURxU0RuNmRJdDFJeVdzTWFLaGZza1JMUGROQnoyZkNCU1J6a3JXclF1SXhFMi91a0VJckZmYkU3KzBtdVY2MllpbHFMR2pIRVdWVjZmUlBaSVJuQmg5KzdYbDhrSVBZKytueEZ1OSsiLCJtYWMiOiI1YWFiZGZhOGZhYzlkM2M3YmI2ZGY4MzAxMmFiNjg1ZDk3NDZlMTgwMDcwNTc1ZjkzNGVmMGMwZWVmYzkyYWMzIiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 06:39:47 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6IlVHczB5aS94VlRUTjRTbE1CZTFHMXc9PSIsInZhbHVlIjoic0o5RjZtc0ZMYmpxZTdpdVozRjYyakFHUVVsaUFlb2IrMjd5eTRlR2dXZURjdjViTWFXYzRZdTgwNVErUXZqWmJXeFpIeVJVTmtBVXdYR0ZWRnJORVcxRXN5YzFhQzh3U2NMQ0VtNHZYQ253SXQvT0FlWTBTYlJMVmZhZ09rSVoiLCJtYWMiOiJhZTZmM2M5NjI0YjhmMjg5ZDE5ZmIyOWQyM2E2NzNkMmNiMWVhMTVlNjNhNWZmZjczNjRjOTdlNzg1ZDliNDkxIiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 06:39:47 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
+          set-cookie: 'XSRF-TOKEN=eyJpdiI6IldBV25MTmgrMFQwcVh1VU1WK21rM0E9PSIsInZhbHVlIjoiVG1LWnM5YWdXNldYYXdKVkVRQ0NTWlE4Um54Z1F6Szc1TlZCbHBZQXBRd3krc255clN3THFlNlFyelcvUm0yVVplb0R0RDZ6andvdUEwaW9NQmI5cm9HTFoyRXlxaWtGWmxkYVMzbzZPK1AyeWJmRURQcllFQ0VRcnJXSHZEeTciLCJtYWMiOiI0YzQxMTE5ZDgzMmM3NmFhZDhmMGUzYzJhM2NhZTNmMTA0NTZhYWMxMGE4NWZmNjQ5MzBhMTkyODc5ZDQ5NDlkIiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 11:13:14 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6IjMzZGhYSmkvVzNKMW9FRTNUWTNUNVE9PSIsInZhbHVlIjoic0hqclRvaFFqb1M0YWJRYSthVTEzVjlKdmh1OXhHeFBGT2ZBWnM2SWRFblVLMlBPLzI2OENwN0toV0FLVmtRRTNhUXFMazBCMDNuNUM5aU9SSm1UQUs4Vm5HVm1Eay94bWhaamtRdkgwRFh4Q0xoQTBQMUNhaUE0b1FMV25rRUUiLCJtYWMiOiIxYzcwMGU5MmQ1ODkxMTFhNDlkMTIzMzg0OTQ0OTUwZWRlOTJjMGU3MGFhZTMxZmIzNTY1MDMyNzYzODBhMDc1IiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 11:13:14 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
         description: null
         custom: []
     responseFields: []
@@ -664,7 +664,7 @@ endpoints:
           access-control-allow-origin: '*'
           access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
           access-control-allow-headers: 'Content-Type, Authorization, X-Requested-With, X-XSRF-TOKEN'
-          set-cookie: 'XSRF-TOKEN=eyJpdiI6IlVkRm1HMmxUWDZFL2V6d2I2dGVsdWc9PSIsInZhbHVlIjoiSkorZkU4VzJaeWc2aVhocTNaenAycDdPelMzWU5qQnJ2dWU2VDJNaW9IZ2tObUxuNEFIZmp0VHhGL2puTU5FOG1hMkM4ZmdKenl2SzcyK0ZPdm41bk53cWFkZHFPSE4xT2MxYSt3UC9veGU1UTFFdS9EdWNjTG5ZT3VMd2NxZU8iLCJtYWMiOiIyNjE3Y2Y0YjIyZTM5NWRiYTgwOGIzMGE1OWI2NWUyZTM3YThmMTVhNDA5YWI3OWU1MDhhY2ZkNzEyNGRjODZkIiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 06:39:47 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6InZxTitYcG5RMUxJYUNhMGZrblE4QWc9PSIsInZhbHVlIjoiTVYyOFY5cnU4aFMxUC93K0RUcVhjcldZMVB6QXd0ejUvN1ZNUW54ZEVIRHk0S01meTFPcXBGRmM4eDlkMnUvVTRCRFoySjN5VUZoaGZ1VTZudU1ETlBuR1FUai9hbWdyQnpDc1RXZ0ljdjJiT0l3bzdwS1lGblo1RlgwL3hCQWMiLCJtYWMiOiIwZWMwY2M4ODE3MDU2MTI1NGJkMWVjMzE0YTM0ZDY0YzE0NGExNjFkNjM4MDllZTUwZDY2YWZjNDg3MzMzYzFiIiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 06:39:47 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
+          set-cookie: 'XSRF-TOKEN=eyJpdiI6IjJjdHVGb1BuSmEvWE9ZSC9PdUZjWUE9PSIsInZhbHVlIjoiK1BhUjJGeDFzZGxHQ1ZKdkNrNHl6UnRBZ1J1RS9kRklmVGV4Z0htSFhiZWZUTTM0Wm1MMkl3VWFoditoRWZvSTlyNW5zS0FhbnFlbkdBa3gwcDFVbXRScGQ5MEVVSnJJZEJWZWJkNnZmVHhWVExVK3Y1dzZTMFIwOUQ4L25wVnkiLCJtYWMiOiJiMzM4ZTYxNDNjMDRiYzM0NmFhMjg4MjdjNzBhYWIzOGZkNDRiODAwMDRkOGViMDA1Njc2YjQyMmI1MWYzMDI2IiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 11:13:14 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6ImxUa2Ftb1JReXZwOXZlTytwOURqdWc9PSIsInZhbHVlIjoidTVEMTJQSGRoQmpYQlpRQ1VmV1p0S3NWZWxpZUdFUnFqNjE4SjZ2cmJ5NXpTdnh4c3Y0RmJwZURIa0ZadUZJczU5M1NGTmVCcE02RzRUVnZTMnJyTmdIK2g2Ty83d1FmNEdhUlNIcU5sdjloVlJLM21hVC9qQVA5VGNxdzJXSHYiLCJtYWMiOiJmNGFjOWEyYzJhZjk2ODgzZTEyNjI4YWY3MjFjY2IzYWUyNGRlYjNkNjdlY2Q2OTVlMmVmMGYwNDNiMjgxMjEyIiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 11:13:14 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
         description: null
         custom: []
     responseFields: []
@@ -707,7 +707,7 @@ endpoints:
           access-control-allow-origin: '*'
           access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
           access-control-allow-headers: 'Content-Type, Authorization, X-Requested-With, X-XSRF-TOKEN'
-          set-cookie: 'XSRF-TOKEN=eyJpdiI6IjBOTUswUFltKzVlT1JoVnNDanU2cFE9PSIsInZhbHVlIjoidkRobHZRdGVkMU9UbUlLMVNIdWdEcXZVaFhxQlBCSWo3TW5rTU9FQ3pkVUdUT0N5bkR6b29Cd1ZzUDhiTnE5QWxoTTdDdzduZmxaWDRJakQ0N2pVZGV0alVoMEt3REllZ3dIQk1JWHRHeXdwc01xemNYejgxNVhYYS9XVlB3Q0siLCJtYWMiOiI1MmVjMjM3Yjk5YTljZjlmYjc3OGYyZTAwMDI4N2Y2MDFmNDZlMDE4MjQ2MzRiNTI1MzJjNzE2NWI5OTJhNjNkIiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 06:39:47 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6IklTaGY2bXJ0a05FMzVGdUUza0VQVGc9PSIsInZhbHVlIjoiUDB2WkdyMXFRUmxSMExxRlNPVjFhWHZWZXloVFBtZGtsUTdUT3AzTkI2R2JZMzUvK0Y5NkhkRjV5YXJvRUhLSGYzRnZjVUwxcUNvZDU1MW9TU2FjVi94OU9iUytYTlhIdFNOVHhzVmh5djVIYWJrNmhCRGdyeWV0a0svUjJDU1QiLCJtYWMiOiJhODJmNzZiNzY1OWUyZTY2OGE5NjA2YmFhYTFhNjBkMjc3M2JlYzY0ZGYzMWZkOWM2OGE4MTU1ODdjMjYzZWZlIiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 06:39:47 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
+          set-cookie: 'XSRF-TOKEN=eyJpdiI6ImRNTG5iRlFHd1J4am5rWDdPNng1T0E9PSIsInZhbHVlIjoiZHV4S2E5SmZSQzN4bEVkS094WUpKYUpaRENveEl1RGVUR28yUnVwZGhHR3dJems0aDR3RTBGcklYSXNSa3QrNEhUOHczV1IvU0daNlYxWTVUZ0x6cm5XMmo0Y1FJMDhtOHQ1dzhxdGcrYW1qU2ZUM1JtZ21hYWNLNncwQ0p3cmYiLCJtYWMiOiI5NjJkMjJhODE4YTc1MGY0N2I4YzIwOGYzNDUxMjJjMWM1NzExNTNlYjQ0YmIzZjBlOGY1M2Y2YTljYmJjYWNkIiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 11:13:14 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6IlMrcG01SmNFcGwvRXpVai9BNEVuYnc9PSIsInZhbHVlIjoiOHY3cGt0NWk0U1BhaVpFN3RVU3BZbXhwWkRpN05IN3huVVh0U2pCb29JSnN0NzVKM1gySkxXK1FHYkxoZ2FxZ2k2L2x2Q3FGZW1wZXNiSXdnWTRwekhlWER1QWMwT1lJdjUvalplZmxkMWZGZUtOdnR3R0trSmZLYU1udWJUbnYiLCJtYWMiOiI2ZWFhYWEyMTljNjIzNGI0ZTM0NTJiMDFmNTNkYTU5YTM1ZjhlYjRhOWMwNzkxNDljYTlhNGUxN2ZmODRjMmI2IiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 11:13:14 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
         description: null
         custom: []
     responseFields: []
@@ -750,7 +750,7 @@ endpoints:
           access-control-allow-origin: '*'
           access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
           access-control-allow-headers: 'Content-Type, Authorization, X-Requested-With, X-XSRF-TOKEN'
-          set-cookie: 'XSRF-TOKEN=eyJpdiI6Im9PNzVpZ0Fib2oyZXFMNmNWNkwvdkE9PSIsInZhbHVlIjoiQnlSaUh3OUZsT1BJRG9qbk9DdExLajB6MU50M2tZY2RnNU9pY3FyYzlYRE9ETjk0VlA1YlE0OEk4UG5nUHhtYnlUKzFOSkpDYjROQ1lUZ1AralM4bjNYZWVYZnJCYUxES2JvZkZLdHQ2dnV1RHZWQ3RsdlpGVzFzdTFza2E3NlkiLCJtYWMiOiJjNDIwNTEwYzI3M2MyNGM4MTUyOGI3NzIwNGFjZjVmNjlkNDE0M2E3NmI4ZmI5OWZmMjM1NWMxNTJkNzc0MjBmIiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 06:39:47 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6Imc5d1FZb2prQ1JUYy94R2pKRkRRbWc9PSIsInZhbHVlIjoiYmpYNWUrUS9JSUFjNzR4U3VmemxkTHdaRDN1bU5XckxTTjRwWm1CM2xsT0lrM0QrVGVMekZaVWFZUkZEZ1dtWnU3SVY2T0dzU1djZEFqd1dwOExlNStuQ05XbStBY3g3Tmt0OUxMOFNDc2tmVjVKK0Rkem4ra1ZRUjhGeEgranoiLCJtYWMiOiIyODkxNGNhOTM5M2MwMWI2NzcxMmRiZGFhYTY4MGZkYTAwM2I1ZWNjYmFhMjg4YmUxNDdhMGRmNDU1NjhjZTVhIiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 06:39:47 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
+          set-cookie: 'XSRF-TOKEN=eyJpdiI6IlNlaDRhMVlzeFJQYjZXcU1xbkpnQ3c9PSIsInZhbHVlIjoiT0hRQ3NHQmpPTmZvTWtyL1Q0M2hVNFlmY2xVcGZ3UnpSMU00eFA4MWVhaU5STmJYa2Q0UmFkamJQT3l2c2xvd1psWnZsOEY5WlMzRUZpVUZISGtEMkdXSTlVeEc1WUx1VnlaZDFxOU5VekRRclRaQWNHLzgzcmZNR2dPWDdtaHYiLCJtYWMiOiI0NmRlYzBkZGI1N2YzMTc5ZThlNGFmNGUyZDM1ZjJmNDA1N2VlYjNhYmJjZDZkNzg2YmQzMzY5ZjIxZGY2MTlmIiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 11:13:14 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6InYwTklxVWFTMUlHN3JSQlk3SWxlU3c9PSIsInZhbHVlIjoiZStvb1Z5cGtmQzhyaDZlM3FlSTJnajhSZC82VzIzNDFQUzRXQm4ycGtUQXluTVBrOVlzdXFhbUQ3Sk9icCsyZkluaWdUTlN3VTBjY09PZXpZZzR2VUp3UE1BZ3d6bTJPSFpCdGFUbFZYdUlaa0FmWmFzRmZlZ29HV2ExaXFTdWMiLCJtYWMiOiI3ZGZiOTVkYWYzZGQ0ZmI2ZGFiNGJmZGJiMGI1MjBlMzE5ZmQ0ZTJmNTU0ZjI1ODFlMmU0MjgxNTM3NjBmYWQ4IiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 11:13:14 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
         description: null
         custom: []
     responseFields: []
@@ -901,7 +901,7 @@ endpoints:
           access-control-allow-origin: '*'
           access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
           access-control-allow-headers: 'Content-Type, Authorization, X-Requested-With, X-XSRF-TOKEN'
-          set-cookie: 'XSRF-TOKEN=eyJpdiI6IitMTytTTEJKL1Myb3ZZYjNzYTVQVFE9PSIsInZhbHVlIjoiQ01wT2N6UVN6YmY2OHhrWWR4Y05QdzgwMGxENE94djRVZVY0UmcxdUw5TVE0ZG5BK1ZkS0lLdVBPSjhST3FaamlNb0ZtaURIZkEzRW0wcUdHVUFjeE53VDhrdlcyaWd3VEk0WGRoOUVQajQwWDZrVDlzaTdmVWMwbUkra1Q0RmIiLCJtYWMiOiI3NWEwNzQ4OTAwNTJmYTljNzIzZDUyNjdmNTRkMGNiZmI0NDIwMWQ0ODFmNDJmNThhNDQxNWZlNDdjNWZiYmU3IiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 06:39:48 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6IlJVc1FTTG9OaXFFUCtOTGR3cnpXWEE9PSIsInZhbHVlIjoiNzZGaXB0MGNPVC85U0lRU0JHN0NIS3pkbkJlR1E5T0lHN29FUW8vTG9EMDJDMFJYd3NZOTBjdFZLVkhBWlBxQndKblErOUFxR09VRGVqN0pjdFI2MkduY0VQbDFXNUpaNXptR2ZsTklucG1qOEVTUm50c0dYMUc3bTVNUnk5b08iLCJtYWMiOiJiZWJjYTAxNzVmZjZjZjBiZjQ2ZDI2OTQwYjc2ZDBmN2RkMDQyYzEwNGMyZTQ0ODE0NWZhZjI4OWE2MjdjOGYwIiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 06:39:48 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
+          set-cookie: 'XSRF-TOKEN=eyJpdiI6InF6WEduMzJFMjF5NWMvQlFRQ1pJN1E9PSIsInZhbHVlIjoieThpS1JQOHFORytCdWhySVQ0cHFhcjVzRDdQYzNrc3JBcWM1c2J1eE56MFBRMFF2V2poUSt3VTZvZ01LRElYTHhjTC9MdHNzNG8rajN6QTJVM1F4YlVZaEtPVWoyeVJKSUJhQUd6VURvcFNJNCtudmlqbEtqVXVYSm5HMWpqT04iLCJtYWMiOiIxMTAwYWQwMjhmM2M3ZWFlNDhhZDBmOWI1OGI4YTc4ZjRhMDc0MTlkMTM2Yzc2ODc0ODY1ZmYyOGNkNDRlYmRlIiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 11:13:14 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6InBPUWVpL0VrSGlvK3l2bkhjbVc0S0E9PSIsInZhbHVlIjoibjNuOU0zNXArSFpFckNEYXIwWmZJaE9xR0ZNYUhPN0NZVkpnTmczSFF3TG5mTjg5NjNIL2Q3Vmt1RDBVYTBaTEdUOEdjV2tOZnJ6bm11NDJPU3RnMVBwaW96QTYvbnBwQkZ2OUVxclpaVlM2KzluUkFCb254WW15aWlpVmhwRWoiLCJtYWMiOiIwMjA5ZGRlMjhhMzYyY2Q1MWMxYjFkMTQyYTBkN2QyNzEwNTNjOWM0NjQ3MzdjNGE1YmE0YmNhYzNmM2M0ZDk0IiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 11:13:14 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
         description: null
         custom: []
     responseFields: []
@@ -955,7 +955,7 @@ endpoints:
           access-control-allow-origin: '*'
           access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
           access-control-allow-headers: 'Content-Type, Authorization, X-Requested-With, X-XSRF-TOKEN'
-          set-cookie: 'XSRF-TOKEN=eyJpdiI6IitvaGhDWDNPQ3EvL0RMZ1hnWGg1aWc9PSIsInZhbHVlIjoib3NzZHNIbzJGVGlpUXViNitRWGVEWFVZTkdnVTV3NWc2dittTWoycU9BQnFOdENzRkNXZUFpZVNNL3BaNGVuLzhkdktFelR4UTdMVlBmNE9GQzd2bFRMc2JUTkQ5Zm5yeUdmc2VubXN5TnhsaytONDhqaEdZZ3JSMTJ1allZOEEiLCJtYWMiOiJkYTAxNDI4Y2E0Y2ViNDY3ZGZiOTcxZjJiMTQzMzhhOTIzNmU0ZWEwMWYzOTY3NWI3NGNmNDQxOGVjMDlhNjQwIiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 06:39:48 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6IlRnZzFVZ2tINDVPUm8yNngzWndYc3c9PSIsInZhbHVlIjoibEF6L2FWaC9TcFJOM25sOW1IZCs2UG1zbk9WTFkrME13QVRPSlZaVG1YSzhVaS9mbEJYcW15M25UZEg0R3d5S01YRVRjSmhPVlVvQWpLSzM2ZTF1NE8wTm9wM0g0QUFlanNhc1IyK0lycUdkejgyNkVwUU5vQ2JBYTZZUVFsSkIiLCJtYWMiOiJlOGU4OTEyMTlmNDU2MmU0NjIwNjkwMTY5ODdjNGI0YzA4MzU1YTJlNWY4MzBkYzJkMTM5MTE3N2Y3ZWZmMmU4IiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 06:39:48 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
+          set-cookie: 'XSRF-TOKEN=eyJpdiI6IjVpa3JlUldsWXNFYWtLQnZxTExOR2c9PSIsInZhbHVlIjoiZzcxSHBEbmhua0Z6U2xickMwRG9jbmFOZGplM01yUlZvWFFRcWZSMWw3NlRmU3AwYjlZK1czeEltMTE3cUJIb1RwekNGTnZIai8rcHNCcDFNODcxMmhFUEtUY0xXTVBnVDVGS0k3M0pqQ2RydU9aMmNlWjUyeExmS1ZSSmRNRloiLCJtYWMiOiI3NmU1ZWZjZTZjZDAxZWY3ZjUyOWVkMmZjZTQxNDI0YzM0MTZjN2MyMmMxZWI4MzI4YTQ4YWJiNzdlYzI5MGUxIiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 11:13:14 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6ImEra3RGTXBrR2JkNGs2MmNEZjBOeWc9PSIsInZhbHVlIjoiMUxFMmo4SEJ3Yzl0cFJnaUVoa2ltQmJjMDFiTHVwdWwyVytrLzdab05pekI0WTJtNmVvNkRZcVlUdTVEOFhtQVU2dzRPTWFQTUdmZ2JLcStvb1ZvandSd1Yycm1CTy9ieG52Q05GUW8xdTMyYWpYSFM3MG5JTTlhZThFMGdkVDQiLCJtYWMiOiJkNDhhZjBlZDBmOWNmMjIzZGEzMDY0MDVlODUxNzFkN2I1NGYyMjk4OWIyODlkOTQ1ZmIxOTBlMzY4NmYxMGMwIiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 11:13:14 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
         description: null
         custom: []
     responseFields: []
@@ -1095,489 +1095,6 @@ endpoints:
   -
     httpMethods:
       - GET
-    uri: admin/categories/trashed
-    metadata:
-      groupName: Endpoints
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: 'Display a listing of the trashed resource.'
-      description: ''
-      authenticated: false
-      deprecated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses:
-      -
-        status: 401
-        content: '{"message":"Unauthenticated."}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          access-control-allow-origin: '*'
-          access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
-          access-control-allow-headers: 'Content-Type, Authorization, X-Requested-With, X-XSRF-TOKEN'
-          set-cookie: 'XSRF-TOKEN=eyJpdiI6IkpscXd4QTNyKzBhU21RYVpEZndYR2c9PSIsInZhbHVlIjoiZWxFNnVWd2o0Nk95K2o4Q1Z2aExEZ2VBQ3hrY01jTzlJTExSZVhHamdld3FMdUtrRk9ZZ2JFelNBTUx0bkZJMHAzZXFqdnNPS2RjZGtKdDVTbkh5TUVUSkduOUJrUWxOL0wzelJYMWJTWVVUT1dTeXBaYWpNUHVSeGxFSnRpNXMiLCJtYWMiOiIwNzVjNTllMTI4Yzg1Y2UzYTE2M2M1Nzg3NjFiMTEwNmRhMmFkOGNlZjI1MDUyNjFmNmZhMjBlMDU0MmJkN2UzIiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 06:39:48 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6Iktpbjd6RFVLSWxMejhqYjJZbTF6Qnc9PSIsInZhbHVlIjoiSFp0SGcwNWsxdG1hMTVJaDBuU2RvUzc3ZGxQQ3d5cndNN3AzM29hRlhrclMrVVBlY01McG82NUxsNVBWcnREOUo4UjgzYlZTR0hJY2xtZFU4OGdjOWdtN1ZpS0lHb2dHb1hSWHdRYjd2L0FkTVpWV0dIb3duRGVHY0l4VzYzcmMiLCJtYWMiOiIzZTk0MjJkY2IxMjU2MTIxMWJlMmE5ZWQ2M2ZhNjY4YTAyYWVlMDFjNTc5YjVmY2JkMTlkYzNmMjU2NGU4ZDlmIiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 06:39:48 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
-        description: null
-        custom: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - POST
-    uri: 'admin/categories/{category}/restore'
-    metadata:
-      groupName: Endpoints
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: 'Restore the specified resource from storage.'
-      description: ''
-      authenticated: false
-      deprecated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters:
-      category:
-        name: category
-        description: 'The category.'
-        required: true
-        example: architecto
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        custom: []
-    cleanUrlParameters:
-      category: architecto
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - GET
-    uri: admin/categories
-    metadata:
-      groupName: Endpoints
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: 'Display a listing of the resource.'
-      description: ''
-      authenticated: false
-      deprecated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses:
-      -
-        status: 401
-        content: '{"message":"Unauthenticated."}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          access-control-allow-origin: '*'
-          access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
-          access-control-allow-headers: 'Content-Type, Authorization, X-Requested-With, X-XSRF-TOKEN'
-          set-cookie: 'XSRF-TOKEN=eyJpdiI6Imw5cjV5RGtjMnJnZWdHVnBueTNiRGc9PSIsInZhbHVlIjoiNUptV1Z3MEEycnhIR1c1QlRqbTBDSlkwaXZnWDkwVUljYlBMWWlmTDQxVU5jdjZZL2l6clN0NS8rUGNCQVJXOFYvSDJKOHhwdHlEMU5jTFIwOXJlbkdWN2VCWDEvSVJ0cXNxR1BBYlkxT2NnZjBHbzNOa04zUVhuSllZV0VveE0iLCJtYWMiOiJkM2UyY2FjY2E4Mzg0N2NmY2U4YjZmYzE0NjI5NTZjMzY1NTk4NWVkOTI3NDcwMTc2YjgyNWNkZDdhOGFlOWRkIiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 06:39:48 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6IkFNb3ZOQWZ2bUpGd281dzk3NlBzdEE9PSIsInZhbHVlIjoiVXh3SU5DVWpNTGVHdTVOWTBPcVlQUUFGT0tMbmJ4blltRGdVUTRPeUkxUlV2OE9GK1N6VGJOTGc5ZTZFRDdydUZLQmpidzFtamN0UlFwWlJlZ2c3UnNzMHhqcUhyODRhbVh4MnNTcWpzOHZPWk1tVGVob2RkZVE3d3FsekpuSFgiLCJtYWMiOiIxNjcyOTBhNDY5ZjdjNGMzNTVlMWRhZmNmMGJiODIwODhhMTgzOGU0OTE2ZTdkMDVlOGI2NmQwNWNhZjY4NDI0IiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 06:39:48 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
-        description: null
-        custom: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - GET
-    uri: admin/categories/create
-    metadata:
-      groupName: Endpoints
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: 'Show the form for creating a new resource.'
-      description: ''
-      authenticated: false
-      deprecated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses:
-      -
-        status: 401
-        content: '{"message":"Unauthenticated."}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          access-control-allow-origin: '*'
-          access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
-          access-control-allow-headers: 'Content-Type, Authorization, X-Requested-With, X-XSRF-TOKEN'
-          set-cookie: 'XSRF-TOKEN=eyJpdiI6Ii8wZkVCMmFiR0NoRTFuSGNiRkRmckE9PSIsInZhbHVlIjoickZrVFE5Nm1PUXUrTHMzVGF2UlQzb0x5Z2hqa1drb0xKQUFpWVIrMnZ5N0RVUEpQcXV0WFhOVVdLTW5nSE05ZkkyQW9ZNUs3M3dTMTJ5dld1TmFMc3Y3b1B3b2ozeGRLSW9DZWxQcDFEcmlCNFduVS9yTzdqdlNvOWNIbXRVc3YiLCJtYWMiOiI1ZjUyMTZlZDhmMWQwZmUwMGE2ZTdiMWMyMTY4MDYzM2UyODY4NThhYzZjOTM0ZmI2YTZlOTliZDk1OWZjY2U5IiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 06:39:48 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6InZuNmtEaUJ5MFliTjdGU2J3ZVI4VGc9PSIsInZhbHVlIjoieGM1dm4vb0hRaFBXeUk1MFdqYVlsaXEwS2RIUDZTaTBNajR2NU1nUnVUeVZvV2JQQUJvbzVmM0J2Q0pZYTBHbzFDSFZiRHZSdzNlMzdEbFhyMWdoci9jYjVBMHhqb3ZZdHB0NkdLWEYvUXF1cVVMdEpNSlFyZ1h6VGliTHFreTkiLCJtYWMiOiIyNjA0NDdkNmJjZjJlNmQ5OTYwZWM1NDYyOWY1NDg1ODVhNWY3ODYxMjMwODU4MTMzODYyNTVjNjcxOTEzMzY4IiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 06:39:48 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
-        description: null
-        custom: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - POST
-    uri: admin/categories
-    metadata:
-      groupName: Endpoints
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: 'Store a newly created resource in storage.'
-      description: ''
-      authenticated: false
-      deprecated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters:
-      category_name:
-        name: category_name
-        description: 'Must not be greater than 255 characters.'
-        required: true
-        example: b
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        custom: []
-      slug:
-        name: slug
-        description: 'Must not be greater than 255 characters.'
-        required: false
-        example: 'n'
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: true
-        custom: []
-      sort_order:
-        name: sort_order
-        description: ''
-        required: true
-        example: 16
-        type: integer
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        custom: []
-      description:
-        name: description
-        description: ''
-        required: false
-        example: 'Eius et animi quos velit et.'
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: true
-        custom: []
-    cleanBodyParameters:
-      category_name: b
-      slug: 'n'
-      sort_order: 16
-      description: 'Eius et animi quos velit et.'
-    fileParameters: []
-    responses: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - GET
-    uri: 'admin/categories/{id}'
-    metadata:
-      groupName: Endpoints
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: 'Display the specified resource.'
-      description: ''
-      authenticated: false
-      deprecated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters:
-      id:
-        name: id
-        description: 'The ID of the category.'
-        required: true
-        example: architecto
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        custom: []
-    cleanUrlParameters:
-      id: architecto
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses:
-      -
-        status: 401
-        content: '{"message":"Unauthenticated."}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          access-control-allow-origin: '*'
-          access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
-          access-control-allow-headers: 'Content-Type, Authorization, X-Requested-With, X-XSRF-TOKEN'
-          set-cookie: 'XSRF-TOKEN=eyJpdiI6IkhEY0RJaDlZNmIxcjZYck5KdlUwOWc9PSIsInZhbHVlIjoiMkhHMmxYNU94UUg1eTlEVmxMZVdoUEE0ZmM3THlzOVNPU09XNVFnMHBoZkZlNVJyN1BNVjE2UTR3UXFBa0FpWXl4Ti9TQlhpTmlGbWtpYzFicEk1ZnFySWNicXVnMDRCTkNpZnp1aXh1bG1YczFmS2RwV2xSOGJHd2g3ZHRZNVYiLCJtYWMiOiJmMjMwMThhMjNlNWVlZmE1MzY0YTE5OGNiZDNlOGI0MTY5M2VmOTBjMWFlNWM1N2M2ODI5NGQ1MDM2ZjEwODlkIiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 06:39:48 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6IkJoLzNSSFYvRkkyaEkvUVZFbkpoSkE9PSIsInZhbHVlIjoiTTAvc3Ivbnd1QTNSNVhrNTZRaTlJbEVtK3NkVUFDN1d4STBnNVg0bUlMQzZ4WTIxemJqYjU1L3lRSDBjcHFJQThmMGpJN3NzS1piRUdqclJ0Z3FMZWc5N1UvUU5Lb2FPbTZTWlZCbklvZzdjVThxeUR1di8xK05zRWZJRzB5ZDEiLCJtYWMiOiI4MDlkYTRiN2FkNDFmMzdmNjg1YjVmZTk4ZjhlMmYzMDJiMjU5NDdiNDU2ZDE4MzcxYTdhZWRiMDhhM2Y0ZjI5IiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 06:39:48 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
-        description: null
-        custom: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - GET
-    uri: 'admin/categories/{category}/edit'
-    metadata:
-      groupName: Endpoints
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: 'Show the form for editing the specified resource.'
-      description: ''
-      authenticated: false
-      deprecated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters:
-      category:
-        name: category
-        description: 'The category.'
-        required: true
-        example: architecto
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        custom: []
-    cleanUrlParameters:
-      category: architecto
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses:
-      -
-        status: 401
-        content: '{"message":"Unauthenticated."}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          access-control-allow-origin: '*'
-          access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
-          access-control-allow-headers: 'Content-Type, Authorization, X-Requested-With, X-XSRF-TOKEN'
-          set-cookie: 'XSRF-TOKEN=eyJpdiI6Ijd0T3NFNEMxckxGWGdNTm10VENJblE9PSIsInZhbHVlIjoicVAxR3FhLzljRjRkRHUvYWV6U25PV1ZvZ3hvOGl5bzQ5YUpYMkUwbFk5eWl1K3lIQWN0VmtpL2pjYVM4MHNRV2c1YnVEU1U5QXAycWpEYWdCeDEvcG02TlAxTlk4SlFEV3NyNFZYb3djcDNKMHVST2M0QjN6c1prR25XUEJwQk8iLCJtYWMiOiI3ODBhOWI2NzIzMWYwNGQzNTMzOWViNzE4MzEwOTcyY2M5M2RmZGU0ZGU1NWYxMWQxNTVkMDQ1MDc2MmQ2YjdlIiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 06:39:48 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6ImhFdUtxYVpzTzZ4K2hCbzhnWjRFY0E9PSIsInZhbHVlIjoiWDN3WVlMUU1WbXZOdy9vandOanNzaWg4dmJUQ3NxRkxaUTZKbTh4ODFJaVZGT1c2NnJZSWZCZktsK2ZhYkJpV1doOERpVDZUbkhRS1BKajVJTjB4M2Zvb0RQYndQczlJaVo2VkxoemFmVnF5MHhpRG1iUVhmb2llK2lqU0Z6aWgiLCJtYWMiOiI2N2ViYzU4ZmNiMGJkMTFiMTcwODczNWMyMDBjYzcxNWViYmZjN2U4ODM4MzJlNTFjY2NlNDQ2MmQwODRlMjQ1IiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 06:39:48 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
-        description: null
-        custom: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - PUT
-      - PATCH
-    uri: 'admin/categories/{id}'
-    metadata:
-      groupName: Endpoints
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: 'Update the specified resource in storage.'
-      description: ''
-      authenticated: false
-      deprecated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters:
-      id:
-        name: id
-        description: 'The ID of the category.'
-        required: true
-        example: architecto
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        custom: []
-    cleanUrlParameters:
-      id: architecto
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters:
-      category_name:
-        name: category_name
-        description: 'Must not be greater than 255 characters.'
-        required: true
-        example: b
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        custom: []
-      slug:
-        name: slug
-        description: 'Must not be greater than 255 characters.'
-        required: false
-        example: 'n'
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: true
-        custom: []
-      sort_order:
-        name: sort_order
-        description: ''
-        required: true
-        example: 16
-        type: integer
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        custom: []
-      description:
-        name: description
-        description: ''
-        required: false
-        example: 'Eius et animi quos velit et.'
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: true
-        custom: []
-    cleanBodyParameters:
-      category_name: b
-      slug: 'n'
-      sort_order: 16
-      description: 'Eius et animi quos velit et.'
-    fileParameters: []
-    responses: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - DELETE
-    uri: 'admin/categories/{id}'
-    metadata:
-      groupName: Endpoints
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: 'Remove the specified resource from storage.'
-      description: ''
-      authenticated: false
-      deprecated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters:
-      id:
-        name: id
-        description: 'The ID of the category.'
-        required: true
-        example: architecto
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        custom: []
-    cleanUrlParameters:
-      id: architecto
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - GET
     uri: admin/products/trashed
     metadata:
       groupName: Endpoints
@@ -1609,7 +1126,7 @@ endpoints:
           access-control-allow-origin: '*'
           access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
           access-control-allow-headers: 'Content-Type, Authorization, X-Requested-With, X-XSRF-TOKEN'
-          set-cookie: 'XSRF-TOKEN=eyJpdiI6IlBKd2NoR2VDSWRoT0k0Y3NMWVpRT0E9PSIsInZhbHVlIjoibE5kVDFySDkxQWZqK3UzUzRCaEp1Q0VyMXVaa3IyRUNkMkVsMFkrWHdZQTlCUzd4a0RGU0JDRzVzeDR6SXlzaHhtVDZPdUN3UlUyK0s5ellsZ2lmeDlXZ1dMZXorTUNGcHlQMGZyOGNqRFlNRThicXRKbGgwSjFncFZ2eElhMkoiLCJtYWMiOiI5YzM0ODkyZjA4ZWM0NGI3Yjc3NmFiYmEyOWNkMGQ4NWQ3ZjZjNGUwZDU3OTc3MjYwZjAwYTU5Yzc1YTU3OWJkIiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 06:39:48 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6IkVkMFNCd0FwRlBOL1JQWDNkeGtIaVE9PSIsInZhbHVlIjoib0kwN2pVTEg0ZmlsQ283dDRTMWR5cEs2VzM1NGhmL2dhcFZ3SzJBRVRBVVdUcU50TFFjTnMwNEc0S205cG1GbVB5cHlSWGJSZTB4QWM3a0xOV3NqcGdYakNYZEdaSUJXMDFZenFvY1hwcmI3Q2l1VVY1R3RmcUozUlpHTWhHNGYiLCJtYWMiOiJjYmMwNGI0NmYyZjViYTAwNWFlNzlkNzAwNGQyZmQwZThjYTFhZjU3YmQxNjg0OWNiZWFhZmQxNTllZGRkYzZiIiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 06:39:48 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
+          set-cookie: 'XSRF-TOKEN=eyJpdiI6IkI0MWRCNzR2anhpcVoxUUZkN1pVYkE9PSIsInZhbHVlIjoid3hpeVU1bEc0VUF1TXZFSys4U0JaZ3dWdmlLbThvRkhXeGQxT1NsMkVWSkJ5ejNNWUdkTDZvR1FWQTh0VG5wbGNyUGtETEwwbFhwMWg4NkpGOCtERVpyRE80My9tUlVpQXBRbUh3Z1ZVRHhrSjFPdHU1L3lnRnlBTzh0ZjlXS3IiLCJtYWMiOiJiNGQ1ODRlZjRiNjNiY2VlZWRjMTlhMmQ5NTA4ODJiY2E4Njk5ZWJlOThlZTYzZDg1ZjRkNzQ3YmE0OTE0MjZlIiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 11:13:15 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6IlZJc1hsOCsyaUFGaGZDNloxeEkwUkE9PSIsInZhbHVlIjoiSVhVRVQrbS8xQU0vL3FlS0Q5VFhxZ1NmWHZ3VHp4eXVWbUdlQzNXU3UrM3Q0a2REK1htenI3K0hRNFBmMjhRRHQyZkxaVk9Edm9LbUU2R1RwQ0c4emZranNuVjcwYVl6KzZBeFFtN0JCZDFOa1NSaGYxOE9aL2RJZ1Eydm5NK1oiLCJtYWMiOiJjMWZkY2YwNzc3Njc3NTFkYzU0ZDFmODVhNmMwYzQ2MjIyMzIxNDgzMmNlMmRjMjBjZTVhMWNlODYzYjhmZjg1IiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 11:13:15 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
         description: null
         custom: []
     responseFields: []
@@ -1694,7 +1211,7 @@ endpoints:
           access-control-allow-origin: '*'
           access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
           access-control-allow-headers: 'Content-Type, Authorization, X-Requested-With, X-XSRF-TOKEN'
-          set-cookie: 'XSRF-TOKEN=eyJpdiI6IlFRUkc0ZGdrYm5DWjNTRHNGT2RGK0E9PSIsInZhbHVlIjoiaEk3c3l5cDBvaU5JSy9Ibkh6K3paaHNuVUQ3bkdDK091V1JNVE1LWDFwYTVmbGk1aHBrU1hsdE5sR281WHl0ZkVlWFR6T1p5cVdqNWJBYkY2K25zYzJuSnhXQmh2WWxLVTN4QWJUSDVZc3JQdVBZTUUvRUJFR3ZJSFcrb1RzU1kiLCJtYWMiOiJiNzk0NjY3Y2I1NzFkOTJlZTk2NDgzYzc1ZTcyMDUwODc4YzIwN2RlZjNiMjliZDliZGYxN2QzNTg1MzNhNzljIiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 06:39:48 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6Im5XUVEzK2pQdFplcUN1elFVblVuaFE9PSIsInZhbHVlIjoiVnRSWHUva2RabmExTWx3SUE1N3JGOTY4YmJHbG1XejBEa21laElURlQ0Qjh2OWZKMW10VzJDL3dCRTZ2NTl4YWthbUdUNyszbDNUZzJ4ajZyTUdnelVQY2I0TkwvZ2pWUHA2Z2JiWWErdDZObGhObldiQlN6cnpJR1dYSkJZNGsiLCJtYWMiOiI3MDlkZjlkNzMwNzk4MjcwOTQ0YTNkNGQwMTRiNDEyZTc3YzVhYTI2MDY5NWM5NTExOGFlMTE4MzlhYmMzYWE4IiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 06:39:48 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
+          set-cookie: 'XSRF-TOKEN=eyJpdiI6IktIVk5mb2xQK1pQOWVjVEpEVU5KRXc9PSIsInZhbHVlIjoiczliTElCbkpaWkMzTzlsSXM2WmFsSEEzY2tUM2ZVNzBaWkFqbk1SZ2czZVhWRS9jR2NTTTZ2N3VPVGExbkd5aGh1WHJSZkFRcHZGSmN6SFNOeWlyYVNXMXV3NCtYYzRkWG55QWJhSHZQY2JmdlI3Yk9YQTd5elREQ3FkOXRyZ0wiLCJtYWMiOiI4NzJjM2Y2OGM2MTJlZDBmMTVmYmY5NjE4ZWYwZmVlZDhkOWVkMTE4ZjIyYjQzMGJkYmM5OTUxZWM4YWI0NGY3IiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 11:13:15 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6ImRSWmxreHpvRkFkaDZJMXdkVFZPWUE9PSIsInZhbHVlIjoiZU1vNXZUYzk0T2JuZTZrOWdYa3RNb3E0eEFSMWVuQXRsR0hkZVQxU3IvVnNkMmgxem94UzB4TVFab3BVVWRVY2JNVlB5aWhVd0YvalVzVEZQbFJDcGh3N2JWcjY3eGRMOHlnTSthMHZXL2k2NTBkejZWN2JBQkdKOENFejEzdXEiLCJtYWMiOiJmNzA1OTIxNjEyMGVmZmZkY2U3MzhiY2I1M2UxODA1NWU5OTI1NjI1YTdiYzQ4ZjE5NmQxMDhmNDVmZmE3MWIxIiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 11:13:15 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
         description: null
         custom: []
     responseFields: []
@@ -1737,7 +1254,7 @@ endpoints:
           access-control-allow-origin: '*'
           access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
           access-control-allow-headers: 'Content-Type, Authorization, X-Requested-With, X-XSRF-TOKEN'
-          set-cookie: 'XSRF-TOKEN=eyJpdiI6ImE2YUxwWGU0RS9KVjJDUG1rMm5BbWc9PSIsInZhbHVlIjoiUEhtbXhRK250NWphZFdmcXlwVlFxR2l5d3Rvczl5NEJUNkovbjFURXp1cENOTXpzTDgyYTBORXkyWmtzZGh4c3lRWmdRRDBxOS9HZzVFT2dMVnpua3h4Si9QWlpLeVl1dWtaUXNoTmkzWklSclVFbkxaVXVoYzBKZlNJSzFKbTkiLCJtYWMiOiJkOWIyMWViNWU3ZDE3ZWY4ZGI2MWZkNDBhZGM5ZWUwMjY3NjgwYTQxMWI3NDViNTRlZTg1NjhiMWMzYzdiZjJjIiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 06:39:48 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6InB2V25DeGwvY21sMDJhWEE4aWRWT0E9PSIsInZhbHVlIjoiUnFXaWkvZ3Ayb0JwR21ySFJqNDNaYmN2R3VZNk5ZZ3BHYTc0ZGMvN3VLNnR0OE1BQTNMRDdSZlpObU5Zeldnak5GdFNPMDdyS3g3QWxSSkgwRWxSS1Vzd0NWaXh5cVJ2YW1nTFdXcFU2YzdJY004S1pyNlJhNFJneVl2aGw0Q2siLCJtYWMiOiI4YTljOWM1MGY5ZjcyZDBhYmU3OTA5YjE2ZmJkODUwODViYjI1ZjljZjBjMjJlMDI0NDQ1NmQ0YTU4MTYxNzdmIiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 06:39:48 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
+          set-cookie: 'XSRF-TOKEN=eyJpdiI6ImhqWUhGNUtYTWF5VXRvWXdmTjVvclE9PSIsInZhbHVlIjoiMEdlRGpDNkdqUzRTdmgreXFicFpwUWRxVVZuY3ZrQmVnM2R6NG9OUDVLUWZ5RmZISWZzUW1vNkZRRDRkaWhLc3JZZjZldktIOExEM01La1diRy9Gc1lEZWloY0VLNENSOHY2VmNWV2NnTDQvYkxUTXpnU01vTThMeHViRlZNSFMiLCJtYWMiOiJmOGJlYjhkMTBmNzZmOWYxZTAyNTU5MjU4Zjg1NTQ1YjFkZDJkMTlkODcyMGM5Mzg5ZjNjYTlhMzMwNmMzNDI0IiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 11:13:15 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6IllISjc4T0tCRENkbFE5RS9CQUcxYnc9PSIsInZhbHVlIjoidnVTRU8zLzFTUjZrdkJ1NVhieWxYTFN1dWhoMlJzWHZaOFk2TmlXa2hNSFpXT3ZsYjJmbCtJZGgwdjU2aGpxU1hCME9FUWVSSTVWeWJka21kaTZ3NnhZd2w4WmpoS2dTZGJ2WmE4YkpIRW92OWxBYmtJaDIrRXdaNE9WTnZwVEYiLCJtYWMiOiIyOTNjOTAxOTcwODNmYzYzOGRkOGY3ZDI1YmNhZDVmNDRmM2VlMDVjNjZhNjUzZDg0YTQ0YTk4YWFmNGMzZmMwIiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 11:13:15 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
         description: null
         custom: []
     responseFields: []
@@ -1832,7 +1349,7 @@ endpoints:
         name: status
         description: ''
         required: true
-        example: '0'
+        example: '1'
         type: integer
         enumValues:
           - '0'
@@ -1866,7 +1383,7 @@ endpoints:
         description: ''
         required: false
         example:
-          - M
+          - '32'
         type: 'string[]'
         enumValues:
           - XS
@@ -1913,7 +1430,7 @@ endpoints:
         name: spec_brand
         description: ''
         required: false
-        example: Pamu
+        example: Asecs
         type: string
         enumValues:
           - Niek
@@ -1933,7 +1450,7 @@ endpoints:
         name: spec_material
         description: ''
         required: false
-        example: Viscose
+        example: Cotton
         type: string
         enumValues:
           - Cotton
@@ -1951,7 +1468,7 @@ endpoints:
         name: spec_care
         description: ''
         required: false
-        example: 'Sấy nhẹ'
+        example: 'Giặt tay với nước lạnh'
         type: string
         enumValues:
           - 'Giặt máy nhẹ 30°C'
@@ -1969,14 +1486,14 @@ endpoints:
       description: 'Eius et animi quos velit et.'
       product_price: 60
       stock_quantity: 42
-      status: '0'
+      status: '1'
       spec_size:
-        - M
+        - '32'
       spec_color: l
       spec_fit: Slim
-      spec_brand: Pamu
-      spec_material: Viscose
-      spec_care: 'Sấy nhẹ'
+      spec_brand: Asecs
+      spec_material: Cotton
+      spec_care: 'Giặt tay với nước lạnh'
     fileParameters:
       image: null
       images:
@@ -2033,7 +1550,7 @@ endpoints:
           access-control-allow-origin: '*'
           access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
           access-control-allow-headers: 'Content-Type, Authorization, X-Requested-With, X-XSRF-TOKEN'
-          set-cookie: 'XSRF-TOKEN=eyJpdiI6InZkQUZISitqMlhBNXRaanEveW5jVGc9PSIsInZhbHVlIjoiQ2c3R0x3RkxOajBGVnc5a1pYaHZrSXJWcWZCaFhWVkN3aXVsL1dEWElFOTNOb3o3alphMGdRL1dTUHZQZGpVQW13cU13c1RoalFZdTc3YTg4OXhHRXRteXFOMmV0REhUcG1MZUsvYWxXVGE1dnc1RVJCc1BrVVhHQTdMRnhTUHYiLCJtYWMiOiIzYjZjYjljOWU2NzhmYTJiOTRhYmVmODE0NDQ1YWZkZTBlMjFkMTk5MDJiZWMxZDhjMGRiOTFhZmUzNDQ1NmExIiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 06:39:49 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6IkM3RnloREgxbVpSbjh1UVBsck1ydlE9PSIsInZhbHVlIjoiZ084VWVudWJvSTRCSEEzbHZqbUxZRWhwRWc1dE8zdEVrdnRNMm5UVXVSTU80MVdHYTRuaUYvQnBQdkdIRnM1UlY1Zms2UlZnYVFOOTdMRlllOEJFR2ExTTdWd0QzMzRWK1RlMWZiTkJhRXVYOXlNRDdLZXpPdisyZzAzQWxHRloiLCJtYWMiOiJjM2NjMTBmZjAyODkxZWJhMDBlNmZiOGMyZTY0NDk4NWZlN2IwNjMxODNiYWY3ZGQzNTRkNGViNTIyZWRhMGNmIiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 06:39:49 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
+          set-cookie: 'XSRF-TOKEN=eyJpdiI6IndaVUU3STFMd3dzMi9TTkpQbmRtRWc9PSIsInZhbHVlIjoiOU5yWE9BTnhqTEw2NkRDaTdUeVBua29Fc1JyYTBySUw5d3gySjlielZQbVhGQlpveU9hUmJ4MG5MWkc5VEgrNVJhS3gvTzNyRFlNbkR1eGdVQWFXSFk5eURRVkNZL2hvQlNWYnVmUUJCblhOd0piZDk1bjZyTzI0emM5a3ZvTEgiLCJtYWMiOiIxYzkwNzkzMjkwMDBiOTVmOGM2Mzg5Yjc2ZDdhYzk0NzRiMjBkZDE3MGQ5YWRkODE5OTAzMjBiY2FiYmU0YzI2IiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 11:13:15 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6IlRTVUtiZ1YrOHZOTEFmNng1SUxuUHc9PSIsInZhbHVlIjoiN01yTVhIVVRxYnIrd3d5d3loUS9DSnhucCtrYjd0cHNBbVpJU2JoYS9iUlkwbHhSaU5TYmkxQmhiTzZVdGRmSnVyODlRLzMwbHhBUEtxQnFwbkprd2NDWjlseUJYbnpTY3pvdktvdHdmSEk5dGg4NXJROXp0YTE2cVdvaUZEakUiLCJtYWMiOiIwNmQ3MTI1MWJmODAzMzU2OGNiODhlYTU5MDQyOTYwMDBiODI2MzRlMjJhYWY1OGM1YmIzZGFlYTQ4ZWViYTM2IiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 11:13:15 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
         description: null
         custom: []
     responseFields: []
@@ -2087,7 +1604,7 @@ endpoints:
           access-control-allow-origin: '*'
           access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
           access-control-allow-headers: 'Content-Type, Authorization, X-Requested-With, X-XSRF-TOKEN'
-          set-cookie: 'XSRF-TOKEN=eyJpdiI6ImJsdThET3llUlpweDArMWxpbmU5cWc9PSIsInZhbHVlIjoiVkpxcGRCNXo5Z05YSkN5M3A2QXNnY1JVc0pJb3Y2VG1UY2VWQUU3SFBDR0hyRHBiQzJLWExGL2ZXVldGM3FQdmhqaTJtVWlXQXcvemVtWi9jOTNZeEVCZkJGNm5zM0k2R0Q5TTFudHNkSngyRkZMUU5CTDZWeW96dDJESVhGZjEiLCJtYWMiOiJhNDE2ZWU1NTEzODIyMjE2NGRlMDUxOWVkODQ2ZDAwNTAyMDZlNDNiZmI2NjAxYWVlYzNlNjA5YjQ2MDU0MmU4IiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 06:39:49 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6Im8vWXRra3R2aVh5V2RmVWh5V0hZM2c9PSIsInZhbHVlIjoiMGJBV25Lb3drVERWTmNrc1ZuWGU5cFVkVXhWVkY3TS93NFpwQVhMOGNZSG9NL1MrcWJMekxVZFBhb3NEdlBpOGpESlU0cXFwOUJkbWJHMUd6eUZRdnJtUGt0RVZHMGZ4OTVDTUJBSVB6bitjaVVUVDlBcmNWSHF6YVpFRXMrR1YiLCJtYWMiOiJmMDA0MzliNzgzYWE1ZDVlNGI4NGZjODFiMTVhYzIyZjFlYmVjY2MwOWRlMGQwMGEyYzNlMmE5OTA2YTE2MzgwIiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 06:39:49 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
+          set-cookie: 'XSRF-TOKEN=eyJpdiI6ImZReWNCKzlWRU5aM2ZBWTExbHl3ZHc9PSIsInZhbHVlIjoiS21hQ1dua2krNzBtNndlWmFPczFCeVhtK2N3eHBteFBoSUhsVmU3aERoSnZyNVhPQjhlb3J1VGRXOEgyYklZUW03cWdLMExhYTB5aFRKaStSNFZIWU05aHd4TkV4WGJQczNyY0ZxcFZTUlNsRWJ6OVJjaDFGaXpvQ0JhY0hNQ24iLCJtYWMiOiI2Mzc1MGUzZWExYWFkODUzZGE0YjRlNWRmMDJiNGFlMzM0MTc1M2Q0YmQ1YzhmYjVjYTQzOTc4Mzc0YTEzODM4IiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 11:13:15 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6IitPeFoyeElkbWhDSDY5MFBSbkVNdXc9PSIsInZhbHVlIjoiTDMrL0pHWFE3QTdYdmxXT2hoWHFOWVpCdEpBSzZLTEVSVTJZNVRMV1VmNVZ6QzJtVGoxV05aV1JPdWVEZnllL3BlWkF3QlVvK1R0TWdIdERQM3hXOUNQSGR4d2xLdzFtVnd5TzBkRjRtdjV1enI0QkE5Zyt6V1FBTlE2UU5EVlUiLCJtYWMiOiJmMDY1NWRhNjU5ZTQzNWJkNWI4MTMxZTdhODI1ODk4YzFiNWEzYjc0OWQ3OWFjNTY1NWQ5ZDY2ZDMwZjkxNzUyIiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 11:13:15 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
         description: null
         custom: []
     responseFields: []
@@ -2194,7 +1711,7 @@ endpoints:
         name: status
         description: ''
         required: true
-        example: '0'
+        example: '1'
         type: integer
         enumValues:
           - '0'
@@ -2216,7 +1733,7 @@ endpoints:
         name: remove_image
         description: ''
         required: false
-        example: true
+        example: false
         type: boolean
         enumValues: []
         exampleWasSpecified: false
@@ -2259,7 +1776,7 @@ endpoints:
         description: ''
         required: false
         example:
-          - '32'
+          - L
         type: 'string[]'
         enumValues:
           - XS
@@ -2306,7 +1823,7 @@ endpoints:
         name: spec_brand
         description: ''
         required: false
-        example: Rebike
+        example: 'Old Balance'
         type: string
         enumValues:
           - Niek
@@ -2326,7 +1843,7 @@ endpoints:
         name: spec_material
         description: ''
         required: false
-        example: Denim
+        example: Viscose
         type: string
         enumValues:
           - Cotton
@@ -2344,7 +1861,7 @@ endpoints:
         name: spec_care
         description: ''
         required: false
-        example: 'Ủi nhiệt độ thấp'
+        example: 'Giặt máy nhẹ 30°C'
         type: string
         enumValues:
           - 'Giặt máy nhẹ 30°C'
@@ -2362,18 +1879,18 @@ endpoints:
       description: 'Eius et animi quos velit et.'
       product_price: 60
       stock_quantity: 42
-      status: '0'
-      remove_image: true
+      status: '1'
+      remove_image: false
       remove_image_ids:
         - 16
       primary_image_id: 16
       spec_size:
-        - '32'
+        - L
       spec_color: 'n'
       spec_fit: Relaxed
-      spec_brand: Rebike
-      spec_material: Denim
-      spec_care: 'Ủi nhiệt độ thấp'
+      spec_brand: 'Old Balance'
+      spec_material: Viscose
+      spec_care: 'Giặt máy nhẹ 30°C'
     fileParameters:
       image: null
       images:
@@ -2461,7 +1978,7 @@ endpoints:
           access-control-allow-origin: '*'
           access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
           access-control-allow-headers: 'Content-Type, Authorization, X-Requested-With, X-XSRF-TOKEN'
-          set-cookie: 'XSRF-TOKEN=eyJpdiI6InZuZUR1enZlNVk5MmtPNmc5OTA0WXc9PSIsInZhbHVlIjoiSnZEN1BPVDJrU1lYaTluUEtycEI1UE5hb2tDK1ZYYXlXbDJEWkVGcGY0SFlmKzRiNUx4ZzRKM0hZTFphRk51MHF6SDBCVG5xUGFkd3lhbCtOQ2thU0VvVHFvV05wVVZmK1JraFBEdGw0WmI4V0xQS2xZeERYOTRFMkVJSmFyZVkiLCJtYWMiOiJkMTkwZjc0MDcyMmMwMTVjMmNiMTBiZGI3NjE4ZjNiNDkwYTU5OGIyODgzMjliNjE2YjVkNDhmODg1NTc2Y2NmIiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 06:39:49 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6IkFSdGZkdDRNVEI1U2VXNTdUNEtSZHc9PSIsInZhbHVlIjoiK295aGV0QW0vVUZqRklRL2luUXdMaW9RVDZiQ3EwcHFWVHhyQlN1cFZ4cURWcVVpUVVuYmQ1cnJqYXNrOFhRanZ2VWFndVBabVRGRDNwOEVCVkwvK2RybDhlbXBEa2FiblFHSEZVd0pjT3VVcTN4ejNIT0pHa3RmUzlyOXNpbksiLCJtYWMiOiJiNTlhOWQ2ZTg5NTY2NDFiMWU2YTJmNWY0ZTIyM2JhYjMzMTQ0NTJhMDM0ZGM5Y2U0NzM0MjRiZjY3MjRlMWE5IiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 06:39:49 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
+          set-cookie: 'XSRF-TOKEN=eyJpdiI6Iit6WncvL0NqQkZSTmpMMFpvWm56RlE9PSIsInZhbHVlIjoiTGQza2dqNGVVd05vbksweDNEZFdmVFVST2Z2NkFHRmFWNnFhTTZ6L3J1anFldUlvQjMzRGlNR2pOZmErQ0M3L3k5dmZCZkt2elkrdFFhQndxT3o0dzZVTGFEN1lUaUltVmEwYnFiNVJ5bFZIZ29nVDFmNGVrekVPRFFGUnFLZU8iLCJtYWMiOiJmYjkwN2M0NzE1NDY3NDdkMmM2Y2MxMmI0ZTBjYjk5NWUyZDNmZjY5MjI3YmY4MjgzOWRkYmFlNTYxMGEwN2Y3IiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 11:13:15 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6InlEOVBYM3UzcEQ1VDdIa3dOUUw3SVE9PSIsInZhbHVlIjoiSXFJa3RXWlRqb1JpcUJoZjI2NTdiU1RNNXl6bGVwSEpTeTEyRFViSStiN1NrcGlUTXFZWTFZellKRmY5SzFNS0xTbWNHUkhSRDR5eWlmRXROTEcyUDYxcmRRcmJXclBjWmFWajdwbThYNSttaWtDNlFwUTh1bVZiVlg0OUpZVFYiLCJtYWMiOiJmYzE3YjFkZDU3NGU2MjllYzJlODNjOTc1MTNiMTFmMmE0NjE5NzFkYWY5YzM2ZTkzNjNlNDQ2NTBlZmYyMmJmIiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 11:13:15 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
         description: null
         custom: []
     responseFields: []
@@ -2504,7 +2021,7 @@ endpoints:
           access-control-allow-origin: '*'
           access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
           access-control-allow-headers: 'Content-Type, Authorization, X-Requested-With, X-XSRF-TOKEN'
-          set-cookie: 'XSRF-TOKEN=eyJpdiI6Ikk4N21MNlFBUHhKOTdaQW11U0ZIbkE9PSIsInZhbHVlIjoiU2dhWGhJbkpubWRGVHBQMiswUExTRkNuWnZQMmNJVFhIcE5wMFNlVnpGR2tOdkVWYVZ3amY0cFE2WmFhb1hSeE1FTjBDVDRQR2tWaDRwNHptZzZNejZGbm9PaEtudy9uWFltaDF6Z3U0blI3dlRjMEVnbU93TnZEYXF5RUFBT2giLCJtYWMiOiJkMDcyMTI2NzE4ZjI5MTQ0YTExYjdlYjZkOGZjN2UyOTg1ODIxMGI5ZTY1MjQ0ODhhMTFhMTEwNzkxYmM1N2I1IiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 06:39:49 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6Ik9OY1p5MkNVZWNaalY0dno0VUZkY2c9PSIsInZhbHVlIjoiNTVpVUpSNkFoWFgvR0VzdTFjM3JrTUpnVktJeWJncGNRRUV1dUZVd0pDMG1qVWdTMlp1K0RQRDBwNEx3ekJoS3VKbHhaWENkc3VPcTdZMjFBSUhzdFlmL1lVSzlhS1RHQ09hY3hoYkpYVVJaWWRtd3VreElDTk9NSUtvL0xzcGEiLCJtYWMiOiIxYzY3MzY1NWIyOWNhZWI4NTU3ZTliMDRlN2RlYTI0NDA1YWU2NTA0ODEwODBkY2MyZTA5ZjFhMzExODdjNjVlIiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 06:39:49 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
+          set-cookie: 'XSRF-TOKEN=eyJpdiI6ImVxZGl2UGJOUnExb3dpRTBxakRPZGc9PSIsInZhbHVlIjoiSkVjUzNoUmx2NHdsQmdzWUkxWUFkb3cvOE91TVFqeWJ2dWhzdUF3bGFoeUsyb1FVNHlQall3aHpaQnJ5eEpGQVhvSEN1di9DRGlwU3BGL2tnN2hlak16c2h2NjEySktiTEI5ZElYb1VvRTF1bnhPdlE2TUZsK0hLOGp4Qm9FbVoiLCJtYWMiOiIzM2U1YmI1ZjM1YzI4ZjE2ODgwMzlmZWYwMmZjYjA0MWJhOTY4N2M0ZjI2NTNmY2ZmYWI4YWUwM2JiMWFiMTBiIiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 11:13:15 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6IlZpVENWby92MHFzcFNyTjJnNlg4dkE9PSIsInZhbHVlIjoiQTg1Z0ZHTTA2cUZaR1dqMlg5Y1pRREVUZTVxRnR2Mi9xRDlLempRNlJ3ZXlhVVVzaEZOTFhkR05xRjNOUi9YbWVTV0VNQk9vYko3ZzZPVnArK1o4Ui84ZGNKdm9uanFXTG1IUnI2VzJkdU4yZ3FtYzJqdFFhb01OUHgxV1pqN08iLCJtYWMiOiIyMzRiZmMyZTUxNDgxYjNkZmY2OTI3YzIxNDNhYjlhNmUwYzFmZGE5ZWRiNmJmZjAyZGVkNTc1NDYzOTAwNjk1IiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 11:13:15 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
         description: null
         custom: []
     responseFields: []
@@ -2611,7 +2128,7 @@ endpoints:
           access-control-allow-origin: '*'
           access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
           access-control-allow-headers: 'Content-Type, Authorization, X-Requested-With, X-XSRF-TOKEN'
-          set-cookie: 'XSRF-TOKEN=eyJpdiI6IkRuNEpYb1RaT0VnMmxFaDhmb2hYSnc9PSIsInZhbHVlIjoiMktEcVFnMmQ0bzUwRnNYbGZhZHh0NGQzMjMwckhNMnp2c2lTSzFhV3RSUnBUNGtrK29mZjhUc0hyR0pKNmVmLzUzZ2RwR0dWaVA5MXR1cVQrK2RIQXFaRnh2cThXNVRoT2xOTlVNWVZKaFFTSEZKU0VMMXZkVUpqRFNwY1ZDbVkiLCJtYWMiOiI0NDBiMmYxYWJiNzAwODRjZWE4NjdmNzc4MTA4OThmOTJiODljM2IzYTcwYmM1MTQyNGQ4MDM5N2YwOWVjZDQwIiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 06:39:49 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6ImtSZXcvS0xlWnI2anJrQ3NBajZpZnc9PSIsInZhbHVlIjoiajk1SkNab1FRS29jelpMKzQyUDlOVXVFMVF2ZElRRlo3NlBNaTI4bzRwZERwTDh1Y29zWGw4Vi90ck0zOEtNYWJkREx3SjJCa2lqM2xvdWVrd0FKcEQ3WFhvcXowT1JhaHdDaVk2T0ZVcENxQVBYSndpM1ZLNG43Mm4zY3AzZ3IiLCJtYWMiOiIyYTkyZDNiYjM5YTQxZjc1NzVhZjE3NjY4OWJjM2U5NjQ0MTFhOTM4OTY4MGE3YzEzZTRmMDI5NzU2MDYzZTZkIiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 06:39:49 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
+          set-cookie: 'XSRF-TOKEN=eyJpdiI6Im1JbUNvZEFFb3BBaGltQmhuRVhHaWc9PSIsInZhbHVlIjoiT2dlNUlHVG1pTWkxNWI4d1NBcnJMdVhMNENkUW1QKzdRYkFDWWR6bGNIT1AxRi9FL3FxOXNJRW5JcnljWjkxTTJZVUxqc0VBUVVWbDBIMk5MQ0hzcktYMHNRbXg1bVdJT3h6Z2liUGZMRU1RUCtzTktQWlZrNXJ0N2NFSkszVFQiLCJtYWMiOiJjNTk5ZTcyMzhiMGEzOTM5MmJlMGU2YzhjMzcxOTAzMjkwNzk3YmViZjY5M2JmMGZkZWU3ZjM1ZDFiOGFhMDc1IiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 11:13:15 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6ImtvR2wxY2RKNkEranJuNkZkQ0NlU3c9PSIsInZhbHVlIjoiNWlkVnAzRDBudEdzUHJjdFE5KzVFRTlhOU9Kc3hhcmdOdjBROXpTQVR2SUNpUUtFNy9QUTJuMDhPVmhBZDZSZGxIcXIzTFhaaStQQU9ORHNQSWVGVHpLT0w3b09rcDdGRCswTmlTakpLVHNFNjJRWTJIbmVCZ1o5SnRnOVRudkYiLCJtYWMiOiIwN2YxYzgyYWYzYzc5ODk3OGFiMDdlZTYyZjQ1OWNiMDRmNmZkYTUwNjZlZjQ2NDRhMDhiOThkNTAyNDk1ZmJmIiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 11:13:15 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
         description: null
         custom: []
     responseFields: []
@@ -2665,7 +2182,7 @@ endpoints:
           access-control-allow-origin: '*'
           access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
           access-control-allow-headers: 'Content-Type, Authorization, X-Requested-With, X-XSRF-TOKEN'
-          set-cookie: 'XSRF-TOKEN=eyJpdiI6IldwdjRnVnREVXgvOWFVY3duczVpZkE9PSIsInZhbHVlIjoiQjBTY0JMdkJTdHBmVTlYS0V2NTFpb3JHaWdpTG5ONGYyQXFzZmJOVFJYRDJVL0hTWTBFcG5XazBoM3dVTCtoenZXSGFYcG02SHJnREQ0b053eFhrbll6RDNONjhzR1NtcmJwSDRGN0l2T0VZekU0djVPVDFGYW55a052MitlOFciLCJtYWMiOiJmYThhYTIxMDFiZmE5NmE3ODhjMTBiYzEyNDlhZGMzMzM4MjQ1OGVhYzVhYWY0NzIwOTBiN2QzYTJkMTcwZmQ3IiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 06:39:49 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6IjhuTXVDQUdnMW0xTEs1aGc5d1RWMnc9PSIsInZhbHVlIjoieUFWZFBnWWwxcFp6M0NObzhYQW4vUnVEUkoxSEZGQzBxcVgrdTFRK1AxSkwxd3daZWdYTmdUNzZRNmQ1YXBzc29FQ0laNk53VVRZeXVqemx3SllxTi9tNHFXTW5yUkI5RTdYcVdBYzRUaTFIdkZlMk9IZzFtWVN2QUdlVDA5WUEiLCJtYWMiOiJmMWM5N2FkMjhjNzM1OTZlMTI1MzcwNTYzZDljZTJhNzVhMTYxOTkwYjYyNjhlNTZkN2Y5OTk2Y2VlMzI3ZWUyIiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 06:39:49 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
+          set-cookie: 'XSRF-TOKEN=eyJpdiI6InBvbUFOWk5JTGYzVDJiZVRlbGp2cEE9PSIsInZhbHVlIjoib2NSQkxRd1FIUUY3ZDYxVFZMaEVLbVlPL3JURWF3dHBzenlnbVhoY1NQQU1mZldiVTZNR3NkOEJoKzA0V1YyUVNtL1ZCSmZFdTA4cGdwZzFCMk40RU54aFpJeHJCbTJRWjR5ejBYSDg5ZTJOUWJ3VDVJbmdnaWpIampoVlZkWngiLCJtYWMiOiJlNmQwNTU4NTU5MWM0ZjgxNjAxODU1OWMyNTIwZDVjZjQ5NTc2MzY0NWVkYzIxYTZiNWM2YmFhYzBhNWFkMWYzIiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 11:13:15 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6IjZyQ2lpRDd6RkZxeHNTZ3BYUTVCQ0E9PSIsInZhbHVlIjoiZloxUmIyUGFDNGFGWnNJYWpTNXRXbElqYzdncDlSYmc5eHVPQm1CN3VmWHg2TFFyK1JaYm50NDZWeGFPOVlKSDd3WXZ4ZWNmRXhTdTZ4aWFBY2VoUTg2K2UzaUtmb09ta1FnaWJQUlVBOVF1SEdjV2gzRXFuTXlGbHhuS3RYSEciLCJtYWMiOiI2YzhhZGZiMGU3ZTJmNGRlMjM5NjZmMTRkNTdkZWI3NjExODUzODYyYzdhMWNiZTRmYzVjNTU3OWRhNTYyMGFiIiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 11:13:15 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
         description: null
         custom: []
     responseFields: []
@@ -2814,7 +2331,7 @@ endpoints:
           access-control-allow-origin: '*'
           access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
           access-control-allow-headers: 'Content-Type, Authorization, X-Requested-With, X-XSRF-TOKEN'
-          set-cookie: 'XSRF-TOKEN=eyJpdiI6ImNreUkxV00yS015NUJHL1NaN2pvNEE9PSIsInZhbHVlIjoiOSt0MVNadU1tR2oxVlJ1QzBnd1V4NFdicnZzbEZZQy9OazVyU0tOZGExeVZnNmw1WG94anQwV3lSZjcwZGpkR2tIcTYwMzhYSkNFcTFHbFhueUR3ZjdIT1NaVnVrOTF3VjRvZmR2dXNlbytyOGRtaXNzd2piM3FhcE1zNDBKQ2oiLCJtYWMiOiJiYTdlNDUyNzNiMThiZDZjZTYzNzUzYTI2NGI3YzViMTIzNjdmYmY2YTc3ZTk4MzdiMDJkMmE3YjliMmQyYzg2IiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 06:39:49 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6InhMS2NsSC9jSkhxVGxtclNrSHRvVVE9PSIsInZhbHVlIjoiOW55ajc1eVp3SzhHU3BpbFFuOUNPMUNWV2hUdzZYcXIwejhoWHJLWVdOcWlRZFhXcEVsTXpMeTdvZiszT1lwazlkUW5tZU9WNXg1QjlJZHVLVitxZm1LRk5TSnRaMWEwaE1nMGlzajlPOXhFb1JFd1haWHFKVmRSN09lVzlGbWMiLCJtYWMiOiIxNDMyOWViZTgzZTI5M2Q1ZTBmNmUzZjcxNGM1NzM0MzEzMjFmZThkMjYxYzgwYzlkMjM5YzQ5N2EzMzA4MzEyIiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 06:39:49 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
+          set-cookie: 'XSRF-TOKEN=eyJpdiI6IlEySkpOcTU5cmJHcDgzaTFKWXRqaHc9PSIsInZhbHVlIjoiTW5XaklPMGUySjVNSFpTcmpvbjFiRmtmZ0szYXFJZGhsaVFXQTIrdWdZV1liYnczSkpvd25EcW9RL3IyeVZBOWc1dFlESUt4MzdTRVZ2cTUrendiRXBDR3pqNHZNbVg5VXJ2c3cyb0pVYVIxVTVyOU0xbGNZRUNXM2VFZDNWSGoiLCJtYWMiOiJiODlmNWQ3OGJjMTljN2Q2M2YyMjYyZDc3NzYwMWQ4MmMwZTYyOTllZjQ2ZGYyOTlkZmEwZjEyN2YwYTU3YTA5IiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 11:13:15 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6IlRuMThlRmFzViswSkdvTVNlKzNMNWc9PSIsInZhbHVlIjoiU09MWTh1YkpkN1IzZVM2bHRFVWxNcGJWSGRIaEVZVW5icmlDWjFoS1hmLzFtRjV3bHRVQ0t3bFYyRndWSUxQakdZMWJDVnVRMmpJd2phMEpNblJIOUlBUFRhaXcvaXVjN0htVkYxYXRibnpHTzc3MW1QVXozWGxFR1drVitVOUciLCJtYWMiOiJhYjc3OGZlY2ZmNTA0YmVjYzcwNWNiNzU3YzBmM2IxYmQxY2VjNTQ1MjcwZWE2NTU4Mzk1MzYzNDA1NzkxZDFhIiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 11:13:15 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
         description: null
         custom: []
     responseFields: []
@@ -2868,7 +2385,7 @@ endpoints:
           access-control-allow-origin: '*'
           access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
           access-control-allow-headers: 'Content-Type, Authorization, X-Requested-With, X-XSRF-TOKEN'
-          set-cookie: 'XSRF-TOKEN=eyJpdiI6IjB0ZTg5cGlEMDUrVE1JTGo5MTN3cmc9PSIsInZhbHVlIjoiZmVYVk1ySnlmYmlkaDVWS2p4V2RSeXo5YUd0Tko4VjJIWHdQdFY3ekxEdUN3Y0ttOXhscjRyaGpPRDRtc21qdkxLb3cweHg4TmdqMVY0WjIxRXE4YjcyK3dRT21SWmN5K0h4RUFsVDdvR0dkMmdyNHJMZVpSMlRqOFpFMGdvOG8iLCJtYWMiOiJiZWMzYjE4MDRmY2JhYzE3NjVkOTFhNTEwMTFiMTU1ZGFkM2E4NDIwMTY1M2IxMGQ0NmI4YTI3MWIxNmEwOGJiIiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 06:39:49 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6IjIvUEVsb1N1TFdMNXRxL21ldGNRZ3c9PSIsInZhbHVlIjoicEJYTkRVbzRRWEx3RG9JMXFGbG4rdlpoS2MyaktlZkpRY1R1ZVNMejB0Wk9ERzlkV2hhOGR3b1Q1NzQ2bUdrWnpsWXNqQnI3Skp6MTM4ZVB1RlNQbWpVeEozTFZGNE11ZEIwVFoyTGk3aE13UVZzM2xYanA3MFlvdUlHbDFZbHkiLCJtYWMiOiIzNjBmZDZkZTI2ZjBiMDEyMjFlZjIwNDVhYTMwZTBhOGZmOWVhNjc0OWQxYWU4YTFjYmU0NTAxNTdkYTRjNzhlIiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 06:39:49 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
+          set-cookie: 'XSRF-TOKEN=eyJpdiI6InhzNWFZZTJKVHF0UFpTZ3JoVXlsblE9PSIsInZhbHVlIjoiSmhDMnZnLzVRYnRhYnJ4ZGhrWk4xV2ZzMVRqVXJ2WUdBclc1Z3JZK0N6ZVh4Y3IzblV2VXh2QWxCcStUTWV6Sm5Fc3VtL0c2aStZNmtzYWh1UEFuSjNHZmFBZjR5R21QVTVpWXYyZ09jWlE1UlJqUG9lWXFkSFp1TVNPeWdISU4iLCJtYWMiOiI0MTk1ZjY4NTIzMGFjMjcxODFkOTRkZDdlNDJjMTZlOWFlZTJmYmVlMWExNTU3NWU0OWJmMGQ4ZDlkMDEzOTg2IiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 11:13:15 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6Im9HWGJiUzV1OFc2YzJqVmRRV0FTK1E9PSIsInZhbHVlIjoiS2JGNnJtaEpuSW9mdlVncU16NEk0djlBenFZZ2lFbjMreFhJRWZ2aTNNRU8wSWhrQlNPVndPVHJvS0J1N1ZESDVoUVdzV25DNys0NmpCTHp2YkM1eU9lN2Q5QnE0dk5Sc2p1RXU1ZVF2dDRwNm9oazhVbXZoZjNhd1I0a0lYbSsiLCJtYWMiOiIwOGI0YWQ3ZTNjYzIzZTAxYWUxNjRlYjc0ZDNjMDZkNDNhMjAyMmQ4M2E1NzkyNjczNTAyMjM4ZDQ4NGFkMjY5IiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 11:13:15 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
         description: null
         custom: []
     responseFields: []
@@ -3027,7 +2544,7 @@ endpoints:
           access-control-allow-origin: '*'
           access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
           access-control-allow-headers: 'Content-Type, Authorization, X-Requested-With, X-XSRF-TOKEN'
-          set-cookie: 'XSRF-TOKEN=eyJpdiI6IlN4dlBUY1hCOEpoNnlseGJpVEpORWc9PSIsInZhbHVlIjoiMVNkMHpwY1dvWUQwNlRGVWc2dk1HWWZBc3VtR3ZCSWRtb09haUwzVEtjOWlKTm11K0VpcWhyVWxDMzg5OEthOGZrMGIrbmswYjU1RlIxNzZLWUV6QzE3S09TTTZlZUl4SjB3VEVOWXY5KzA0d1lHVHNva2QrdURycCtiLzFia1YiLCJtYWMiOiIwOWU4MjhhNTdiMDU4MDUxZTg2ZDlkODkzZGZkZTM2NDJhZTBmNDk2M2I4M2I2MzNjMWZkMmEwMGI4Y2I0ZjAyIiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 06:39:49 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6IkxFUVhVdmFBR1pia1M4UU56aHRZQ0E9PSIsInZhbHVlIjoiSHBORU1nejhrdVV6c0RadXp1SGFmc2lQK0hXYVVlbDBHbnhzOEpBUzlzNFVGdGNSM0hhSGcwQjRiK3lGamtIOTFabU9ZYzZRaWJpNEtUWUVzb2VEaXRlRjZKN2d4S2g0SkhOUWNyNGsxdmVla0ZpYmFVQVdaaSthdnVOOURZNkMiLCJtYWMiOiJjODVmOGViOTY1ZmVjMWRjYTY3OTY2MGQzYjI0NTFhYWY2MGY3OTE0OWZlY2U3NmY1MGI2NzhkYzFkODQ4YzNhIiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 06:39:49 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
+          set-cookie: 'XSRF-TOKEN=eyJpdiI6Im9YTzA1eGw1cUFDVDQ3N0U1ek5sa3c9PSIsInZhbHVlIjoiMTZIMS9tYzRISTg1YWM4b3IrTGUyQVZYZ3p6ZkRuM0ZFbmkrR1FvQTcrZ2gxUHBwTi9VTXVRUlYyWlFzNlpmUCtaUll6R0oxNXdwSnl3RDMxek1DQysrQkoyMXJkTlVOb0p0T2s2N0dxaGNVZkRXZlNYdjJFd1E3VjNab3ZWaTUiLCJtYWMiOiI5NmU5YTI4MTUyMzU1NjhmZjMxYWVlNTM0MzExNDU1YTg1YjgyOWE4ZGM3MTk1M2M5MGI1MGQwMjg2NDczMWY1IiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 11:13:15 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6Imw1a09pd21ld1dNQjkrZ1NORURJaFE9PSIsInZhbHVlIjoiQXJ2Q0NFUkJwNGNVWUNUcThYcSs0Q0FleEx6TnNkaFY3a1VVNUJGVHBacVUxaHZCVittWDhleHBSVzJYS1gzTnlOMG9lZlB1ZG1DS3BKVi96L3AzYSt2SzZUbE0rWjFPMWZhQ2RYcEVjUUpwSHgrSlhuZnZKdUJLWkZMeGZjNmUiLCJtYWMiOiI1ZjgzYThhY2NkYTk3ZWE0ZDY2MDdjNTZjZjY1MmQxODczZmUzMGQ1YzZmNmM1MjY2ODY4NjRhYzExOGJiZTM0IiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 11:13:15 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
         description: null
         custom: []
     responseFields: []
@@ -3081,7 +2598,7 @@ endpoints:
           access-control-allow-origin: '*'
           access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
           access-control-allow-headers: 'Content-Type, Authorization, X-Requested-With, X-XSRF-TOKEN'
-          set-cookie: 'XSRF-TOKEN=eyJpdiI6Ikk2aFZkZzE0dERNZjZ0bWhtZ3Q4VUE9PSIsInZhbHVlIjoiU1dXUlRTa1Y3MjU1UEJUVmNjc2ZXY256SHkybTBzOG9ybUFRelhxWFhnNEYxUlVGQUI2dFpGbnRtM0tueUtrSVN3elRJSFUzdFI2ZCs4L1RmMUoxTURkaTZCbE1XOUJSeTRMSGthdTBJZUpzR0x5MVc4aVVOb2xwZ3ZUU0V4UlgiLCJtYWMiOiI3N2RmYWYyZjY4NTI2N2NhODBjZWU4ODE0NDVkMjhhYTRkODFiYTI5OThjMWU0NzY2MjJjNGFlMTU0MzEzNWZjIiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 06:39:49 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6IkJKeVM2RzhGV0t2ZEVLZXhkNDR1L0E9PSIsInZhbHVlIjoiOTB4aVRLcXAwSW1ValZMNW44MjdpR3hzSEFoVVZHYWhrbDQzbU9xMzlWRkJHMlhkNG9IMThUdkdNV3hMMEtlSm5OSkFFR3BJRXo1MVA5akZkVGcrak14SW0rUXZYMDlhZmVEN3IzREpQdC9FMURqRGpNODFmZ0FkZkkwZXlUVTMiLCJtYWMiOiI5OTQ2NzFhZDY2NTZhYmJmYmE3OTViYTAyM2IyNjgzZmEwOWFlZWIyZWYwNTNkMTVhYWFiZjI5ZTBiMjhkMDBiIiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 06:39:49 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
+          set-cookie: 'XSRF-TOKEN=eyJpdiI6ImM2SWJzT21oenpJK1NqbHV1cTBHb2c9PSIsInZhbHVlIjoiSWhQL2taNmNJRmJ6di9SYzhVc0ptK3R5M0pSY01mOW95WWt0UDhxaE9lejJzdUNIL3Qra2NoZEJMNjRlRDM4WWY0aW50SWlVUjVqd0V0dzRFRzl4RGdvcHV6cUxFN0R1ZC9lOWlEYzhsTHVtNnd3MldOWG1OMnVnSm9qK1IyZTMiLCJtYWMiOiIwYTlmY2ZmNmQzMGI1MDg1MmNmZjg3Y2Y2OWY4ZGU0NzcxYTZiYmQ5M2Q4OGZhODY5MGNlMGJmOTAyODcyYmE1IiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 11:13:15 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6ImJHUGVRL0hrMC9jMTB0VVZjRkJvQUE9PSIsInZhbHVlIjoiOHozcWtCTTJINzg1NEZ3N2hrd1VLeWJ1N29DaDlVeE9WQ2REV2tudE5JVHRqdkNIUDJ3MGhCV1ZKWDd6TnRKd2p0TVFRR1BGRVlPRWJLbDQrU1BjcmMzbXNjVVo2R01Yd3JFNG4za3paQUJUSm1sdTRrbjJzNkEvRzJoOXhkKzIiLCJtYWMiOiJlNGFlYzQ2YzA5ZjM2MjBmMDM2NzM3MTEzYTk2NWMwM2IxMjlhYTMxYmM0YjgxNDE3MGE1Zjc2NTc0NjkxYjRlIiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 11:13:15 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
         description: null
         custom: []
     responseFields: []
@@ -3124,7 +2641,7 @@ endpoints:
           access-control-allow-origin: '*'
           access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
           access-control-allow-headers: 'Content-Type, Authorization, X-Requested-With, X-XSRF-TOKEN'
-          set-cookie: 'XSRF-TOKEN=eyJpdiI6Ijh5a2RCYjRlOVUrbTV0emRrTlVidGc9PSIsInZhbHVlIjoid0dWbW8xSXRWUmp0WDZJOHp1L2E4elFEdXloUGU1WFpLcldtSlpFcmI0SWplQm5DQ01WOGhIMUFQbzhkbmdXc2IvR2FMdlJIM0NZY3NIZDNuZkZwRm43YUNMNjZKcDBKRG1XYjc1ZnVKVnlkNEwxTVc5T0RJdTlISHBvZXZkL0EiLCJtYWMiOiI3NTZhNjEyNTkwNmE2OWRiNWJmYmMzMjM4MTJkMzdlMzRlZDRjOTNhNjY3ZGRlZDYzNWQ0N2Y1NTdjOTk2NzFmIiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 06:39:49 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6InFQclpsNzBZNnQ2L2pLMUVXMlVtdkE9PSIsInZhbHVlIjoiTi9QNFhGME91dVBDbnVvZWwrN0h6OVpwZ2ZmWXoyeXpWWXZQcmI1cjZsOUo2TWRkbWJUTlBSbzRoYUJidVBCbDIvWjhhQWJLNm01azRPYnF0V09LTUJmYVZ6T25HcTN3UDgzL2luMkZXejZtZDdndnVZU0tNbnpqekVPTm9TUTAiLCJtYWMiOiIzNzc3YjM5MzZmNDI4ZWNkMmQyYjNhYTdmMTQ4MjI0MjNhNDFhMjBiMmU0YjE4ZDU1NmM2OThiMTkyMTcxYmJhIiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 06:39:49 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
+          set-cookie: 'XSRF-TOKEN=eyJpdiI6ImtEZW9rS2czeVBvQmNBZFIydFEyaHc9PSIsInZhbHVlIjoieWtqRVlxUmVtU1E0bXlzQ250ZHF5M2k0N1dYaitQMFIydnRKRFFhSjgwZ0JNalAyZFBnS3Nac1Vpb1FvVXl0K2pvY0FXSndhd3ZVcjBUdnJZOGNiQVd2bFRadnJ6MGRORlpZOEtOK3R1cW5pYzVxQkFzTzNZUFFTeVRDWEgrd0QiLCJtYWMiOiIxMjkwZGIwODA2NTIzM2FlNzRlOTU2YTZlN2FiNGE4MzI3NTA1ZTNmNmM2ODllZTM1MzdjZmU1NDZkNzhjNGI2IiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 11:13:15 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6Im9oRWNidXBLTTh2VWZDQXB5d0hJYnc9PSIsInZhbHVlIjoiTW9iYnFqdldnTHlrQ2pVVzA0Q2NFM3kybnpmSUswQVhOSjNtdjFIT3MrSDY0WU9VclEvV2FuOWpTMi9HZzI5N2ZlbDljKzlZYisxSHd3eFU2Vll1NkVCVGluT2pSTlF3VEE1MDhiaTZVaGc1YVBHMWZEaC9QUFAzRkp3cFNWTEgiLCJtYWMiOiI3NmUxYjdjZmE2NzUxYzM0ODk4YTg3Mjc4OWY0ZGRhNDhjNDIwNTllNzgzOGNjNWJiN2FkNzA3NTEyMmJjZDQ1IiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 11:13:15 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
         description: null
         custom: []
     responseFields: []
@@ -3178,7 +2695,7 @@ endpoints:
           access-control-allow-origin: '*'
           access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
           access-control-allow-headers: 'Content-Type, Authorization, X-Requested-With, X-XSRF-TOKEN'
-          set-cookie: 'XSRF-TOKEN=eyJpdiI6InprMzRId2EzSldQYjE3c0FWdGdHY0E9PSIsInZhbHVlIjoiTTM2L25zck9obDNlUnVzQThZNndESXF3ZEp2bmNuOURlRmgrSWZYanVxSDcrbVQxbnVZQnFJMFhQNk1UUERJK3o3Mk1uZERjaTJmdzdLRFg0bUpUNWVsWHVTU0VXbFE4WWhGWDBlZlljUzJ3NnpmUDZ2OFg0TDRYcldRaGFUSnUiLCJtYWMiOiJlY2NkNzYxNzQzYWViZDQyYjUxMWM1NjQ0M2FiZTg0NDI5YTc0NDViNjFkM2FhNTQyN2EwZWVkYWE5YzAwYzMyIiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 06:39:49 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6IlpxNXhrK092QzRqdk44amlZcXBVUUE9PSIsInZhbHVlIjoiV1VBNjNWRm1TT2NoblozKzFtTU5TYWNQQkIveiswMm0rMHZkbnlscy9CUFFZRWJBc3ZyZzkzRXg1SVlxRlpNMG9pMlpPVjlEaGpaUjFteDlBeE56MStDQTNJNGtoRkMwRDRlSXRQZWN3alAyN3UwMVZxMllsSTdHN1BtdGY1cnAiLCJtYWMiOiI2OWRlMDQ5ODBlMGQ1YzNmY2Q0OGM0MmEyMDY4YmYzYjk0ZjU0YzE2NjJmMmI3OTE3N2EwZTNiZDM5OWQyNjY4IiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 06:39:49 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
+          set-cookie: 'XSRF-TOKEN=eyJpdiI6IndWU08vU25oTFlMSkFyVHpsS3ZYRkE9PSIsInZhbHVlIjoiVTZxTVFNSDlDM2J1VzMwWmRDZlRjRkYydDF0NVNXbDVpZHpxVTY5SFVzRy9sNHMwYUJEc3VhSWMvOTBVS1NHQ2pJQzR3cWdsSjd3Yzl0eEp0ZTVoMmhGNlVraWoraTVSMlk2ckd0QTZHRUN5LzQxemhEaTNONy96UXdBakVDUlkiLCJtYWMiOiJiYTMyOGYyMDk4MzJkMTA5NjNjM2FiZTliMDE0N2Q2MmY3MWU2ODNhZjlmZjA5NDQxODUyNGM4NzRlOTcxNzA1IiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 11:13:15 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6InlUVE9EM1hlU2JWbTVTNTRORTV4Q1E9PSIsInZhbHVlIjoibmQzbVV4SDVPTVBCSE9TK3lCNTdXWHBYQ0MvWElITkpVUW9tOUVoUkZWWWhwRG5JWWlnUmJ3N2ZycjZVZ3RQU1Z0WXRaWVhlZS9jSmcvRHVpcHVVckIwekFndENPN0hLc1BxTHkzK0J4L1FBcTFFU0JMVWN0SW5hU0dVbW1FRE0iLCJtYWMiOiI4YTQ4YWM0MGIxMGRiNTZlMTg1MGVhNjZlZDUwMzAwYjQ1NzA3ZDJhMGQxZGI5YzY2MjQ1M2RlYzUyMzZkZWJkIiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 11:13:15 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
         description: null
         custom: []
     responseFields: []
@@ -3221,7 +2738,7 @@ endpoints:
           access-control-allow-origin: '*'
           access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
           access-control-allow-headers: 'Content-Type, Authorization, X-Requested-With, X-XSRF-TOKEN'
-          set-cookie: 'XSRF-TOKEN=eyJpdiI6ImFtZ0RvMmNUSGJNanNwMVlEa1QrcVE9PSIsInZhbHVlIjoiSkVEVVlmS09abmFzTlVydnVaK3BSWDk4REtPclJGOWR6TTgzcG5BV0llSjUxaHFnc3ZDUUFqVWVYOWxmWE5CL2pnZWJuZHppc01RTm4rTDIvejIxS2FBQlRUWERoa1ZWL1grZ3M3NkNZL21kczlMWjRQdGZtaVVESnltSkJDYUQiLCJtYWMiOiI4NjE4MGUwM2Q2YTljYzdkM2RkOWQwNTRhNjI1MTlkZTI2NTYyZDRjMmQzZDk4ZjA5Njk1YTZlNGZiNmZhM2JkIiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 06:39:49 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6Ik9aYlJTOFp0a0ljcnJvZ3pLSWxsMVE9PSIsInZhbHVlIjoiVGdrVi9QK2hJZE5MSTNPMlN4clhubXc4a0o4WUJERW42V29IUDIzTnR3eFA1L2pWenpiMjB5US9yR3BiN3Q1MkVGTjlMbjBDUncyNnR6VEpEQUdGZXMrcDFnSE1MWmEzajh3cHQxcVdYYk9mNHFMTDVIR0VEMTdUV2ZkeHF2ME8iLCJtYWMiOiI0ZTQ3ZWY4M2NlNGQ0MmMyYTA0NTMyMDMwMjUwMDExZGQ0Y2QyMTc3ODNiM2RjMzRmYmQyYTg3M2Q4N2Q4MTg2IiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 06:39:49 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
+          set-cookie: 'XSRF-TOKEN=eyJpdiI6Iklad1BnTHAwcGxqY2ZOWDBPRmkvWnc9PSIsInZhbHVlIjoidzJwanBDOWpuckcxQ290ODBmelJ2UVl4Q0dIQm0zTm5sTXFYYjBaV0NTOU1hK0hkcGRIMVVWczM2RGxLR0NRcFFVZTJtWEQzTUdlREQvUHVMTC8vV2JBZW1jRWRvdGJHYnQwU1B1SkF5Vjd6RWwwQXIyYWpieGJzVmdreFdUcWQiLCJtYWMiOiI2NGYyMjA0OTEwYjg4ZjY3MzUwMzI3MTNkYzg5ZTk1ZmFkNDJlZTNkMDQ1Mjc2MzQ3ZjZiYjY4OTYzNjkyZTE2IiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 11:13:15 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6IkJLSXIvYnpGeUZZdHY1cFFob3VxSUE9PSIsInZhbHVlIjoibEFFV0ZTNlZBQzFNOXZtTkFTYVV3cnFnSlB3SlJXamVXTVQzV2pTQjR1N1JkNlFHUDVUZzNtaUJTSHoraWlqbVFxV2xHVmdiNEU5cGEvVGdXOHdmQjI1NXdJamphS0RDTytsUE9Jdzdha2pZM3E0a0kvMldVSGVVQ1pSZVFPSUEiLCJtYWMiOiI2YmIyZGY0ZjVjYzY5NDAwNWI5YzhiN2E2MTkwMWVlYzVkNzAzN2M0NjQ3M2U4Y2Y5ZjUwMTRmZjhjMDY0ZmMzIiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 11:13:15 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
         description: null
         custom: []
     responseFields: []
@@ -3264,7 +2781,7 @@ endpoints:
           access-control-allow-origin: '*'
           access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
           access-control-allow-headers: 'Content-Type, Authorization, X-Requested-With, X-XSRF-TOKEN'
-          set-cookie: 'XSRF-TOKEN=eyJpdiI6ImtCUlFyNW1KUzZUS3U3RVVCWkoxSlE9PSIsInZhbHVlIjoiOHB0bmoySzBNUUFpNStKL2ZPN2NaR0k3TlhydHBPOGQ4TGM5Nzd3aHFKdzQyaDRrUzFPZ1FWWDUwbWdLdDltNWZFTUtWR1hZcERlL2lCWnZjMXF5allVbjBFM0xEbDRkeHlKbVZZQTJiWDVVOHAxSUlac1FRZ0Y5ZWtzd3hHclIiLCJtYWMiOiI0ODAzYzQzYzRkYzhlNWI3YTU0OWM4YWJjMjZjNmRiMDkyNDVjMTM2OGE0ZGMyMDJlYjc4NzI4MTVlNDExNTI5IiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 06:39:49 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6IlVuRFdYbW9zd2xzM3RKVFJMVjgwV3c9PSIsInZhbHVlIjoiVkl3L1Y4ZU9OUUVDWVJ1QU1wMkRvN2dXaDJOYy9nT3UzVnlKQVorOFowNjdwRjk4UlNEelVsU043Tko4Y2lBZWRmMGhZUXNBb1Zkbnh2dW9ZdDB2RFNZUm9tV3NMUUgvOHlGbEYyUlJlQXJXQUtPSFRSRGtLanRnRkt3MGRzVVgiLCJtYWMiOiI5OGVjNDBjOGQ1NGE3NTVlNWExY2MwZTc3Nzc3N2JiOGI0YWI0NTkzN2E1NDBkNDI0Y2MwMTYxZmNhNDkwY2NlIiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 06:39:49 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
+          set-cookie: 'XSRF-TOKEN=eyJpdiI6IlJaSWtJWFE1cVErRm40Vm9OSDc1Y3c9PSIsInZhbHVlIjoiK0VNN0ZQbUtyb0JwS0lGVnZ1NFF3Y3JORjlFR2NkMjl6K2UzL1BQakdlSHl5VzNYSmtJQUxMT3YyZll0d3kzbXpDaUxud3ZJSDdPUURFQ0xSY3ZUNGJQampDTi8wbG1xRS91eHZTM2toQW1yTmZXZWxNMG5ieS9NYkNYcTZIcysiLCJtYWMiOiI3NGQ0NDcxYTg5ZDhmYmRlYzI2ZmRhNzg2MzhiMDIwY2RjNjc1NjJlYTBmYjhjYmU5N2E4MWJjMDdhMzMzODk1IiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 11:13:15 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6ImRwRkh2UlZtL0Z5RUM1eGdNVURVelE9PSIsInZhbHVlIjoiN2JmZzFxMFRRWG9hZlh2b0gzbDJ5SXczZmZNdkhXaGVXTlhGYzdkZHRFNlNEWS96blNuTUh6emVtcTM2alpyZjdtcTRVRlozdDBaTGFtNy9QQWdpaGE0SXc3RktQRncvUDlGODN0UXE2YkdDWmNWSjNnT2liOUpVOEw0L2duU3QiLCJtYWMiOiJlNDM0NTVjMjBjMTFhOTk0YzI5YjA3ODViMTE3ZmE1ZThkOTlkYzVhZjhhNmFlZGI1MzU3ZTIwMDkwZmE1N2U1IiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 11:13:15 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
         description: null
         custom: []
     responseFields: []
@@ -3393,7 +2910,7 @@ endpoints:
           access-control-allow-origin: '*'
           access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
           access-control-allow-headers: 'Content-Type, Authorization, X-Requested-With, X-XSRF-TOKEN'
-          set-cookie: 'XSRF-TOKEN=eyJpdiI6IjV3Z0xMQUFGRU0zcGxWMk1IQUQyS0E9PSIsInZhbHVlIjoiY1ptUTdCNXZDTDM4Mm5XcHRsN0dNaUZNMHVOazNlNGpwUUsvVHFCenBlR1N2RmZsVHNBVFZ2YXVSeWhDRURCT3JobFR0MWVvRjE3MGtkNUpia1o4emtnS2NzUFN5RzFCbm1tRUh0UlNBb0dHR0JuaC9qNE1NcGdlcHA0c1hBMXgiLCJtYWMiOiJmZGIxNzk4MTIyMjVkNjA1NTJjNTA3ZTJjYzg5YjAxZGRhMGUwZjkwMTUyMWYyNGZmMjMxZDM1MjI0NDNiZDQwIiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 06:39:49 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6IjYxSjlOMHdZSnRXN0E0b0ZkYW5md0E9PSIsInZhbHVlIjoiaW4wdG5yZ0tjWGREZGFwdjYyUXNrZjN1dkV4NjUxcTlZanM4UWlkRjZJbkRSei9rNEhpaEEycGt4cnUrVHlmd3FwRnlJNmlDU1ZVRUJDdEgrcDRaajFnT25wQU94SkRaeWY4QzZLcFUvMXJjNXBTMkJwbjhqakJRWmNMaHloYW8iLCJtYWMiOiJlMThlODRjNjlmY2RmOTUzYTQ4NjMwN2QwZWQ0OWJhNjUxNDMwNGEzOTlhMjRkOTQyZTdkODA5NGU1YTVjYWVkIiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 06:39:49 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
+          set-cookie: 'XSRF-TOKEN=eyJpdiI6ImdTL3NneXJBZ0QxTE51R3FxaTN2OVE9PSIsInZhbHVlIjoiQmduOUM3Y0VxbitKVXVJd0JlRURHNUFFVHNwSk9kR0NrUTM2RjdCNzJ1dWZ3anU1TCtOTW5sUWhrdThsR1RZZDkvVEhCTzBnMlpsd1JUbERWeW4vMVVNM0kwRzJMbTljTjFoVGN5dzRWcmtWUmVMU3F5ZnlRNGdDQ2tzYU4zT0QiLCJtYWMiOiIxNWUzYThhMzg5ZWEwODNmNWJjZThjOTY1YjJjOGMwYTU4MTAyODZlOTA4NzRkNzlmZmYwZjA5N2M2NDBlM2Q5IiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 11:13:15 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6Ilo4R0pBUWx5V2cyTm4vWXptRVFJVGc9PSIsInZhbHVlIjoiSlV5RjhOQ3oyRXM0dFZMTWlqQ3ZPb2NFM2NwMEh0NXgyLzg2Ri84Z05MK3lOd2lXSlF1MEgyK1laczlRcllmZzdoUHFlOUFYdDFEVXpBbjYxMjRBc29FQVFlSVBSRlgwSU5tcm5JTVE3RmdpNjZEMVdKTVdHTE5oWEEyTTV4MS8iLCJtYWMiOiJhZTlhMGE1NjAzNGY3NTVkMTQxMmEyNWRmMjRmNjMzMTdkMWFhNjRmODYyOGVkMjUxNGM4MTkzODI5NTUwZmNkIiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 11:13:15 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
         description: null
         custom: []
     responseFields: []
@@ -3758,7 +3275,7 @@ endpoints:
           access-control-allow-origin: '*'
           access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
           access-control-allow-headers: 'Content-Type, Authorization, X-Requested-With, X-XSRF-TOKEN'
-          set-cookie: 'XSRF-TOKEN=eyJpdiI6ImtGcGNJbDZmdkROUHF5UHZaTlZVSUE9PSIsInZhbHVlIjoiS0t0eWlKazhOT0FQWWZTNUVob3NoZ1hIb2cxQnh0WnFOd3cybTZjclNwcDFOeEFBWGdQWGNRSEJaNXZNSzJENmlCWm10NHlVWExTdUJNTW1vMFg1TEI1bW4wTlJ3MlIwWHhHSFNrZVhWNk1ORjRKSkgvcjVoYkRnN0EzT0hmRVQiLCJtYWMiOiJmN2M1OGNmMDk1NDYzNGRiYzk4Njc1MzQ1YTdhYzAxY2RhOGZlOWE1MzEyMzdiMDcyYTE0OTM3YmQ0MGNhNDg5IiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 06:39:49 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6IkJrMVBCK08rMkhnNU1PWU5VVTcwTnc9PSIsInZhbHVlIjoiRHFZVWdQajQzRXZKZ1JPM3dBN2FkZG0xdVZXZnNxNEY5bW4reFBoOFhxdURJcnhzSXI1YWdwZGFYVHZzTUlWa2dsdzBBdlpCcEpvWkdPenZ3bUhzbFhMdldxVWpHT1RCUGtHVG9KMU1mUFBIYjlxc3liMVk2MHdnVU1meDV4cXciLCJtYWMiOiI2OTk1NjAzNzRjYWViOGY0NGU3OWY2YzVlYzNhNGM5MDNhZDMxZGUwYjI1MGJlOGVjNWM0ODdkNzJhNjMyMTQ4IiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 06:39:49 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
+          set-cookie: 'XSRF-TOKEN=eyJpdiI6IlYxeWszWVNaejltbUV4RVoySXhWclE9PSIsInZhbHVlIjoibmM1cWdSdmR6V1EvYS9Eb3pFbDNlOVhKK0lQZk1rdXZzci8wUElsSlhYWFE4SWlMUXAwLzBZY2I0akd0ZkZTcWNnSnNkNDRkNW8va0VLYThKcGNVekdCeWZha1Z2U2U2YUpQMVVMcWNNR1J1UHNsNHh4dEs2d2hHcTV4TFhTVmwiLCJtYWMiOiIwN2I4ZTc4YWU0ZjFlYTRmMzU2NjNjMTFjNzljMDllMWIyMmRhYjYzNDljM2NjZjZlMjQyZmViM2YxNzc5MzdkIiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 11:13:15 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6InhpQjAzeGRLcU9wazB3ZHkrWU4rV3c9PSIsInZhbHVlIjoibkZzQlRxcjIvQUk0eFg0Z2RoN28zK3o4eWc0YnFmby80R0g4S3NEczltcFNZdCtTNzRtSWh0Z1dZWVN5UkcySXFkQk1WQ1lVT211ekRHQ3kzMTdnRldYSlYvZ0orbXBNVHhlcTArQk02U0wwM0F1R0YyM0d3SGdoVzM1Y05QdysiLCJtYWMiOiIxZjY5NjRhYmI5NTg0YzhiNmE2ZmI4MDk3Mjg2YWFkNWNjNTg2MTg4MzM0YzU4ZDMxMDZhNGRkZDE1N2VmYjIzIiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 11:13:15 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
         description: null
         custom: []
     responseFields: []
@@ -3812,7 +3329,7 @@ endpoints:
           access-control-allow-origin: '*'
           access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
           access-control-allow-headers: 'Content-Type, Authorization, X-Requested-With, X-XSRF-TOKEN'
-          set-cookie: 'XSRF-TOKEN=eyJpdiI6InQ4YVdSb0l6UTROeDJ5ZkJtWlR4R1E9PSIsInZhbHVlIjoiZEl4eU1na0ZaaFkydi85aXBJQlFvc2t4MDFVQkpxaE9uUlNRa1UwNjUrUUhlWCtoVlQrUWJRNUxKTTZTQ0wwalZidkVUYklRSUNvNVkweEUyR0k0eEJ4bnFTZUtCem96Y09yM1g0QUoxRE9UZTRwRm5rR2dxUUt0NVZnWlFzUHIiLCJtYWMiOiI2MTIzZjA4ZTc1Y2Q2M2ZjMWE5ZTNiMzU1ZDliN2UyMDJlZjc5YWYxOTYxNjQwZDkyNjEyMjI4YzNmOThkY2Q5IiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 06:39:49 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6Ikt1NEZaWmdMWlJMdVF6bk9ueDdQelE9PSIsInZhbHVlIjoiaWE3bVI3blo4aWFpWXN4NTBEcXIvRm5iQm92SzlxMjNwR1pLYktrc1VrVTU4Tm40QjdFNGVpVjRTdWpOU3dzdWQ1U0lNeHNHU3ZxMHlvTjFPQlprZVZ3YWNuZWFIck5NbFo5Y3U0d2dtQWdLY3h1eHU4WEt4KzhTUnBhT1hvOHIiLCJtYWMiOiJiZmU0OGU0MTQ5YzY4ZGM3MTI5YWQwOTIwNGY3OTRkYjJjM2JlYWU4NmU4NjRjZmQ1OWNmYzVkMzVhZWMyZDU0IiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 06:39:49 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
+          set-cookie: 'XSRF-TOKEN=eyJpdiI6ImY3OENIQy96TEliOHoyK0RSSWtJN1E9PSIsInZhbHVlIjoiaUFvcC83MmVUV2hoUlVHUFpEU2FyTEozOW0zZXB2cHVoZ3RZR2pqa0tGVWhvbXptUHpoUnZwOHAwbWVDNXUwVXduZ1BMMXFmcHpUa2t4NE9YVDFCRzRSRFc4ZUQwVGtpL2JIS2FsYlJ4S1h5K05hMFBjZHNjSkZncXRnR3prVzgiLCJtYWMiOiJkYTQyYTIyNWQzYWI4NzRhNjIxZWFiYjlmMmFjMWYyNmIyZGMwMDg2YjQzMWI2NmUwMTk3MGU3OTIzNjVhZDQ3IiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 11:13:15 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6IjMxQXhtY0JzUnFMUG9lWHdDZWd6NkE9PSIsInZhbHVlIjoicjl5OHRLUklVVTVPZFplcTA5NkdjcXFsNFNxSlRkMmhUUkt0V1BwZHdEcTVXbGs5Q3g3MVhNVjB6R21Udm5TVkVjSzZYTVkyeHNZci83YkFOZ21TejN1amJyemxLZ1BUR1d4QThkTlVybTBmZTVQSnZRQmNDTEU1YlFZU3EwaWMiLCJtYWMiOiI3ZmJmZmFmMWZjMDI3Y2QxNzIwMzkyZmFlZDllYWY3NzU5MWVkMDAwN2U4ZjM3MjMyY2E2ZjkxNjlhYmRjOTdmIiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 11:13:15 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
         description: null
         custom: []
     responseFields: []
@@ -3939,7 +3456,7 @@ endpoints:
           access-control-allow-origin: '*'
           access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
           access-control-allow-headers: 'Content-Type, Authorization, X-Requested-With, X-XSRF-TOKEN'
-          set-cookie: 'XSRF-TOKEN=eyJpdiI6ImRlcEV3dVZiMjJtZGRsL0ZGQXVSVEE9PSIsInZhbHVlIjoiVnhSWlVxSC82NVVoMXh3RFRlN21CT3hGM0hOTXAwQkt6UkVFSHk1SU0vSStjV0I1NHIySWE2bmdCN3V5d3FibGFGVDJkcmV5UzJqWURjQjJ4RHBwTzlJMmFEN1FNVzQ0NGZZMlAyWTEzeGphVUt6Lzk2amJqNkxiempzaG5aQ2UiLCJtYWMiOiJmMTU0NWI3NjJmZWVlZjJkZTAzYTk5NzRhODEyMzdmODc3YzA5NzUwZjI3YjBiZTMwNTVkMTgwYmE3Y2Y0MDcwIiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 06:39:50 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6IjEyMkxDc2xPTytFVDYyZ2RwZ0JrTFE9PSIsInZhbHVlIjoiVzA2MW56N3QrRDVYZjF3cjRZL0VmclNzQ3k5OHFnbytZQXdGZnc3aXZsd3ZoUmsxUGZZTzJ4S1pISHU2VUN1T09KMFlSQUJpWVEweks2c2c4ZFNXOW42UUExeldPVmN3QjBDZ2N3eXVRcXhJbHc3M0JPVU1TdkFiY2dmc0lzVTQiLCJtYWMiOiI5MzgyNWMxNDViZDhlMGI3N2YyYjg3ZGE2NjA5N2VjZDgzMjdmNDVmNDNmYjQ0ZWYyZDNjODUxODEzYmNmOTg5IiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 06:39:50 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
+          set-cookie: 'XSRF-TOKEN=eyJpdiI6IlhISURsZ1hzQk8zQ0VJb3dGaVdqK2c9PSIsInZhbHVlIjoiOGhDTmZCaTVoNHVlSVI4NmlCUG1NcmVoa3lFQUpocW9aSjhqa1g2SUl3TW4zd0NUT1FhTTVTNHZ5bTU5YTUzTUdYMnhvcjZOUzZVV2dyeXQ4U3h0ZDRtWlMyN3lvZjhQMUVmdmR5VmZTTlVNQW9sUGxVY3UrRGVjbjUydGlZd2YiLCJtYWMiOiIzNzI0MDE0MmM1OWJmNTAyNWVhNGE5YTliMjAxNWQwZjU3Y2E5MDlmMTYzNWE1MmU0ZWJjZmViNGM4ODhlN2Q3IiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 11:13:15 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6ImsvaEw2bDVoZks5WlllMHBiSWx2ZGc9PSIsInZhbHVlIjoiSFEwZjN0QzJzaVUwckxFUGhQSE90M3orY2QxUzBOd3dCeWFlSCt2RlFFcTg2Z0ZzSmZKcVdoWVRTTVBnVlRYa1FSNjlkUW5hSzRqak5NNDU2Y05DMjJtS3Z1aXRydnJjVGR1MEVGbFY0MkFGenRvc1YrV241Wm1HK0Ezamhyc00iLCJtYWMiOiI4MzJjNGExYmY1YWNiMGIzMjllMTM2NGNlNWQxOGMzZTlmY2U5ZTY0ZmIwOTM2ZGIyNDM2MDEzYWEyZWExZGM5IiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 11:13:15 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
         description: null
         custom: []
     responseFields: []
@@ -4090,7 +3607,7 @@ endpoints:
           access-control-allow-origin: '*'
           access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
           access-control-allow-headers: 'Content-Type, Authorization, X-Requested-With, X-XSRF-TOKEN'
-          set-cookie: 'XSRF-TOKEN=eyJpdiI6IlZKMkZwQ0lqR0J0YzJPeDlnTC85ekE9PSIsInZhbHVlIjoiUWNCT04yWUxET29DMjF4czA3aUZxaGxKS0srQ25ueEovNXVKaDNVMmRFTlZJb2JNNG9nMFFIQUVTZ0xLcmoreEUydG02ZFcyeUJCK1FKa0NXb0doVnl5dm5KNGEwTVRlWE5XbjI1VGZ6R2RzQ2dBUmlibzdTMWFQc0FqMU9JdFkiLCJtYWMiOiJjYjgwNWQ3NzE0NjE1NzhjMjU1NmQzODUzOGQ1NDViMGNiODQ4MTM2NDk4YTlhMjFjMDFmNDk0Njg1MGY5ZDIzIiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 06:39:50 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6InhUWnM4K1FvbUd6TWlHN2haOXRRaHc9PSIsInZhbHVlIjoicnM5Z2xnMkovaHp1Q0EyWkxvSzdUd2ZYVHFnNkZkL3ZJNWV6T2ZMcURnTjFvK0NkbG42RE5Nd0k3OTV4TUdkSHVTUEZab0FJV29ONFRtazlYMFVGU09rN2N3LzRqekFnamNSUEhwOFZCcDNGa25vR2F6Tmd5VjRnbGNuVml3QnUiLCJtYWMiOiI5NDFkZGNjN2I5OTk3ZTYzN2NkYzE4Y2M5ZDAwN2NjMTFkMWZmYmI1NjU1OGI3YTNlOWVhNjMxYmQ5MTc0MDc5IiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 06:39:50 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
+          set-cookie: 'XSRF-TOKEN=eyJpdiI6IkFMNytBblBGM3VVdWU2aDhHb1VPR3c9PSIsInZhbHVlIjoiZm9uUm5oMEs5YlFHUjdNajg5VEJGWER6bW5DcDVJbUFrcGdLTWpHdmM3QmdYT282bjloYW1uTmpuQnIxRTVIU0UwSFRjRURXeXJpT3FrT2pkWUNDMk83NHFMemNkeXdPdlRreUc2dDdkNUlLSG5RaXd1R2hDQTBXdVFZSVdvbmQiLCJtYWMiOiIwZjcxNjYwYTQ2YmEwZGEzZTJmYmQ2MWRhNzE4NTgzNDgzZWU0OTJmOGNmNDMwY2MyNzBiMTNhZjhjMzQ3MTk2IiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 11:13:15 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6Ii9OY2F4TDRkTjZQWEMwSE9jaVVoYVE9PSIsInZhbHVlIjoiZUxzV0I3YkNmNzFGYm9UZjlUSHdDZWF2VVNjSEZQbTJHZ0wwaGlBT0U3YTNINUlIN04zK0JjenhFdDdyUjhPUTRwUm16M3BOWUNoM2l0Wm5TTWYrbFVPay9PblE5RnpEQkJpVDQ5YmJXUmFNN1VzbTg1emxJcWhYakY0aE5ueUYiLCJtYWMiOiJiOTUwZWU1MjI1OTdkODU4NmUwYTdkNThhNzY0MDQ5ZWU1ODRlNjA2OWFiMDg0ZjQxMmZjYTE4MDgzYTZkZDRmIiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 11:13:15 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
         description: null
         custom: []
     responseFields: []
@@ -4133,7 +3650,7 @@ endpoints:
           access-control-allow-origin: '*'
           access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
           access-control-allow-headers: 'Content-Type, Authorization, X-Requested-With, X-XSRF-TOKEN'
-          set-cookie: 'XSRF-TOKEN=eyJpdiI6IkhyZXpGcFE5OHdwdkFjRlU0d000Rnc9PSIsInZhbHVlIjoiSTVJYThWaThPQzhoYVBvaTNUaE0rSXAxWVdFbDBTbTRLaUNzd05ZcXJQeVFtRGZYanRyQ3VJbXdnQUVZN281NVIvVEtQVnlGL1ZhQUV3QkhvZWFDdU16NkphR2JPWFdPcGh2T0FLeHdHVE9saHZxTG5NOFpHZCsvNWc4ZHJRNWwiLCJtYWMiOiI5YzFiYmY1NzBlYjdjNjQ1YjE1NjlhZTdjMDlhMzA5Y2E5OTg2MmE0YWFiYmQyOWMyODYzN2U2NDkyNWI2NmEzIiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 06:39:50 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6InVocVVXbjZkL2hXZGN1V0prU1VGVXc9PSIsInZhbHVlIjoiTUFhZm1LSXU0YW1VdXV6RTA0WDJPT2crUDlCR00zQ3REWDJibnRRSzRJZVRPUjhvSG9OS0tLM0pPNW84ME9nVi9vSlRqcDBpZmNzKzFFaTZwdld4Q2lMaSt3clFwemdtWUo2MWFELzF5NHI3dFAxdXpoZFEyQi84N3dITkMvTUQiLCJtYWMiOiI1N2EzY2ZlMWY2ZGY2NmZlNDY4Mjg4ZTI2ZTgxNzBkNTg0ODZlZGMyNjZhNjYxN2UyNWMzMmQzYmIzMWY0NGZkIiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 06:39:50 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
+          set-cookie: 'XSRF-TOKEN=eyJpdiI6ImlFcy9jb2NGQVltM2FxSjNMdjQ0Z2c9PSIsInZhbHVlIjoiUmcxMVdQamlPTWtDRkY2ZTRpS09xZWtDN0RtTHZXdkxpQVVSSHR3TFZ0UlFpZThEVnluSVp1Vks3Z3NqTWZIa05GTHRORm9qM0hoaFBzZ1pDMHR2YTBtN2Y2M2FmMjNpSTVtR25EK3NxZTA4ZHJPdWpuWU42Q1Qxb2J4MXZjV0UiLCJtYWMiOiJhMGQ5OWVmZjRkYWE5MzAwM2Q4ODg4MjhiM2QyMjNhNDhmMjg2NGU5ODU2MzQzZTk1N2Y1MmQ5MjMxODQ0Zjk1IiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 11:13:15 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6IkhiVndoNUZRZGEyM0lPSFAzQnNxK1E9PSIsInZhbHVlIjoiZmowYk9vUzhhRDdvc293WTI0U0sycDA1bmJFaUV2R3ltbjZZd0RrU3dmZU11U29lMjF5M2J6bHYrdk4vaDRQU1pjb1JmL1J2ZVdhOUxnSU1POXNQdHFpelNNblQzN3dHanBjWmlIeVIyTVA3Y0IwMVljQlc3ODd3N0IrSXRnZ3kiLCJtYWMiOiJhYTBjOTE4YzZiMjhlMjZjZTVkMDY2ZDk2MWNhNjkwZjBhNmRlNTNiOWE2YTE1NzZmYTE5MjU0MWVhYzM0MDUzIiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 11:13:15 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
         description: null
         custom: []
     responseFields: []
@@ -4175,7 +3692,7 @@ endpoints:
               <head>
                   <meta charset="utf-8">
                   <meta name="viewport" content="width=device-width, initial-scale=1">
-                  <meta name="csrf-token" content="9JmvuZzeHMVyLnRsRrnjduBFPhjXniKDFGsDcrij">
+                  <meta name="csrf-token" content="LlAVUw894rD4PX51GCNFnK0aKP6UWE5L2A7SfxyD">
 
                   <title>Laravel</title>
 
@@ -4184,7 +3701,7 @@ endpoints:
                   <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
 
                   <!-- Scripts -->
-                  <link rel="preload" as="style" href="http://127.0.0.1:8000/build/assets/app-GHg_Xo9N.css" /><link rel="modulepreload" as="script" href="http://127.0.0.1:8000/build/assets/app-DtCVKgHt.js" /><link rel="stylesheet" href="http://127.0.0.1:8000/build/assets/app-GHg_Xo9N.css" /><script type="module" src="http://127.0.0.1:8000/build/assets/app-DtCVKgHt.js"></script>    </head>
+                  <link rel="preload" as="style" href="http://127.0.0.1:8000/build/assets/app-BpQEJJqb.css" /><link rel="modulepreload" as="script" href="http://127.0.0.1:8000/build/assets/app-DtCVKgHt.js" /><link rel="stylesheet" href="http://127.0.0.1:8000/build/assets/app-BpQEJJqb.css" /><script type="module" src="http://127.0.0.1:8000/build/assets/app-DtCVKgHt.js"></script>    </head>
               <body class="font-sans text-gray-900 antialiased">
                   <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-100">
                       <div>
@@ -4197,7 +3714,7 @@ endpoints:
 
                       <div class="w-full sm:max-w-md mt-6 px-6 py-4 bg-white shadow-md overflow-hidden sm:rounded-lg">
                           <form method="POST" action="http://127.0.0.1:8000/register">
-                  <input type="hidden" name="_token" value="9JmvuZzeHMVyLnRsRrnjduBFPhjXniKDFGsDcrij" autocomplete="off">
+                  <input type="hidden" name="_token" value="LlAVUw894rD4PX51GCNFnK0aKP6UWE5L2A7SfxyD" autocomplete="off">
                   <!-- Name -->
                   <div>
                       <label class="block font-medium text-sm text-gray-700" for="name">
@@ -4268,7 +3785,7 @@ endpoints:
           access-control-allow-origin: '*'
           access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
           access-control-allow-headers: 'Content-Type, Authorization, X-Requested-With, X-XSRF-TOKEN'
-          set-cookie: 'app_locale=eyJpdiI6Ik1hSnZtMDlCMllvSjFibFREVkswV0E9PSIsInZhbHVlIjoiWGxEZVJnc0xLcEVFUys4cndld2hXeFhndVVueTk4R0dPajdWMFozVGRKYWgxaG9QVEcyQjdMTTJmalB4aW5XZSIsIm1hYyI6ImM0N2FlNDEwNzMwZWFhODFmMGNiY2Y3NGJmZjZjMjY1ZTNkMzgyN2YxYzQ1ZWQ3YWRhZTNkMTZhZmQyZjA2NWUiLCJ0YWciOiIifQ%3D%3D; expires=Sat, 29 Aug 2026 04:39:52 GMT; Max-Age=31536000; path=/; httponly; samesite=lax; XSRF-TOKEN=eyJpdiI6Ink0Sk5wQVMwamhJSCswK0VKbEh0d0E9PSIsInZhbHVlIjoiVHlHNXRialJkUllWVUtMOFRJb05HSG9oVi9EWk8zV0M2aUdlMGtGSi9EdzdpSmRDWVA3MXFEVUt2L3Rkc2FwM0lxeTVWa1RGUXlab3l1QWkyWWFRRFo1RTIyOGFzTUZhMklLL3lva0VGTjFyTkFBam5zOFk2emlEdWxhbjN1STAiLCJtYWMiOiIzMzUwYzMyN2U4NDY3NDJhNzNhZWM3OWExYWYwMWNhNWQxMjRhNWIwZDUyMzBiNDdiNmFmZjIyMDBhYzU1M2EwIiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 06:39:52 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6Ik41N0Z1WmppRGhHNGFjb0Q3RWRFNnc9PSIsInZhbHVlIjoiMldZSUF6Y0N1YXVYWGFDa3orcndVd2xPZ0dZQmhMUGY3Y05iNDlyTEgxcmVIKytxdWpkcEdEbmVXME5nbHlKMGsyN2NZMW9WbnNtZUtxeGQ0bUtvQVI5S0l1Q3BhUnJ6WGtlRjJrZDM5dmJBbmFJTDdINjA4OFh2SmpCUDV3QWYiLCJtYWMiOiIwZWMxODEwZDY1ZTFiNzEwOGI4Mzc5N2ZmMWJmN2QyZWE2NGY1NzU5ZTM4YzUzYzZhM2QwNDczNTJkYzVkYTE1IiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 06:39:52 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
+          set-cookie: 'app_locale=eyJpdiI6ImMxZDBxMmZ0VzlMaGNxQkprbC9OR2c9PSIsInZhbHVlIjoienZld3RIc1MxZk5zbTQ0cmlKOWhaVnJwdkVIVWpPWlRzN2hHSEE1bHZzS0RlNFduUjZFSTN4UThIa3BEVUJ5NCIsIm1hYyI6IjFmODc3NzBhMjUyNjI1ZGJmOGEzMTUxYWMwNzM4NGE0NjQyYWM1YjUxNmJiZjhmNDg2ZDQzZmZkYWYxOTc4NzUiLCJ0YWciOiIifQ%3D%3D; expires=Sat, 29 Aug 2026 09:13:15 GMT; Max-Age=31536000; path=/; httponly; samesite=lax; XSRF-TOKEN=eyJpdiI6ImxmczExQmZkdG1LMGM2dmFWN2lFNWc9PSIsInZhbHVlIjoiVDdIcmEzNjlmUnJzV2VjOHhaOFk5cHFPdjFFZmRGYkR2d0k2ZEtkK0QvMndWc1h1eFQyUksvRDU4VE9zSEh6bXIweVRJSDlBaWFZZDNVK0pEMEJUZ1QyTWppendBZjBEeEljYnFJUmpwMjZFSjE4R09PckUwUERFNld1Y0FxbmoiLCJtYWMiOiJhNjA1MjRjMTIxNzYzYzRlNDllMDY4Y2I4ZmZhMWUzMzI0NDdhMTkzZTdjOTNhYzUyY2U0Njc3NzYyYmMwODZlIiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 11:13:15 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6IlQ4R1dOMVBnZ0JScXBUOXdXKzlRbnc9PSIsInZhbHVlIjoiTVNkQndQUWQzZWFralViSXZuVW9KYXFhdDZ1UmVmZXpNTnBTcVFwMllTSDZ4VC9TczBiWUJnN3ZmaldqTkJ5Vk9yRGJqdnROeXg4MjNBVk5MZ3l2bkN2L0pHbEFrVW00Yzk5Y3Z2WGplRTRvdVJhc3lDL0s1dHhuZ3N4cWl3TjIiLCJtYWMiOiI0M2I4MDExNTc0YjkxZTRmZWIzODQzMGQ1N2MxYzNlMjdmNTFjYTM3NzA1OTA4OTY4ZTY1MWM1YTYxYWUwODU2IiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 11:13:15 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
         description: null
         custom: []
     responseFields: []
@@ -4374,7 +3891,7 @@ endpoints:
               <head>
                   <meta charset="utf-8">
                   <meta name="viewport" content="width=device-width, initial-scale=1">
-                  <meta name="csrf-token" content="9JmvuZzeHMVyLnRsRrnjduBFPhjXniKDFGsDcrij">
+                  <meta name="csrf-token" content="LlAVUw894rD4PX51GCNFnK0aKP6UWE5L2A7SfxyD">
 
                   <title>Laravel</title>
 
@@ -4383,7 +3900,7 @@ endpoints:
                   <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
 
                   <!-- Scripts -->
-                  <link rel="preload" as="style" href="http://127.0.0.1:8000/build/assets/app-GHg_Xo9N.css" /><link rel="modulepreload" as="script" href="http://127.0.0.1:8000/build/assets/app-DtCVKgHt.js" /><link rel="stylesheet" href="http://127.0.0.1:8000/build/assets/app-GHg_Xo9N.css" /><script type="module" src="http://127.0.0.1:8000/build/assets/app-DtCVKgHt.js"></script>    </head>
+                  <link rel="preload" as="style" href="http://127.0.0.1:8000/build/assets/app-BpQEJJqb.css" /><link rel="modulepreload" as="script" href="http://127.0.0.1:8000/build/assets/app-DtCVKgHt.js" /><link rel="stylesheet" href="http://127.0.0.1:8000/build/assets/app-BpQEJJqb.css" /><script type="module" src="http://127.0.0.1:8000/build/assets/app-DtCVKgHt.js"></script>    </head>
               <body class="font-sans text-gray-900 antialiased">
                   <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-100">
                       <div>
@@ -4396,7 +3913,7 @@ endpoints:
 
                       <div class="w-full sm:max-w-md mt-6 px-6 py-4 bg-white shadow-md overflow-hidden sm:rounded-lg">
                           <form method="POST" action="http://127.0.0.1:8000/login">
-                  <input type="hidden" name="_token" value="9JmvuZzeHMVyLnRsRrnjduBFPhjXniKDFGsDcrij" autocomplete="off">
+                  <input type="hidden" name="_token" value="LlAVUw894rD4PX51GCNFnK0aKP6UWE5L2A7SfxyD" autocomplete="off">
                   <!-- Email -->
                   <div>
                       <label class="block font-medium text-sm text-gray-700" for="email">
@@ -4469,7 +3986,7 @@ endpoints:
           access-control-allow-origin: '*'
           access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
           access-control-allow-headers: 'Content-Type, Authorization, X-Requested-With, X-XSRF-TOKEN'
-          set-cookie: 'app_locale=eyJpdiI6IlhFK1VYNmJQUDBnOTZTZVNQT05IS1E9PSIsInZhbHVlIjoiakJoQzlMNXU4d3RESmNSazBwMHB6SStlYSswcUMrZEd5MEx1MEZBSDZFbFJWMlNQMWg4NVRzVkpTb1NCcUUvaCIsIm1hYyI6IjVjYzkzNDBhNTIxZGMzMGIzZDYyNzBhY2E1ZjA0ZTFmMDI3ZmEzMzA4OGJlYWVkMDczMjIzNTFiNzA1N2NlMmIiLCJ0YWciOiIifQ%3D%3D; expires=Sat, 29 Aug 2026 04:39:53 GMT; Max-Age=31536000; path=/; httponly; samesite=lax; XSRF-TOKEN=eyJpdiI6IldaSGwrV0lEYS9mS01jY3BnekFGbXc9PSIsInZhbHVlIjoiSDYxdFJmOWVPVndjZmFsZENlUU1NNER1UGdZalBHMmFFeFBNbFM1WlRyU1hSUGxJRnVqZktwTGVDb29UL1kwWHdRNVUzN1BUYnluMUtJV3ZpMGV6NkNWYmlpOXFkRG5oVlJ2YSs0azhCaWlHWVRhNWhmUm9PZSt5OTI3MEpSeUoiLCJtYWMiOiI3MjYxZGYxNjhlNzY5NDMyZjNhMGY2OWQxNzA4ZTE2YzBlMzgyZmY4Mjc0YTYyMzM4MTlhODVjOTEzODQwMmU4IiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 06:39:53 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6Ikd3RHRobHhUVFY4bmJMVWhjaFJwZnc9PSIsInZhbHVlIjoidTF2NGkrb3lZTFltZHl0U0VYVlNPTWVUUDJkcTZzdTFvUGwydExGUmk0ZVJrNEtOZ2lTbnJGMWc2amFmT3pvWEhCcS9MK0hKalRNeDhXNnZMSTA1d2RCano5WmRwOW5mVk5YT1RVZm0yNU1ITFRLOUhEcnFNeHpVQ1crc2xPZ0siLCJtYWMiOiI2YmQzOTA4MDBkOGJmOTE3Y2Y2YWEzY2UyNTExNWMxMjQ1NjllN2U5ZDM3MWZhOTk0NDZiZmU2MTc5NjUxMmQ1IiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 06:39:53 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
+          set-cookie: 'app_locale=eyJpdiI6IjdsSXhJNXBNWmtYTExCU01rSW5UWGc9PSIsInZhbHVlIjoidExIMVRvTXFiSFRSRzRtbHZTbnpMTncrRUMvMzlqTjNWa0h6ZThsVWVadG94T2tnUXlMckptQmZWT1hydXFBNSIsIm1hYyI6IjZiZjU4YzI0NzQzOTJlMzg4NjliMWYyNWUyM2VhYzQ5ZTQ2MGU4NTFmZmYyZGIyOTgzMGNlOTc3MjQ2NzQzNWIiLCJ0YWciOiIifQ%3D%3D; expires=Sat, 29 Aug 2026 09:13:15 GMT; Max-Age=31536000; path=/; httponly; samesite=lax; XSRF-TOKEN=eyJpdiI6ImgreitabGN5UU9FTE5mVGp4QTlWenc9PSIsInZhbHVlIjoiRjVFc2t6SGtCTFpyZjgzd0Vac254UXY4eXNtY2tDN3BodUl2TmRZYkwxeUJIMFYwRmJGby9kdzZUbzdCK250WHRXT0NyVE51NjB4S3ErakxSbWgwcXhXUmdQcHJJRjNQaTFLU0VlTXBnMHpJeVFEVThQQVBHN2dnaWlORTJnMlUiLCJtYWMiOiJhOGYxMTIyMzU0MzI5NWM1YjUwM2ZmYmU5ZmVmZDBhMDg2MmQ3Yzk1ZGYyYWI2MjhmMDE0MjFhMjgzNDlkNDFiIiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 11:13:15 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6IjkzMURGRytCSGJoenJBRy81MEpLTmc9PSIsInZhbHVlIjoibWMzN3FjSmJOQnFiamNiVERwbEtxM2VJVnpnY1VhSnAxdlRhWXZ1MW5ZMUZ6dkVucDdic2QzTElkcVBTTG5DK1J1M0dmKzhYWVVpUlg1Z09JT2IrUHNwc0tiUEhiN0lTcnBmc3I0RlZ3bUdSZnVHNWdqV21lVHlhd1d0N0QxNjYiLCJtYWMiOiIwNjE4ZWJkZmE2NmQ3YWI3NDM1OTI1MzFkMzM2NWVlZDJkYWZjMTYxMDM0MTRiYmQwYzYwOThmMjU5ZDE4OGJlIiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 11:13:15 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
         description: null
         custom: []
     responseFields: []
@@ -4564,7 +4081,7 @@ endpoints:
               <head>
                   <meta charset="utf-8">
                   <meta name="viewport" content="width=device-width, initial-scale=1">
-                  <meta name="csrf-token" content="9JmvuZzeHMVyLnRsRrnjduBFPhjXniKDFGsDcrij">
+                  <meta name="csrf-token" content="LlAVUw894rD4PX51GCNFnK0aKP6UWE5L2A7SfxyD">
 
                   <title>Laravel</title>
 
@@ -4573,7 +4090,7 @@ endpoints:
                   <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
 
                   <!-- Scripts -->
-                  <link rel="preload" as="style" href="http://127.0.0.1:8000/build/assets/app-GHg_Xo9N.css" /><link rel="modulepreload" as="script" href="http://127.0.0.1:8000/build/assets/app-DtCVKgHt.js" /><link rel="stylesheet" href="http://127.0.0.1:8000/build/assets/app-GHg_Xo9N.css" /><script type="module" src="http://127.0.0.1:8000/build/assets/app-DtCVKgHt.js"></script>    </head>
+                  <link rel="preload" as="style" href="http://127.0.0.1:8000/build/assets/app-BpQEJJqb.css" /><link rel="modulepreload" as="script" href="http://127.0.0.1:8000/build/assets/app-DtCVKgHt.js" /><link rel="stylesheet" href="http://127.0.0.1:8000/build/assets/app-BpQEJJqb.css" /><script type="module" src="http://127.0.0.1:8000/build/assets/app-DtCVKgHt.js"></script>    </head>
               <body class="font-sans text-gray-900 antialiased">
                   <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-100">
                       <div>
@@ -4592,7 +4109,7 @@ endpoints:
               <!-- Session Status -->
               
               <form method="POST" action="http://127.0.0.1:8000/forgot-password">
-                  <input type="hidden" name="_token" value="9JmvuZzeHMVyLnRsRrnjduBFPhjXniKDFGsDcrij" autocomplete="off">
+                  <input type="hidden" name="_token" value="LlAVUw894rD4PX51GCNFnK0aKP6UWE5L2A7SfxyD" autocomplete="off">
                   <!-- Email Address -->
                   <div>
                       <label class="block font-medium text-sm text-gray-700" for="email">
@@ -4617,7 +4134,7 @@ endpoints:
           access-control-allow-origin: '*'
           access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
           access-control-allow-headers: 'Content-Type, Authorization, X-Requested-With, X-XSRF-TOKEN'
-          set-cookie: 'app_locale=eyJpdiI6ImtJRGI1czR5cFJMejZBR2VKZXB4Y2c9PSIsInZhbHVlIjoiaHMyUVlwN200UHN0VURXdWFid1dtd3lQYXBoUFNxTkhKczZJREtIQUswRExZTDR0OUhMN2h3NVc5WXVqQlh6bCIsIm1hYyI6IjcyYmMwZWRkYzcxNjA1MjliOWExNGMxYjk5ODVmNTBmZDUzYjMyMDk4OGE1MjAxOTk4YTJjMjM1YjE5YTdlNzYiLCJ0YWciOiIifQ%3D%3D; expires=Sat, 29 Aug 2026 04:39:54 GMT; Max-Age=31536000; path=/; httponly; samesite=lax; XSRF-TOKEN=eyJpdiI6InplSlJYNHBXMUdSM05vQXBiMHQ5eGc9PSIsInZhbHVlIjoiMkRYV1Y0bjNFZWFWT0tGd0FZeDdKbW5Mc2dCSkJyR3A1N3ZNaFEwZnl5bDB0ZHZ5SDNmRzQyNVZjYllDZmpJM080TDQvSXdiVVlvYWNnWjJHYVRIT0F6MTZ5c2pIZjdUQTg5emlEdFp5VFVtcXpGR3hlWDRDb2kycDd2aVZxTlkiLCJtYWMiOiIyZGM2ZDI1OGY0ZTYxNmQ2NzM0MDJhNDc0NmIwNTBjYTUxYzBkODg1ODBlMTU0OTY1ODg4NzQ5MDVkODBiODk1IiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 06:39:54 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6ImgvVjZnTUZ6eEJtZEpmMmJOMy9EUnc9PSIsInZhbHVlIjoiMnNrWDJxQXlaYVpsUzlWKy9LYXJ5RVRvRHRJTCsyNm9ET1FRV2ZrYklrY0FPdDBKSEQ0eUR2bzh6bVVnK0JoMC9NWkF0Witxa3p1QnUyREJCVlFIc2s3M2RRYjNvQ3VCUnhsb0VjMCtlVUpvdDVDYWFMWnJ2U2FBTkY1M3lmMCsiLCJtYWMiOiIxM2NlY2Y2MzY4NDI0NzkwYzk3Nzg2NDM5NDA3NmNiYTMwNDg5YzRmMzgyNzM4NTk1YTRkMDFjNmViNWIxZDJjIiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 06:39:54 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
+          set-cookie: 'app_locale=eyJpdiI6ImdKTlZ6Um1iT2xNd21qN0pWeEZUc0E9PSIsInZhbHVlIjoibVozcm5CRnNBVlUxVnFUN1c5UFd2ZkREMVErdThQSnRPZ1RQOVBHNmtyM0dVaDNEK0h6ZUd5MDdUNTVieGdLVCIsIm1hYyI6IjEyMWQyZjg1MGUxMjM4ZjYwZTI3NWI1ODE5YTIyOTVmNzY4OGFmNzM5ZjFmYzc3ZjdhMGM3ODI5NjYxMjNiNTIiLCJ0YWciOiIifQ%3D%3D; expires=Sat, 29 Aug 2026 09:13:15 GMT; Max-Age=31536000; path=/; httponly; samesite=lax; XSRF-TOKEN=eyJpdiI6InJBRDVGNGxIbEsycCt6Rk5lT2dTNWc9PSIsInZhbHVlIjoieW9nclhzKy9ZWDJKcitmVmtJNUdYWTFYeVVWblp6THIzZUhrc25vbnFZRU01SkcyclhCWlJOaERDcjJMTG1ZdytBeXI3eG5KZ2x1OU80MktrSFZEMGxHTzBwR1d6NlNkTXRpL0xUTFNzM3hJOWZ4QnB6QVYvVzl1cGtLeXpiWnkiLCJtYWMiOiI4NDFkNTk5NWQ3YWYzY2NiNjk1YjFjMzBlYTgxZjg3Y2M0YWRhYjRmNTYyZDYwYTY1ZDI1M2Q5NzU0M2I3ZWRkIiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 11:13:15 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6IkNQdHBUZVlKZGY4dEZiMmVIMHduL2c9PSIsInZhbHVlIjoiOGh5T3pYMnpXRzZxZXB5MFI3VnZLQ0hWcUw0UTh6clFFMlQvRlQxR0FsWG1ySnIvSFI2VHhEVnRUMm1FUmJ1K1BzVE41MitWT2wzdVMySmJHSmZJTU8rU1oxUkVLZGg4VUIwM29rWDVYQndidmNGUm5WcVE2MFFUZUJnK0VZbm4iLCJtYWMiOiIyMGRiODg1ZjI0Y2E1MWE0MzcyYzIxYjRiYmNmZDIxMzc1YzkyZmNjOWY3OWIxOWNkM2E5ZGI2ODMwYTUyYmM3IiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 11:13:15 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
         description: null
         custom: []
     responseFields: []
@@ -4712,7 +4229,7 @@ endpoints:
               <head>
                   <meta charset="utf-8">
                   <meta name="viewport" content="width=device-width, initial-scale=1">
-                  <meta name="csrf-token" content="9JmvuZzeHMVyLnRsRrnjduBFPhjXniKDFGsDcrij">
+                  <meta name="csrf-token" content="LlAVUw894rD4PX51GCNFnK0aKP6UWE5L2A7SfxyD">
 
                   <title>Laravel</title>
 
@@ -4721,7 +4238,7 @@ endpoints:
                   <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
 
                   <!-- Scripts -->
-                  <link rel="preload" as="style" href="http://127.0.0.1:8000/build/assets/app-GHg_Xo9N.css" /><link rel="modulepreload" as="script" href="http://127.0.0.1:8000/build/assets/app-DtCVKgHt.js" /><link rel="stylesheet" href="http://127.0.0.1:8000/build/assets/app-GHg_Xo9N.css" /><script type="module" src="http://127.0.0.1:8000/build/assets/app-DtCVKgHt.js"></script>    </head>
+                  <link rel="preload" as="style" href="http://127.0.0.1:8000/build/assets/app-BpQEJJqb.css" /><link rel="modulepreload" as="script" href="http://127.0.0.1:8000/build/assets/app-DtCVKgHt.js" /><link rel="stylesheet" href="http://127.0.0.1:8000/build/assets/app-BpQEJJqb.css" /><script type="module" src="http://127.0.0.1:8000/build/assets/app-DtCVKgHt.js"></script>    </head>
               <body class="font-sans text-gray-900 antialiased">
                   <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-100">
                       <div>
@@ -4734,7 +4251,7 @@ endpoints:
 
                       <div class="w-full sm:max-w-md mt-6 px-6 py-4 bg-white shadow-md overflow-hidden sm:rounded-lg">
                           <form method="POST" action="http://127.0.0.1:8000/reset-password">
-                  <input type="hidden" name="_token" value="9JmvuZzeHMVyLnRsRrnjduBFPhjXniKDFGsDcrij" autocomplete="off">
+                  <input type="hidden" name="_token" value="LlAVUw894rD4PX51GCNFnK0aKP6UWE5L2A7SfxyD" autocomplete="off">
                   <!-- Password Reset Token -->
                   <input type="hidden" name="token" value="architecto">
 
@@ -4780,7 +4297,7 @@ endpoints:
           access-control-allow-origin: '*'
           access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
           access-control-allow-headers: 'Content-Type, Authorization, X-Requested-With, X-XSRF-TOKEN'
-          set-cookie: 'app_locale=eyJpdiI6IjZubzNuQVlOamZRTUF4bUNFT1ZySHc9PSIsInZhbHVlIjoiV1dPbDk0alVpcVg5YWFFVUtxcDJwaTI2SmZBdDdUOU5UNmVpZDBUSVpPVkV0NUlIT0djS2xNWlcvVVhkci9JSiIsIm1hYyI6ImJkM2IwMDBhYTcxNTAwZTE3OTNjZjFiNDNlMWU1YzJlNmU5YTE0NTBjN2JhODJhNDU4Y2FkMGI3MjQ4N2UwZGUiLCJ0YWciOiIifQ%3D%3D; expires=Sat, 29 Aug 2026 04:39:55 GMT; Max-Age=31536000; path=/; httponly; samesite=lax; XSRF-TOKEN=eyJpdiI6ImVqNHN6V055cWU1ZWZHeE9RcmhrU3c9PSIsInZhbHVlIjoieU5iS09nUjdxbUEwTXRTLzBBaWRVOWRBMTRqcy9UUjAzYzZoRFI0SStseXBPajdXazMwaXhxVFlhdjhjdzN4R0FIVVBYWGc1eEZOSDkxSEcrK00vaHRWUHYybmxIaVRLTGVqRTJ3MTFmRVhhNHVFSjJLNmZsTkZjQ2x1VnZqRm0iLCJtYWMiOiJiNWE3M2VkYjdhODQxYTA5MmQ0MzgxYTUyZWEyZmNkYzc0MGViNjFiOTg1ZTZiMmI3ZDc1M2Q5YTkwZjNmYTAzIiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 06:39:55 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6IjJpMC9sNUtvcGZDKzZHL3lTZmk4TVE9PSIsInZhbHVlIjoiU2lhWTM5SVE2RU1qZFVLSHVxRXZzSjJTZ3pLa2xHbkJ4cnRDR0E3MWR1UXp4ZnlYZmw1MytGT2REYS81cDRiclB3bVB1S2gyVEl4citRUXg0bkhIUXJlMnd3dDhtMjJjZ0VGN1JIcE1aNUlicitVVUI0NFJPalZsZ0RKRzV5dXoiLCJtYWMiOiJkMjQwZmQ4N2U1M2Q4YTVmY2Q5ZTFkODgyZGRmOTc1YTM5MWMwZjEwZTEzN2Y5NDMwNTg0ODg1MjAyNTJkZDY4IiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 06:39:55 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
+          set-cookie: 'app_locale=eyJpdiI6ImYxdGI0akxYamdjOVlScjYva2RYVmc9PSIsInZhbHVlIjoiQUluUlhqVVoxVDlpZENUTy9Fa1ljZVJUSEVmWjdsb3c1WlNQTWdoZjU5ZHBZaHlLdmNMTXE2VlBmNEErVEY3LyIsIm1hYyI6ImQ0YzhkZTc3MTNiMWU2YTc2NmQ1OTk5YWYyODY5ZGY3NTY4ZWUwMWQ4OTc3YWVmZWYxYzk0Y2FiZDg1N2M5MzkiLCJ0YWciOiIifQ%3D%3D; expires=Sat, 29 Aug 2026 09:13:15 GMT; Max-Age=31536000; path=/; httponly; samesite=lax; XSRF-TOKEN=eyJpdiI6ImYwUEg2dmlpYjg4MVBXdWV0NmJhcEE9PSIsInZhbHVlIjoid2toMkVvcEV5ZmhkRzNPcXhRR3hmbkgzV2U5TXdZa3l1dThVcjZweDh2ZExLVzZhVGhvaGEvT1hOanY1KzdZWU02UUlVVTE1Zy9oK25uRkdJa1krNndEdHZFa24zdE1Odk16RnlZUXB3L2xzZnFheTVMN1V1ZWlDM085cExIK1MiLCJtYWMiOiJiYThlZTFkMGZiNTRjZGRmOTYxYjgwY2Q0ZTA5NTE4YTM3Y2EyZTU4N2M2YjgzMmViZmUyM2ZkZjYyMzJhYmVlIiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 11:13:15 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6InRnWnNubEYvN2FCNWZUSnVjMm81YXc9PSIsInZhbHVlIjoiUEx5MDY4bDVoU2o2c1g1bCtzN3g5dS95TTd5dzNvWEpiVm1UdEZZQXFKU2FVd2QxWTVJR2FwL0JZNHNhai91elBIZDdTWlhWTzVDSDEzZm5wdWdyZXRkSUd6V0hrb1MzVnN6d2RIMW83ZFJPYjNmVE9xRmxqWE91QTBBbHljSjciLCJtYWMiOiJkYTk1NTlkZTM3MTFhODM0ZDk4M2MwZmMwZjc5ZDRmYTIzMDM4OWNmMTg3YjdmZDQ3OGQyZDI0YWI1ZmQyYzVhIiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 11:13:15 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
         description: null
         custom: []
     responseFields: []
@@ -4887,7 +4404,7 @@ endpoints:
           access-control-allow-origin: '*'
           access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
           access-control-allow-headers: 'Content-Type, Authorization, X-Requested-With, X-XSRF-TOKEN'
-          set-cookie: 'XSRF-TOKEN=eyJpdiI6Ink3bHFQUUZIKzJRenB5c2NhYWV3M0E9PSIsInZhbHVlIjoiYlBFeVRMY2NhOFAveVpRbW1vandQdElnTVN6VmszRmI5bUNxb3J3ZmhVYUJibW9uMWRvNy8xa3pXRHc5ZStUa05hR3dWQ05KN0tqcVRKWDM1Sk1mVWJwL2hmbzdpbWhyTFhGVzNhTzBsUVg2L0R2bGwzNEFtVmlkVHlSdWFoS1AiLCJtYWMiOiIyMjNmZDZhYzNhYTk3YWI4ZDI4YTg1MThhZmUwMjRjNmI2ZmYyZDZiYzhlM2UyZDNmZTY0Y2EyZGExZjI5OGYxIiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 06:39:55 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6IkMrMTQwZTdrQmVSRVFvejgvZHRBSEE9PSIsInZhbHVlIjoiNFVLYlVtMFBEZ0ttS2o1R2ZxemIxYWhlTjNRQllGQWhlRkFhZWVwM1JJUTlEZDlsdXRBb1VvUWZNRytIRjNQc0NYVGFFV0F5eUN1VWhFa1F6eVhjV3VHZDNmZXR6My9LUWJiUHI5OGxyU1ZtUDRLelNiREZGUzJaNFlwbTNjcVgiLCJtYWMiOiIyZDZjOWJkMmQ0YjdjOTk3NWFkODJlYzhlNTI0NGExMjkwYWNmYzg1MzE4OTI3NjAwNDk5OWFkYmI2NmE5OThjIiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 06:39:55 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
+          set-cookie: 'XSRF-TOKEN=eyJpdiI6Inp5Y0pRV05mK3k0aHNISENod3BaYmc9PSIsInZhbHVlIjoiNklTbHRnR0QwbWNGN3NkKytEQlJyT1dtdkVvMFJlT3J2VUhiZHBEZ214bksvdktKSHp2L1lVRkNRS203bEI3Y29aQnVac2dETlNUWG9KQlhsMEo0VGJlVDVhZ0owanBmL0plNzdYZXc0cWpXRGpqYnRTUUNINStQL3ViUFc0QkgiLCJtYWMiOiI3NDhmZWQ0ZThiOWM5YTAyMGYwYTUxMTliYzkzNzFiYmFjNzJjNDg5ODRjZjgwMzVhYzk4MTBlNzUwMWU2NDkzIiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 11:13:15 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6ImZhN29FWVp0V3hzQTVFektKRU11N1E9PSIsInZhbHVlIjoiZ0hXUEJNUTFaMkwzU2x1QUlNUHN4U0xIUDF5S284Y0RDczVOcHdJOFJkMElCb0xFYzhYQU1zK20wV1A2Tzk1c0wxaWhSUXJXL0FjVzE5bk10WHljS3pFVmxVNnhtTFNyVVZFeUpVRitQN0V4QkM1YUxXMVZMeVhqS1hDQmxDaG0iLCJtYWMiOiIwOWQzZDVjZWM4N2M0ODk1NDIzMDQyZjM3NDc5ZjA1Y2M3ZjQzYzM1OTc3ZTcxOGE5NmJkMjdjMGE4ODJhNzZhIiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 11:13:15 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
         description: null
         custom: []
     responseFields: []
@@ -4952,7 +4469,7 @@ endpoints:
           access-control-allow-origin: '*'
           access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
           access-control-allow-headers: 'Content-Type, Authorization, X-Requested-With, X-XSRF-TOKEN'
-          set-cookie: 'XSRF-TOKEN=eyJpdiI6Im1WK1dBdTRLM29pWDViK08wdjQ3Q0E9PSIsInZhbHVlIjoiLzlhczJxTlJaSmxDdjlMaHR0RFZqc0RWQTV0aUVWNmwxS21ONUJSV0lZb3ZiaFhoa0ZPclp1TjAvSEYxcGtLMncvV0pKc2NhZzc2dEFkTlFlcUFWT3BhbkFsWHZaY1NzSGxRcGdoN3luVjIzM2lTclhzcUFjdEhKb0ZCakYrWXMiLCJtYWMiOiIxYzI3MTQzNmUyMDU3MDYxZTU0NzVkMDI5MmNlZmJmMzUwNTRlZjU2ZTU2MzAyNjYwNDYwNGNiMjc1YmU4MDE4IiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 06:39:55 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6ImhKNFd0TFVkWmFVNlNqTSt0QlJmNnc9PSIsInZhbHVlIjoiWUF3VFhmNWNEcXNMRGxFQUFiMCtvRHk0VmJrVXVya0VRKytTeUtwb1hJZCtKTXl0Nmt2YStlSFdSKzV0dzJxbkN0NGtyNHI2blo1Vnp3QUVLcjJMWVRlN3B2eXo0MW5DOWpVN1dReWRaaG56OWtKcjQ3eEVZNkMrRkN4WXJnSVQiLCJtYWMiOiIwMzU5MDYwZDZjMjllYjMwNWE2MjE3YWUxNDg3NGE2NGI0ZjkyZGEyOGFlMjI5N2QyNjFmNmVmMGE4NjNkODg4IiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 06:39:55 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
+          set-cookie: 'XSRF-TOKEN=eyJpdiI6IlN1L3JKL245R2xSNHFHcjFyenI4WGc9PSIsInZhbHVlIjoiTG93TDl5cnllUHFyakJQRTNXWDFJVXdUaVYwMWtyWEFqdkVGY1BORlhBQVdKa2E3K3p2Q2tlNGJIa1BvVHc3bC91RVFvVGl6RlJzWWRORkFDMmNDajdKWDFMMDZYa3BDVHVKY2tCNzRnY0E5THJuMUl2R2Q4RWF6bDgrd1RJcUQiLCJtYWMiOiJmZTk0YjU1NzQ0OTE1MmUwMzVlYzJlZjhkZTA1ODgxYjQzMTg0NzkwNGRlOTk2MzAzMWUxY2I1MWEwZGY4NWEwIiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 11:13:15 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6Imk0dTZPb3BpZm1Xd0xLL1RiRFg5ZUE9PSIsInZhbHVlIjoiNWtFb2pEMHNXWk4vMm1ZR2RSVnVRdXV6K2o1Yk5vc1U5N1ZZcXcrbUk2S3Y2bEI2cUFJZ1lKUkZhd3NTbnZmQ3JCU2N1bmV5eE5DbXlPbDg1QUVCT0lwT1g2S25TTzZReEZMOUs3RkNZYmNnMmpGMFBMMG5xTFRJaGgyMlRPdjciLCJtYWMiOiI5M2YxNjUxMDg4ZWJiN2YxMzJjZjNjOTM5YjdjOTEyMmRiMWUzMzU5NjlhYjAwY2ZkYTg4ZDE4NmU4YjA5OTA1IiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 11:13:15 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
         description: null
         custom: []
     responseFields: []
@@ -5026,7 +4543,7 @@ endpoints:
           access-control-allow-origin: '*'
           access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
           access-control-allow-headers: 'Content-Type, Authorization, X-Requested-With, X-XSRF-TOKEN'
-          set-cookie: 'XSRF-TOKEN=eyJpdiI6IllaVnEvQytUaEV3R0IxaHlaWi9PT0E9PSIsInZhbHVlIjoiT1RBemZwZWVBU0M2SnFlY2lXcncrNE9YaHlKU2Q3VXlydVltQ2xIQmFWV0NESmJBYXZMUVZ0MkZjT3VST0h1eitrUFA0MjVhTWJlQk9YSDVRS1IrRkFLd3o3MEpwaWNpU3BwVE9qZGp5OXV2Mnl5N05hZng4ME9uRkE3bWxZaTciLCJtYWMiOiJjYWUxZmRiOTdmNWE3MTVmODI4YWRmMGMyY2FlNDNhZGIxZTFlODk4MGQwNjdjYThmODEzMWNiOTEzMDE4NGQ0IiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 06:39:55 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6InZCWHpvSVMvaWZvdVltK0Z3NDREYkE9PSIsInZhbHVlIjoiZ1dUSCtrWHFPSDlBSTFFcHpmNWZGcG1GemdhSVZOZVlGNUVFYkZBSlB5Qi9kbmdhcjUzTFBENXBhYjRnczkzeXl5Zk9WV296MUVsN3VwWS9tRGExajNrdWFLZzc5cER2emJsN2M5a3RDcUhLWXJmeXZkVG9Yck4yYzh6VXczakIiLCJtYWMiOiI3YTZjYzE5NmE3Mjk2ZDhmMDNlNDM4MDFmNmQ5ZWRkZDc3MzM2MDk2MjAyZDA2MjQ4NzdhYzQ3YWE2NmEzZGE1IiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 06:39:55 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
+          set-cookie: 'XSRF-TOKEN=eyJpdiI6Im9CNC9zcUFzbUJjQ2hjd3gvdElFTkE9PSIsInZhbHVlIjoiVGJtd1orWVE2RGZvZW51Z3pWenpyV2pkTHBGbTN0cFJsVVpIeWk0V3lRT3RxL0dLSG4vd2Q4SVlkejdlcHd1MnUrK3gxZlhpRGpWKzZXR1ZiSkdTOHVXOS9idWh5QlZDSHlwd3Rnd1R0VjZLa0ZsMmpSUTJOU2NIMm96YjJQc1oiLCJtYWMiOiJmMTYxYjViN2VmYmJhMmNiNjZmYzRjOTIzZjYwMDY4ZjkxNDQ4MTczMzY3MTJjZWI5NzQ1YTBjZGI1YzEzY2E0IiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 11:13:15 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6IkMzNm1Jc2pXQlBRUUNkdWpyY0wvY1E9PSIsInZhbHVlIjoiZ0lTWlRLWitld3o2V3VJTG5VRFpBaTlsVjdaLzhQaTMrTzVsL2YrYW9QQVVNRTUxa0hwNkJUeG11c0tiQU1oNE5oekkvb09RVG5qbkxvQnh6cnc3QWFSS3ZxTU9LZE5lNStxT2kzWUNwV01lWEF6c1YwK1NPMHRXRUU3UUpBcmgiLCJtYWMiOiIyNjE2OTY2NTY0ZjVmMWNlNmMxZDg1MTUwM2YzOGY5NzFhYTBjNGJiNjg3YWE0YzI0MjkyMDk2MmFhZmUyY2I0IiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 11:13:15 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
         description: null
         custom: []
     responseFields: []
@@ -5182,22 +4699,22 @@ endpoints:
           <html>
               <head>
                   <meta charset="UTF-8" />
-                  <meta http-equiv="refresh" content="0;url='https://accounts.google.com/o/oauth2/auth?client_id=779101711005-bulf72fjcfo0lcf5sr257b46hmu6cs3i.apps.googleusercontent.com&amp;redirect_uri=http%3A%2F%2Flocalhost%3A8000%2Fauth%2Fgoogle%2Fcallback&amp;scope=openid+profile+email&amp;response_type=code&amp;state=EUZSLmNCtv9eWL9x5KrGMmjTKor8VlA6RNbkOiTN'" />
+                  <meta http-equiv="refresh" content="0;url='https://accounts.google.com/o/oauth2/auth?client_id=779101711005-bulf72fjcfo0lcf5sr257b46hmu6cs3i.apps.googleusercontent.com&amp;redirect_uri=http%3A%2F%2Flocalhost%3A8000%2Fauth%2Fgoogle%2Fcallback&amp;scope=openid+profile+email&amp;response_type=code&amp;state=OwASlY7WjUKiGSeKbLAJ2NBL4n9uGz6iBEiIgmDo'" />
 
-                  <title>Redirecting to https://accounts.google.com/o/oauth2/auth?client_id=779101711005-bulf72fjcfo0lcf5sr257b46hmu6cs3i.apps.googleusercontent.com&amp;redirect_uri=http%3A%2F%2Flocalhost%3A8000%2Fauth%2Fgoogle%2Fcallback&amp;scope=openid+profile+email&amp;response_type=code&amp;state=EUZSLmNCtv9eWL9x5KrGMmjTKor8VlA6RNbkOiTN</title>
+                  <title>Redirecting to https://accounts.google.com/o/oauth2/auth?client_id=779101711005-bulf72fjcfo0lcf5sr257b46hmu6cs3i.apps.googleusercontent.com&amp;redirect_uri=http%3A%2F%2Flocalhost%3A8000%2Fauth%2Fgoogle%2Fcallback&amp;scope=openid+profile+email&amp;response_type=code&amp;state=OwASlY7WjUKiGSeKbLAJ2NBL4n9uGz6iBEiIgmDo</title>
               </head>
               <body>
-                  Redirecting to <a href="https://accounts.google.com/o/oauth2/auth?client_id=779101711005-bulf72fjcfo0lcf5sr257b46hmu6cs3i.apps.googleusercontent.com&amp;redirect_uri=http%3A%2F%2Flocalhost%3A8000%2Fauth%2Fgoogle%2Fcallback&amp;scope=openid+profile+email&amp;response_type=code&amp;state=EUZSLmNCtv9eWL9x5KrGMmjTKor8VlA6RNbkOiTN">https://accounts.google.com/o/oauth2/auth?client_id=779101711005-bulf72fjcfo0lcf5sr257b46hmu6cs3i.apps.googleusercontent.com&amp;redirect_uri=http%3A%2F%2Flocalhost%3A8000%2Fauth%2Fgoogle%2Fcallback&amp;scope=openid+profile+email&amp;response_type=code&amp;state=EUZSLmNCtv9eWL9x5KrGMmjTKor8VlA6RNbkOiTN</a>.
+                  Redirecting to <a href="https://accounts.google.com/o/oauth2/auth?client_id=779101711005-bulf72fjcfo0lcf5sr257b46hmu6cs3i.apps.googleusercontent.com&amp;redirect_uri=http%3A%2F%2Flocalhost%3A8000%2Fauth%2Fgoogle%2Fcallback&amp;scope=openid+profile+email&amp;response_type=code&amp;state=OwASlY7WjUKiGSeKbLAJ2NBL4n9uGz6iBEiIgmDo">https://accounts.google.com/o/oauth2/auth?client_id=779101711005-bulf72fjcfo0lcf5sr257b46hmu6cs3i.apps.googleusercontent.com&amp;redirect_uri=http%3A%2F%2Flocalhost%3A8000%2Fauth%2Fgoogle%2Fcallback&amp;scope=openid+profile+email&amp;response_type=code&amp;state=OwASlY7WjUKiGSeKbLAJ2NBL4n9uGz6iBEiIgmDo</a>.
               </body>
           </html>
         headers:
           cache-control: 'no-cache, private'
-          location: 'https://accounts.google.com/o/oauth2/auth?client_id=779101711005-bulf72fjcfo0lcf5sr257b46hmu6cs3i.apps.googleusercontent.com&redirect_uri=http%3A%2F%2Flocalhost%3A8000%2Fauth%2Fgoogle%2Fcallback&scope=openid+profile+email&response_type=code&state=EUZSLmNCtv9eWL9x5KrGMmjTKor8VlA6RNbkOiTN'
+          location: 'https://accounts.google.com/o/oauth2/auth?client_id=779101711005-bulf72fjcfo0lcf5sr257b46hmu6cs3i.apps.googleusercontent.com&redirect_uri=http%3A%2F%2Flocalhost%3A8000%2Fauth%2Fgoogle%2Fcallback&scope=openid+profile+email&response_type=code&state=OwASlY7WjUKiGSeKbLAJ2NBL4n9uGz6iBEiIgmDo'
           content-type: 'text/html; charset=utf-8'
           access-control-allow-origin: '*'
           access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
           access-control-allow-headers: 'Content-Type, Authorization, X-Requested-With, X-XSRF-TOKEN'
-          set-cookie: 'app_locale=eyJpdiI6IlBldWNGMGE0K0tMSUx5N0oxVk1nZ1E9PSIsInZhbHVlIjoienQxMkNTUVQxNGhmYXB3aEJ3cXppQWpDd1lTTHlxNC9Sa2ZrWGNwbEc2eWc5aFVGWXVSbDI2RDgyY2gzREUyWiIsIm1hYyI6IjhiMjI3YWM1ODJkZGMyOGFiMzQ1MzVlZDIxZmEzZjk5NjhhMGMyM2E0ZjkxYTljZGE2MzU2MTJkYzQwMGJiMWYiLCJ0YWciOiIifQ%3D%3D; expires=Sat, 29 Aug 2026 04:39:56 GMT; Max-Age=31536000; path=/; httponly; samesite=lax; XSRF-TOKEN=eyJpdiI6IlNzcWVBcmZHWVYycCt1RjJ6Rk9PTUE9PSIsInZhbHVlIjoienNPQUd0NmJNTXE4WGVSTGJNQlcwWnVZSm1jUGhqT3RJNWZ2RWc0djhtYk85VTVSRkhIU1ZnMmZiOXlTWE96bzR3b0JCWlJSc0JJV3JjM0VHVGRiaU1IcG9RSnRwK0s0dUJVTUtyQk5GYy9oWUlzTUo1ODVJM2wwc1dUK3ZicFoiLCJtYWMiOiI1ZTFkZDg2ZTBiY2YyNzJlZmRjMDQ1YThjOTNmNTZhNTFkYzE4NTBjNzE4OGQwZjQyZTQyNjU0YzJkOTIyZWU5IiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 06:39:56 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6Im1uNEJnTDdCZ3hFYU5BQXl6cnZVNFE9PSIsInZhbHVlIjoiOTY0TTdOS1p2WmZYaDhOSFpibC9BclRnOHFraFdqb2l0eWcwQUdPa0JsdWNOaEh6cVlXRmpDNlQvTDNIclcxcCtDZWl4TWlOcXF3a09NSWU2RXAwQThuY3ZJMmRack14b3VJcHk1QkgrZm9lMHJCUTFMb1ZDMlFxL2tsVXp6M1ciLCJtYWMiOiJiNDIwM2ExNWFjZGQ1YWM4NDYxZDZkOWJjYmQwNDE4M2EwYTIwOGYxZGI4ZDhiMGQ3OTU0MjcwNzBmMjA1MzY3IiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 06:39:56 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
+          set-cookie: 'app_locale=eyJpdiI6IjBNYWE4QXhWYitvWFpLeVJRRnJlZ2c9PSIsInZhbHVlIjoid1l0MHRXSGdXWitJTStuMzNOYVZvOU1TaXFyUDkwcEtoSVZBNmhPYXZqY0gweFhXRGUyLzcwU21oS05UUVRraCIsIm1hYyI6IjE3MzBmYjI5YTE4MmQ0ZTYzZDYzZDFkYjljNDgwMDhiZTUzMjZkNjM5ZjI2NzQxNzNlMmY4YTQxMGQzY2RmM2UiLCJ0YWciOiIifQ%3D%3D; expires=Sat, 29 Aug 2026 09:13:15 GMT; Max-Age=31536000; path=/; httponly; samesite=lax; XSRF-TOKEN=eyJpdiI6IjF1MXpuSE9mU0FvdjRPd2VsTUJncGc9PSIsInZhbHVlIjoiQkl6RmhmUVdjMFFQS3Fjb3BHaVZsTGhmSk9UN0JLR2kxcFRKdjdka2FDZEU2YXR1Zkw4OWlxYnpJa243bi83NVJnMm40ZUNtVzJ3cmd5U1lYOGVBNVJ4Y0ZycWhrSzJGWG9CMEZrRWJHOHNkU1NieVF0SHM3bW1WNGpsMjE2YlUiLCJtYWMiOiJkMWNmZjgzZjJjMWI4MGRkZjNlYzYxNzRiMDBmNzk5MDU4YzUyM2U1MmI1NmMxNDlkNDkwYjMwODgyZGQ2YjkxIiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 11:13:15 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6IkNNR1cyR2htZEd0VWx0V2NObzJ2bXc9PSIsInZhbHVlIjoiMFlocDZrZkpZVXBoVmUyeWVMT2tsVm5WejZidkl3alloZDFCb1Vma0pIS3NUM3Z0Y0NtN0JDV1dYS2tUSlRpQ2JSTVVjL29xM1BmR0VjRC9CaGlSVEx3N056SnhUUHB2aDZGUkZreGJuSW51eXcyaHFxVFBWVnNRMkErSXgxc2IiLCJtYWMiOiJlOTUzOWFmZDVlODA5OWQ0MGZhZjZmMTU2Mjk2YWFjMzNiMTUzMmE3NDYwOTFkZDlkM2E1YzExNzkxYzhhOTIwIiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 11:13:15 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
         description: null
         custom: []
     responseFields: []
@@ -5253,7 +4770,7 @@ endpoints:
           access-control-allow-origin: '*'
           access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
           access-control-allow-headers: 'Content-Type, Authorization, X-Requested-With, X-XSRF-TOKEN'
-          set-cookie: 'app_locale=eyJpdiI6ImJKbWN6SDlMVHpIbWUvNVlPekZqOWc9PSIsInZhbHVlIjoiZzdQQm5pOHg1MU85MjZIZGswVlhwbUZlWVllQWtTUmU3WUFwd0tKcElmN0s5czNJS0JseTl0RjkrdVRoRUhsayIsIm1hYyI6IjRmZTJjYzgyMWFmZTY2NzgwZjNhNmUyNjA5NjcwMzE2ZWU5Yzc5ZjgwODBkYTBhYjY4ZTA1NjcwYzYzZGNkY2YiLCJ0YWciOiIifQ%3D%3D; expires=Sat, 29 Aug 2026 04:39:56 GMT; Max-Age=31536000; path=/; httponly; samesite=lax; XSRF-TOKEN=eyJpdiI6Ing5aUhNM2o1dkhoRUlCVnhDU0VWMGc9PSIsInZhbHVlIjoidmtqbEM2ZkhFNHVCSm1mRW12V2dZR1k1ZFpiK2F3ak5ZVlpVQ3dESzdnTXp5Y0tTWUFCcjNDSDByeUpUdVFoNjBuNWQraWtqeFBJcHdBMVFLWWFDNjVtRnBobVdjUXhTVDJZejQ3YVJKMzZmMUFwRHRrSG1TRnBDTzA0WUlrcUQiLCJtYWMiOiJjY2QxZTdjNmRiMzg5MmQwNjA2MDdhZDNmYmQxNTIzMzllY2E1NDIyZjU1MDU3ZWMwZWJiMmYyOGI5NjQzMmRmIiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 06:39:56 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6IlFRbC9vWW9wM1VSZEZJZDhUYUxGMFE9PSIsInZhbHVlIjoicENXZllVK2xBTjMyZGcvenRsMXpCZzNObG5oQlNmYzFwOURQRGNzZlpEbGhTRWVxdklpb09LTkdvVzJ6L3FHWmZwQ2xlQjI2NmJ3QklHckNMdlV5VnNRK2plZ0xUS040bHdRbEVoSWdBbWpiYVp3L3YzendtR1VGcGtZdDYvemwiLCJtYWMiOiJmOTllNTI1M2U2YmZkOWFiZWNlMGE4YmY3ZDJkNzhmMjJlMjVkMzU3ODYwYWNjZjM4NjM5N2JhNjQ4Njk0ZGI3IiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 06:39:56 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
+          set-cookie: 'app_locale=eyJpdiI6Im5mWUZTZEt0a3doRlNrVWpZWG1tVGc9PSIsInZhbHVlIjoibjI2ZFFkUzJ4UmdPNjloQWhBeG90bytZT2ZCYVZUQU9WbUxVSG84dCtZVkNOYnl1bFB1a0xYUHdZNVdPWUUwbSIsIm1hYyI6Ijc5YTkzMDBmYmQxNmQyNjNiNzM4OWE5ZmFlMWVmZGU5NzgyMGYzY2M2NzNkNTMzMTVhYzhjM2RhOTcxNTRiMTQiLCJ0YWciOiIifQ%3D%3D; expires=Sat, 29 Aug 2026 09:13:15 GMT; Max-Age=31536000; path=/; httponly; samesite=lax; XSRF-TOKEN=eyJpdiI6Ik0xQmZtNGxTLzRCeXBpRWF6OVN4YlE9PSIsInZhbHVlIjoiMUFvekpMOGtPSW1zRFNRK29xamRrTGhZMXNBanBiQmZTWWFEMDRDdTlydGNBaGx3RmVEaTVmVVhlQVBXUmd5TU1Uc1JYRkN3dUQxYzZieThWS3FYelRwTmxnWENzQ3ZrZUlLWU5jU2ZJTS96L3ZnaUs0ZU1CSUZCZWJ2NU03b0ciLCJtYWMiOiJmNWJkZjZjZDUwMzU0ZDJlZjJjYmFjMzFjNzYwNjA0MzY1MTIzZTg0Y2U0NmYxZDU4NTZjMDE4ZTM3ZmM4ZGIyIiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 11:13:15 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6IkVFMkRhRkExZTdwcDBUbG12VVNsQkE9PSIsInZhbHVlIjoiOFVjK28xV2dKd1JxYXJGbTA0QndIVGUxaXVxTzV2ejh5ZGcySERXai8zYUI2UTRjTExJS1VYQVVNOVlhZXRSc0l0elhjaUdJRDdKOW9qRTVScEdDUDI4YXpaUEZ6WGVUSEFrSjd4enNpd1l2NmtaOUJHL1l6ekNIeVlEV0x5YW0iLCJtYWMiOiIxYjk1MWFlMTdiZjY0ZmQ2NjU1ZGJkYjNmZDJlYTc1ZGNkNTA0MDc4ZjhhZDA0ZmIwMmY1ZTAxZDY2ZWVlN2FhIiwidGFnIjoiIn0%3D; expires=Fri, 29 Aug 2025 11:13:15 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
         description: null
         custom: []
     responseFields: []
